@@ -1,0 +1,18 @@
+inc_epicspells.nss
+   GetEpicSpellSlotLimit
+      ReplenishSlots
+at_player_rest.nss
+prc_essrest.nss
+prc_rest.nss
+ss_ep_cont_resur.nss
+contingent_reun.nss
+inc_epicspellai.nss
+         DoEpicSpellcasterSpawn
+      [Penalize][Restore]SpellSlotForCaster
+
+inc_epicspells.nss
+   PLAY_SPELLSEED_CUT
+   PLAY_RESEARCH_CUTS
+      DoSpellResearch
+_plc_rsrch_ep_sp.nss
+
