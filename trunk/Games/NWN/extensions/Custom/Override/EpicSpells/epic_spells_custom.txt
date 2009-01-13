@@ -1,0 +1,69 @@
+Fiendish Words
+--------------
+- Skill bonus, temporary
+- Skill bonus, permanent (cost: 1 level in XP for 5 points)
+- Stat bonus, temporary
+- Stat bonus, permanent (cost: 3 levels in XP for 1 point)
+- Epic Spell Seed
+- Immunity, temporary, to one of:
+   knockdown, paralysis, poison, level/ability drain, sneak attack
+
+* Tanar'ri
+   * Quasit (CR=3)
+   * Succubus (CR=7)
+   * Erinyes (CR=8)
+   * Rakshasa (CR=8)
+   * Vrock (CR=10)
+   * Bebilith (CR=12)
+   * Balor Lord (CR=16)
+   * Balor (CR=21)
+
+* Baatezu
+
+
+* Slaad
+   * Red (CR=6)
+   * Blue (CR=7)
+   * Green (CR=9)
+   * Grey (CR=10)
+   * Grey Boss (CR=11)
+   * Death (CR=15)
+   * Death Boss (CR=15)
+   * White (CR=25)
+   * Black (CR=30)
+
+
+* Mephits
+   * Air (CR=3)
+   * Dust (CR=2)
+   * Earth (CR=3)
+   * Fire (CR=3)
+   * Ice (CR=3)
+   * Magma (CR=3)
+   * Ooze (CR=3)
+   * Salt (CR=3)
+   * Steam (CR=3)
+   * Water (CR=3)
+
+
+* Elementals
+   * Air
+      * Normal (CR=3)
+      * Huge (CR=13)
+      * Great (CR=17)
+      * Elder (CR=19)
+   * Earth
+      * Normal (CR=3)
+      * Huge (CR=13)
+      * Great (CR=17)
+      * Elder (CR=19)
+   * Fire
+      * Normal (CR=3)
+      * Huge (CR=13)
+      * Great (CR=17)
+      * Elder (CR=19)
+   * Water
+      * Normal (CR=3)
+      * Huge (CR=13)
+      * Great (CR=17)
+      * Elder (CR=19)
