@@ -1,0 +1,86 @@
+hakedit v1.0
+------------
+(C)2002 Benjamin Moos -aka- SmokeSerpent
+smokeserpent@psnw.com
+
+A utility to compile, decompile, add to, and remove from Bioware's HAK format, as used for the game NeverWinter Nights. The
+source code is included for your use or for a good laugh at my expense, see LICENSE for details.
+
+Command line
+------------
+
+hakedit [-h|v|S] [<hak> [-a|d <file>] [-u|p <dir>] [-o] [-s]]
+
+-h Display help and exit
+-v Display version and (c) info
+-S Support HAKedit and MetaHAK development via PayPal donation (opens browser)
+
+-a add <file> to <hak>
+-d delete <file> from <hak>
+
+-u unpack <hak> to <dir>
+-p create <hak> from files in <dir>
+
+-o overwrite existing files in <dir> (valid with -u and -a only)
+-s suppress description.txt handling (valid with -u only)
+-q quiet mode - suppresses most messages
+
+
+Operation
+---------
+
+Fairly straightforward. If you use -a or -d, hakedit creates a temp dir on the root of your current drive, but deletes this
+when finished. With -u, a file named "description.txt" will be unpacked containing the HAK's name, URL, and description
+fields, unless you use the -s switch. With -p, if there is a file called "description.txt", hakedit wil put the contents in
+those fields instead of packingthe file normally. Any files which I don't have a Bioware type code for will be ignored. I
+think I have all of them, but let me know if I don't :) When you use -a or -d, the HAK is changed in place, so a backup
+copy would be prudent
+
+
+Examples
+--------
+
+1) Unpacking a HAK to get at the files in it
+
+hakedit myhak.hak -u mydir
+
+2) Packing a HAK from a directory containing Bioware resource files
+
+hakedit myhak.hak -p mydir
+
+3) Deleting a file from a HAK
+
+hakedit myhak.hak -d myfile.tga
+
+3) Adding a file to a HAK
+
+hakedit myhak.hak -a myfile.tga
+
+4) Updating a file in a hak to a new version
+
+hakedit myhak.hak -u mydir
+copy myfile.tga mydir
+hakedit myhak.hak -p mydir
+
+5) Combining two HAKs, files from the first overriding the second
+
+hakedit myhak1.hak -u mydir
+hakedit myhak2.hak -u mydir
+hakedit myhak3.hak -d mydir
+
+6) Combining two HAKs, files from the second overriding the first
+
+hakedit myhak1.hak -u mydir
+hakedit myhak2.hak -u mydir -o
+hakedit myhak3.hak -d mydir
+
+
+Acknowledgements
+----------------
+
+* Bioware for creating Neverwinter Nights in the first place, also for their mostly non-obfuscated file formats :D
+
+* Rothos for releasing hid HAKCombine faster than I could get hakedit out, giving me some lead time on confirming that my
+format analysis was essentially correct, and giving people a chance to find one error that slipped through.
+
+* The Wife and Kids for putting up with my "computer time"
