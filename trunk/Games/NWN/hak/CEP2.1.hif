@@ -1,0 +1,24 @@
+# Title for the HIF.
+Title: CEP 2.1
+
+# Add the PrC pack version and specify at minimum NWN version to install.
+Version: CEP 2.1
+MinNWNVersion: 1.69, XP1, XP2
+
+module.hak: cep2_top_v21.hak
+module.hak: cep2_custom.hak
+module.hak: cep2_add_Phenos5.hak
+module.hak: cep2_add_Phenos4.hak
+module.hak: cep2_add_Phenos3.hak
+module.hak: cep2_add_Phenos2.hak
+module.hak: cep2_add_Phenos1.hak
+module.hak: cep2_add_sb_v1.hak
+module.hak: cep2_core6.hak
+module.hak: cep2_core5.hak
+module.hak: cep2_core4.hak
+module.hak: cep2_core3.hak
+module.hak: cep2_core2.hak
+module.hak: cep2_core1.hak
+module.hak: cep2_core0.hak
+
+module.CustomTlk: cep21_v1.tlk

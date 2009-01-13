@@ -1,0 +1,7 @@
+Title : TLK Merge prc_dug+cep21
+
+Version : 1.0
+MinNWNVersion: 1.69
+
+module.CustomTlk : prc_dug.tlk
+module.CustomTlk : cep21_v1.tlk

@@ -1,0 +1,7 @@
+Title: TLK Merge PrC+DUG
+
+Version: 1.0
+MinNWNVersion: 1.69
+
+module.CustomTlk: prc_consortium.tlk
+module.CustomTlk: dac_custom.tlk
