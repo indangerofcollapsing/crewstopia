@@ -1,0 +1,12 @@
+49986
+Autotarget
+
+49987
+Some creatures you may encounter have been turned ethereal.  You can sense them but you cannot select them to attack.  This feat allows you to automatically select the nearest enemy to attack.
+
+49995
+Practised Shifter
+
+49996
+You are well versed in Shifting.  You gain a +4 bonus to your character level when attempting to take the form of another creature.
+This does not affect your effective Shifter level, only your effective character level.  So as a Level 1 PnP Shifter, you cannot take any forms other than medium or small humanoid, but you can take the form of a higher Challenge Rating humanoid than you otherwise would be able.
