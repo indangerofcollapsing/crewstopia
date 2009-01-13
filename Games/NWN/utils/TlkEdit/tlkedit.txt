@@ -1,0 +1,43 @@
+NeverWinter Nights TLK Editor V1.1
+----------------------------------
+
+This utility will help you to edit the dialog.tlk file
+which contains the texts can be found in the game. You
+can create new texts or you can modify the existing ones
+with this utility. For example: you can add new spell names,
+spell descriptions, etc.
+
+New Features in version 1.1
+---------------------------
+
+- you are able to delete the last few entries from the tlk file
+- you can add new entries by specifying the entry number exactly
+  and if the specified entry number is higher than the current
+  maximum entries then it automaticaly builds up the database to
+  reach that entry number. For example: there are 65000 entries
+  in the tlk file and you press the New... button and enter
+  80000 as entry number then the TLK Editor creates 14999 empty
+  entries so you can add entry 80000 easily.
+- new entry bug corrected: now the completely new entries show up
+  in NWN correctly
+
+Features
+--------
+
+It
+
+- can create new .tlk files
+- can open / edit the existing entries in a .tlk file
+- can add new entries to a .tlk file
+- can maintain 120000 entries in a TLK file
+
+Just Open a .tlk file and and new entries or modify the
+original ones by double-clicking on its ID field then
+save it.
+
+Important - make a backup of your original dialog.TLK file
+before using this utility.
+
+For comments, bug reports, etc write me to tlkedit@newarcana.com
+
+             Nerwen
