@@ -1,0 +1,8 @@
+Weapon Master modifications:
+Now need Discipline 8+ rather than Intimidate 8+
+0  Discipline            SKILL   3          8
+
+Now need either Whirlwind Attack OR Bladewind
+4  Whirlwind_Attack      FEATOR  867        ****
+5  Bladewind             FEATOR  3609       ****
+(renumber remainder)

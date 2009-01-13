@@ -1,0 +1,569 @@
+2DA V2.0                                                                
+                                                                        
+           FeatIndex   Label                                            
+1          953         FEAT_IMPROVED_CRITICAL_DWAXE                     
+2          953         FEAT_WEAPON_SPECIALIZATION_DWAXE                 
+3          952         FEAT_WEAPON_FOCUS_DWAXE                          
+4          954         FEAT_IMPROVED_CRITICAL_DWAXE                     
+5          958         FEAT_EPIC_OVERWHELMING_CRITICAL_DWAXE            
+6          955         FEAT_EPIC_DEVASTATING_CRITICAL_DWAXE             
+7          657         FEAT_EPIC_WEAPON_SPECIALIZATION_CLUB             
+8          658         FEAT_EPIC_WEAPON_SPECIALIZATION_DAGGER           
+9          659         FEAT_EPIC_WEAPON_SPECIALIZATION_DART             
+10         660         FEAT_EPIC_WEAPON_SPECIALIZATION_HEAVYCROSSBOW    
+11         661         FEAT_EPIC_WEAPON_SPECIALIZATION_LIGHTCROSSBOW    
+12         662         FEAT_EPIC_WEAPON_SPECIALIZATION_LIGHTMACE        
+13         663         FEAT_EPIC_WEAPON_SPECIALIZATION_MORNINGSTAR      
+14         664         FEAT_EPIC_WEAPON_SPECIALIZATION_QUARTERSTAFF     
+15         665         FEAT_EPIC_WEAPON_SPECIALIZATION_SHORTSPEAR       
+16         666         FEAT_EPIC_WEAPON_SPECIALIZATION_SICKLE           
+17         667         FEAT_EPIC_WEAPON_SPECIALIZATION_SLING            
+18         668         FEAT_EPIC_WEAPON_SPECIALIZATION_UNARMED          
+19         669         FEAT_EPIC_WEAPON_SPECIALIZATION_LONGBOW          
+20         670         FEAT_EPIC_WEAPON_SPECIALIZATION_SHORTBOW         
+21         671         FEAT_EPIC_WEAPON_SPECIALIZATION_SHORTSWORD       
+22         672         FEAT_EPIC_WEAPON_SPECIALIZATION_RAPIER           
+23         673         FEAT_EPIC_WEAPON_SPECIALIZATION_SCIMITAR         
+24         674         FEAT_EPIC_WEAPON_SPECIALIZATION_LONGSWORD        
+25         675         FEAT_EPIC_WEAPON_SPECIALIZATION_GREATSWORD       
+26         676         FEAT_EPIC_WEAPON_SPECIALIZATION_HANDAXE          
+27         677         FEAT_EPIC_WEAPON_SPECIALIZATION_THROWINGAXE      
+28         678         FEAT_EPIC_WEAPON_SPECIALIZATION_BATTLEAXE        
+29         679         FEAT_EPIC_WEAPON_SPECIALIZATION_GREATAXE         
+30         680         FEAT_EPIC_WEAPON_SPECIALIZATION_HALBERD          
+31         681         FEAT_EPIC_WEAPON_SPECIALIZATION_LIGHTHAMMER      
+32         682         FEAT_EPIC_WEAPON_SPECIALIZATION_LIGHTFLAIL       
+33         683         FEAT_EPIC_WEAPON_SPECIALIZATION_WARHAMMER        
+34         684         FEAT_EPIC_WEAPON_SPECIALIZATION_HEAVYFLAIL       
+35         685         FEAT_EPIC_WEAPON_SPECIALIZATION_KAMA             
+36         686         FEAT_EPIC_WEAPON_SPECIALIZATION_KUKRI            
+37         687         FEAT_EPIC_WEAPON_SPECIALIZATION_SHURIKEN         
+38         688         FEAT_EPIC_WEAPON_SPECIALIZATION_SCYTHE           
+39         689         FEAT_EPIC_WEAPON_SPECIALIZATION_KATANA           
+40         690         FEAT_EPIC_WEAPON_SPECIALIZATION_BASTARDSWORD     
+41         691         FEAT_EPIC_WEAPON_SPECIALIZATION_DIREMACE         
+42         692         FEAT_EPIC_WEAPON_SPECIALIZATION_DOUBLEAXE        
+43         693         FEAT_EPIC_WEAPON_SPECIALIZATION_TWOBLADEDSWORD   
+44         619         FEAT_EPIC_WEAPON_FOCUS_CLUB                      
+45         620         FEAT_EPIC_WEAPON_FOCUS_DAGGER                    
+46         621         FEAT_EPIC_WEAPON_FOCUS_DART                      
+47         622         FEAT_EPIC_WEAPON_FOCUS_HEAVYCROSSBOW             
+48         623         FEAT_EPIC_WEAPON_FOCUS_LIGHTCROSSBOW             
+49         624         FEAT_EPIC_WEAPON_FOCUS_LIGHTMACE                 
+50         625         FEAT_EPIC_WEAPON_FOCUS_MORNINGSTAR               
+51         626         FEAT_EPIC_WEAPON_FOCUS_QUARTERSTAFF              
+52         627         FEAT_EPIC_WEAPON_FOCUS_SHORTSPEAR                
+53         628         FEAT_EPIC_WEAPON_FOCUS_SICKLE                    
+54         629         FEAT_EPIC_WEAPON_FOCUS_SLING                     
+55         630         FEAT_EPIC_WEAPON_FOCUS_UNARMED                   
+56         631         FEAT_EPIC_WEAPON_FOCUS_LONGBOW                   
+57         632         FEAT_EPIC_WEAPON_FOCUS_SHORTBOW                  
+58         633         FEAT_EPIC_WEAPON_FOCUS_SHORTSWORD                
+59         634         FEAT_EPIC_WEAPON_FOCUS_RAPIER                    
+60         635         FEAT_EPIC_WEAPON_FOCUS_SCIMITAR                  
+61         636         FEAT_EPIC_WEAPON_FOCUS_LONGSWORD                 
+62         637         FEAT_EPIC_WEAPON_FOCUS_GREATSWORD                
+63         638         FEAT_EPIC_WEAPON_FOCUS_HANDAXE                   
+64         639         FEAT_EPIC_WEAPON_FOCUS_THROWINGAXE               
+65         640         FEAT_EPIC_WEAPON_FOCUS_BATTLEAXE                 
+66         641         FEAT_EPIC_WEAPON_FOCUS_GREATAXE                  
+67         642         FEAT_EPIC_WEAPON_FOCUS_HALBERD                   
+68         643         FEAT_EPIC_WEAPON_FOCUS_LIGHTHAMMER               
+69         644         FEAT_EPIC_WEAPON_FOCUS_LIGHTFLAIL                
+70         645         FEAT_EPIC_WEAPON_FOCUS_WARHAMMER                 
+71         646         FEAT_EPIC_WEAPON_FOCUS_HEAVYFLAIL                
+72         647         FEAT_EPIC_WEAPON_FOCUS_KAMA                      
+73         648         FEAT_EPIC_WEAPON_FOCUS_KUKRI                     
+74         649         FEAT_EPIC_WEAPON_FOCUS_SHURIKEN                  
+75         650         FEAT_EPIC_WEAPON_FOCUS_SCYTHE                    
+76         651         FEAT_EPIC_WEAPON_FOCUS_KATANA                    
+77         652         FEAT_EPIC_WEAPON_FOCUS_BASTARDSWORD              
+78         653         FEAT_EPIC_WEAPON_FOCUS_DIREMACE                  
+79         654         FEAT_EPIC_WEAPON_FOCUS_DOUBLEAXE                 
+80         655         FEAT_EPIC_WEAPON_FOCUS_TWOBLADEDSWORD            
+81         709         FEAT_EPIC_OVERWHELMING_CRITICAL_CLUB             
+82         710         FEAT_EPIC_OVERWHELMING_CRITICAL_DAGGER           
+83         711         FEAT_EPIC_OVERWHELMING_CRITICAL_DART             
+84         712         FEAT_EPIC_OVERWHELMING_CRITICAL_HEAVYCROSSBOW    
+85         713         FEAT_EPIC_OVERWHELMING_CRITICAL_LIGHTCROSSBOW    
+86         714         FEAT_EPIC_OVERWHELMING_CRITICAL_LIGHTMACE        
+87         715         FEAT_EPIC_OVERWHELMING_CRITICAL_MORNINGSTAR      
+88         716         FEAT_EPIC_OVERWHELMING_CRITICAL_QUARTERSTAFF     
+89         717         FEAT_EPIC_OVERWHELMING_CRITICAL_SHORTSPEAR       
+90         718         FEAT_EPIC_OVERWHELMING_CRITICAL_SICKLE           
+91         719         FEAT_EPIC_OVERWHELMING_CRITICAL_SLING            
+92         720         FEAT_EPIC_OVERWHELMING_CRITICAL_UNARMED          
+93         721         FEAT_EPIC_OVERWHELMING_CRITICAL_LONGBOW          
+94         722         FEAT_EPIC_OVERWHELMING_CRITICAL_SHORTBOW         
+95         723         FEAT_EPIC_OVERWHELMING_CRITICAL_SHORTSWORD       
+96         724         FEAT_EPIC_OVERWHELMING_CRITICAL_RAPIER           
+97         725         FEAT_EPIC_OVERWHELMING_CRITICAL_SCIMITAR         
+98         726         FEAT_EPIC_OVERWHELMING_CRITICAL_LONGSWORD        
+99         727         FEAT_EPIC_OVERWHELMING_CRITICAL_GREATSWORD       
+100        728         FEAT_EPIC_OVERWHELMING_CRITICAL_HANDAXE          
+101        729         FEAT_EPIC_OVERWHELMING_CRITICAL_THROWINGAXE      
+102        730         FEAT_EPIC_OVERWHELMING_CRITICAL_BATTLEAXE        
+103        731         FEAT_EPIC_OVERWHELMING_CRITICAL_GREATAXE         
+104        732         FEAT_EPIC_OVERWHELMING_CRITICAL_HALBERD          
+105        733         FEAT_EPIC_OVERWHELMING_CRITICAL_LIGHTHAMMER      
+106        734         FEAT_EPIC_OVERWHELMING_CRITICAL_LIGHTFLAIL       
+107        735         FEAT_EPIC_OVERWHELMING_CRITICAL_WARHAMMER        
+108        736         FEAT_EPIC_OVERWHELMING_CRITICAL_HEAVYFLAIL       
+109        737         FEAT_EPIC_OVERWHELMING_CRITICAL_KAMA             
+110        738         FEAT_EPIC_OVERWHELMING_CRITICAL_KUKRI            
+111        739         FEAT_EPIC_OVERWHELMING_CRITICAL_SHURIKEN         
+112        740         FEAT_EPIC_OVERWHELMING_CRITICAL_SCYTHE           
+113        741         FEAT_EPIC_OVERWHELMING_CRITICAL_KATANA           
+114        742         FEAT_EPIC_OVERWHELMING_CRITICAL_BASTARDSWORD     
+115        743         FEAT_EPIC_OVERWHELMING_CRITICAL_DIREMACE         
+116        744         FEAT_EPIC_OVERWHELMING_CRITICAL_DOUBLEAXE        
+117        745         FEAT_EPIC_OVERWHELMING_CRITICAL_TWOBLADEDSWORD   
+118        495         FEAT_EPIC_DEVASTATING_CRITICAL_CLUB              
+119        496         FEAT_EPIC_DEVASTATING_CRITICAL_DAGGER            
+120        497         FEAT_EPIC_DEVASTATING_CRITICAL_DART              
+121        498         FEAT_EPIC_DEVASTATING_CRITICAL_HEAVYCROSSBOW     
+122        499         FEAT_EPIC_DEVASTATING_CRITICAL_LIGHTCROSSBOW     
+123        500         FEAT_EPIC_DEVASTATING_CRITICAL_LIGHTMACE         
+124        501         FEAT_EPIC_DEVASTATING_CRITICAL_MORNINGSTAR       
+125        502         FEAT_EPIC_DEVASTATING_CRITICAL_QUARTERSTAFF      
+126        503         FEAT_EPIC_DEVASTATING_CRITICAL_SHORTSPEAR        
+127        504         FEAT_EPIC_DEVASTATING_CRITICAL_SICKLE            
+128        505         FEAT_EPIC_DEVASTATING_CRITICAL_SLING             
+129        506         FEAT_EPIC_DEVASTATING_CRITICAL_UNARMED           
+130        507         FEAT_EPIC_DEVASTATING_CRITICAL_LONGBOW           
+131        508         FEAT_EPIC_DEVASTATING_CRITICAL_SHORTBOW          
+132        509         FEAT_EPIC_DEVASTATING_CRITICAL_SHORTSWORD        
+133        510         FEAT_EPIC_DEVASTATING_CRITICAL_RAPIER            
+134        511         FEAT_EPIC_DEVASTATING_CRITICAL_SCIMITAR          
+135        512         FEAT_EPIC_DEVASTATING_CRITICAL_LONGSWORD         
+136        513         FEAT_EPIC_DEVASTATING_CRITICAL_GREATSWORD        
+137        514         FEAT_EPIC_DEVASTATING_CRITICAL_HANDAXE           
+138        515         FEAT_EPIC_DEVASTATING_CRITICAL_THROWINGAXE       
+139        516         FEAT_EPIC_DEVASTATING_CRITICAL_BATTLEAXE         
+140        517         FEAT_EPIC_DEVASTATING_CRITICAL_GREATAXE          
+141        518         FEAT_EPIC_DEVASTATING_CRITICAL_HALBERD           
+142        519         FEAT_EPIC_DEVASTATING_CRITICAL_LIGHTHAMMER       
+143        520         FEAT_EPIC_DEVASTATING_CRITICAL_LIGHTFLAIL        
+144        521         FEAT_EPIC_DEVASTATING_CRITICAL_WARHAMMER         
+145        522         FEAT_EPIC_DEVASTATING_CRITICAL_HEAVYFLAIL        
+146        523         FEAT_EPIC_DEVASTATING_CRITICAL_KAMA              
+147        524         FEAT_EPIC_DEVASTATING_CRITICAL_KUKRI             
+148        525         FEAT_EPIC_DEVASTATING_CRITICAL_SHURIKEN          
+149        526         FEAT_EPIC_DEVASTATING_CRITICAL_SCYTHE            
+150        527         FEAT_EPIC_DEVASTATING_CRITICAL_KATANA            
+151        528         FEAT_EPIC_DEVASTATING_CRITICAL_BASTARDSWORD      
+152        529         FEAT_EPIC_DEVASTATING_CRITICAL_DIREMACE          
+153        530         FEAT_EPIC_DEVASTATING_CRITICAL_DOUBLEAXE         
+154        531         FEAT_EPIC_DEVASTATING_CRITICAL_TWOBLADEDSWORD    
+155        490         FEAT_EPIC_ARMOR_SKIN                             
+156        867         FEAT_WHIRLWIND_ATTACK                            
+157        868         FEAT_IMPROVED_WHIRLWIND                          
+158        584         FEAT_EPIC_PROWESS                                
+159        774         FEAT_EPIC_GREAT_CONSTITUTION_1                   
+160        814         FEAT_EPIC_GREAT_STRENGTH_1                       
+161        775         FEAT_EPIC_GREAT_CONSTITUTION_2                   
+162        815         FEAT_EPIC_GREAT_STRENGTH_2                       
+163        776         FEAT_EPIC_GREAT_CONSTITUTION_3                   
+164        816         FEAT_EPIC_GREAT_STRENGTH_3                       
+165        777         FEAT_EPIC_GREAT_CONSTITUTION_4                   
+166        817         FEAT_EPIC_GREAT_STRENGTH_4                       
+167        778         FEAT_EPIC_GREAT_CONSTITUTION_5                   
+168        491         FEAT_EPIC_BLINDING_SPEED                         
+169        754         FEAT_EPIC_TOUGHNESS_1                            
+170        755         FEAT_EPIC_TOUGHNESS_2                            
+171        756         FEAT_EPIC_TOUGHNESS_3                            
+172        757         FEAT_EPIC_TOUGHNESS_4                            
+173        758         FEAT_EPIC_TOUGHNESS_5                            
+174        759         FEAT_EPIC_TOUGHNESS_6                            
+175        760         FEAT_EPIC_TOUGHNESS_7                            
+176        761         FEAT_EPIC_TOUGHNESS_8                            
+177        762         FEAT_EPIC_TOUGHNESS_9                            
+178        763         FEAT_EPIC_TOUGHNESS_10                           
+179        6           Cleave                                           
+180        44          WeapProfEx                                       
+181        28          PowerAtk                                         
+182        40          Toughness                                        
+183        26          Mobility                                         
+184        23          KnockDown                                        
+185        391         GreatCleave                                      
+186        392         SpringAttack                                     
+187        9           Disarm                                           
+188        14          GreatFort                                        
+189        22          IronWill                                         
+190        24          LightngRef                                       
+191        389         Expertise                                        
+192        408         BlindFight                                       
+193        5           CShot                                            
+194        27          PBShot                                           
+195        30          RapidShot                                        
+196        425         DirtyFighting                                    
+197        16          ImpDis                                           
+198        17          ImpKnock                                         
+199        18          ImpParry                                         
+200        19          ImpPower                                         
+201        20          ImpTwo                                           
+202        390         ImpExpertise                                     
+203        0           Alertness                                        
+204        42          WeapFinesse                                      
+205        32          Shield                                           
+206        39          StunFist                                         
+207        31          Sap                                              
+208        8           DefArrow                                         
+209        10          Dodge                                            
+210        1           Ambidex                                          
+211        67          ImpCritScim                                      
+212        70          ImpCritHAxe                                      
+213        71          ImpCritTAxe                                      
+214        72          ImpCritBAxe                                      
+215        73          ImpCritGAxe                                      
+216        74          ImpCritHalb                                      
+217        75          ImpCritLgHam                                     
+218        76          ImpCritLgFlail                                   
+219        77          ImpCritWHam                                      
+220        78          ImpCritHFlail                                    
+221        79          ImpCritKama                                      
+222        80          ImpCritKukri                                     
+223        13          ExtTurn                                          
+224        82          ImpCritShur                                      
+225        83          ImpCritScy                                       
+226        84          ImpCritKatana                                    
+227        85          ImpCritBSw                                       
+228        87          ImpCritDMace                                     
+229        88          ImpCritDAxe                                      
+230        89          ImpCrit2Sw                                       
+231        90          WeapFocDagger                                    
+232        91          WeapFocDart                                      
+233        92          WeapFocHXBow                                     
+234        93          WeapFocLgXBow                                    
+235        94          WeapFocLgMace                                    
+236        95          WeapFocMorn                                      
+237        96          WeapFocStaff                                     
+238        97          WeapFocSpear                                     
+239        98          WeapFocSickle                                    
+240        99          WeapFocSling                                     
+241        100         WeapFocUnArm                                     
+242        101         WeapFocLongBow                                   
+243        102         WeapFocShortBow                                  
+244        103         WeapFocShortSwor                                 
+245        104         WeapFocRapier                                    
+246        105         WeapFocScim                                      
+247        108         WeapFocHAxe                                      
+248        109         WeapFocTAxe                                      
+249        110         WeapFocBAxe                                      
+250        111         WeapFocGAxe                                      
+251        112         WeapFocHalb                                      
+252        113         WeapFocLgHam                                     
+253        114         WeapFocLgFlail                                   
+254        115         WeapFocWHam                                      
+255        116         WeapFocHFlail                                    
+256        117         WeapFocKama                                      
+257        118         WeapFocKukri                                     
+258        12          ExtSpell                                         
+259        120         WeapFocShur                                      
+260        121         WeapFocScy                                       
+261        122         WeapFocKatana                                    
+262        123         WeapFocBSw                                       
+263        125         WeapFocDMace                                     
+264        126         WeapFocDAxe                                      
+265        127         WeapFoc2Sw                                       
+266        128         WeapSpeDagger                                    
+267        129         WeapSpeDart                                      
+268        130         WeapSpeHXBow                                     
+269        131         WeapSpeLgXBow                                    
+270        132         WeapSpeLgMace                                    
+271        133         WeapSpeMorn                                      
+272        134         WeapSpeStaff                                     
+273        135         WeapSpeSpear                                     
+274        136         WeapSpeSickle                                    
+275        137         WeapSpeSling                                     
+276        138         WeapSpeUnArm                                     
+277        139         WeapSpeLongBow                                   
+278        140         WeapSpeShortBow                                  
+279        141         WeapSpeShortSwor                                 
+280        142         WeapSpeRapier                                    
+281        143         WeapSpeScim                                      
+282        146         WeapSpeHAxe                                      
+283        147         WeapSpeTAxe                                      
+284        148         WeapSpeBAxe                                      
+285        149         WeapSpeGAxe                                      
+286        150         WeapSpeHalb                                      
+287        151         WeapSpeLgHam                                     
+288        152         WeapSpeLgFlail                                   
+289        153         WeapSpeWHam                                      
+290        154         WeapSpeHFlail                                    
+291        155         WeapSpeKama                                      
+292        156         WeapSpeKukri                                     
+293        11          Empower                                          
+294        158         WeapSpeShur                                      
+295        159         WeapSpeScy                                       
+296        160         WeapSpeKatana                                    
+297        161         WeapSpeBSw                                       
+298        163         WeapSpeDMace                                     
+299        164         WeapSpeDAxe                                      
+300        165         WeapSpe2Sw                                       
+301        166         SpellFocusCon                                    
+302        167         SpellFocusDiv                                    
+303        168         SpellFocusEnc                                    
+304        169         SpellFocusEvo                                    
+305        170         SpellFocusIll                                    
+306        171         SpellFocusNec                                    
+307        172         SpellFocusTra                                    
+308        173         SkillFocusConc                                   
+309        174         SkillFocusDisa                                   
+310        175         SkillFocusGrip                                   
+311        177         SkillFocusHeal                                   
+312        178         SkillFocusHide                                   
+313        179         SkillFocusList                                   
+314        180         SkillFocusLore                                   
+315        181         SkillFocusMove                                   
+316        182         SkillFocusOpen                                   
+317        183         SkillFocusParr                                   
+318        184         SkillFocusPerf                                   
+319        185         SkillFocusPers                                   
+320        186         SkillFocusPick                                   
+321        187         SkillFocusSearch                                 
+322        188         SkillFocusSet                                    
+323        189         SkillFocusSpell                                  
+324        190         SkillFocusSpot                                   
+325        192         SkillFocusTaunt                                  
+326        193         SkillFocusDevi                                   
+327        35          SpellFocusAbj                                    
+328        36          SpellPen                                         
+329        37          StillSpell                                       
+330        25          MaxSpell                                         
+331        7           CmbtCast                                         
+332        29          Quicken                                          
+333        34          SkillFocusAnim                                   
+334        33          Silent                                           
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        

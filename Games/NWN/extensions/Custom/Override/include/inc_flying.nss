@@ -1,0 +1,343 @@
+int canFly(object oCreature);
+
+const int JUMP_ANYWHERE = 2;
+
+#include "prc_inc_clsfunc"
+#include "x2_i0_spells"
+
+// Returns FALSE if creature cannot fly
+//         TRUE if creature can fly
+//         JUMP_ANYWHERE if creature can jump pretty much anywhere
+int canFly(object oCreature)
+{
+   switch (GetAppearanceType(oCreature))
+   {
+      // see appearance.2da
+      case 41:
+      case 42:
+      case 43:
+      case 44:
+      case 45:
+      case 46:
+      case 47:
+      case 48:
+      case 49:
+      case 50:
+      case 52:
+      case 53:
+      case 55:
+      case 101:
+      case 105:
+      case 106:
+      case 107:
+      case 108:
+      case 109:
+      case 110:
+      case 111:
+      case 112:
+      case 113:
+      case 114:
+      case 115:
+      case 144:
+      case 145:
+      case 291:
+      case 292:
+      case 374:
+      case 375:
+      case 376:
+      case 377:
+      case 378:
+      case 379:
+      case 380:
+      case 381:
+      case 382:
+      case 383:
+      case 384:
+      case 385:
+      case 401:
+      case 402:
+      case 403:
+      case 405:
+      case 418:
+      case 419:
+      case 425:
+      case 472:
+      case 1031:
+      case 1046:
+      case 1050:
+      case 1073:
+      case 1094: // cornugon
+      case 1121:
+      case 1171:
+      case 1172:
+      case 1275:
+      case 1281:
+      case 1282:
+      case 1320:
+      case 1321:
+      case 1322:
+      case 1323:
+      case 1331:
+      case 1342:
+      case 1343:
+      case 1344:
+      case 1345:
+      case 1346:
+      case 1347:
+      case 1366:
+      case 1367:
+      case 1368:
+      case 1372:
+      case 1373:
+      case 1374:
+      case 1375:
+      case 1376:
+      case 1377:
+      case 1387:
+      case 1388:
+      case 1389:
+      case 1412:
+      case 1413:
+      case 1426:
+      case 1431:
+      case 1432:
+      case 1434: // Cornugon A
+      case 1435:
+      case 1436:
+      case 1437:
+      case 1493:
+      case 1494:
+      case 1508:
+      case 1512:
+      case 1515:
+      case 1516:
+      case 1517:
+      case 1518:
+      case 1527:
+      case 1528:
+      case 1537:
+      case 1538:
+      case 1539:
+      case 1540:
+      case 1541:
+      case 1542:
+      case 1543:
+      case 1556:
+      case 1557:
+      case 1558:
+      case 1559:
+      case 1560:
+      case 1561:
+      case 1562:
+      case 1563:
+      case 1564:
+      case 1565:
+      case 1566:
+      case 1567:
+      case 1568:
+      case 1569:
+      case 1570:
+      case 1584:
+      case 1585:
+      case 1586:
+      case 1587:
+      case 1588:
+      case 1589:
+      case 1590:
+      case 1591:
+      case 1592:
+      case 1593:
+      case 1594:
+      case 1595:
+      case 1596:
+      case 1597:
+      case 1598:
+      case 1599:
+      case 1600:
+      case 1601:
+      case 1602:
+      case 1603:
+      case 1604:
+      case 1605:
+      case 1606:
+      case 1607:
+      case 1608:
+      case 1609:
+      case 1610:
+      case 1611:
+      case 1612:
+      case 1613:
+      case 1614:
+      case 1615:
+      case 1616:
+      case 1617:
+      case 1618:
+      case 1619:
+      case 1620:
+      case 1621:
+      case 1622:
+      case 1623:
+      case 1624:
+      case 1625:
+      case 1626:
+      case 1627:
+      case 1628:
+      case 1629:
+      case 1630:
+      case 1631:
+      case 1632:
+      case 1633:
+      case 1634:
+      case 1635:
+      case 1636:
+      case 1637:
+      case 1638:
+      case 1639:
+      case 1640:
+      case 1641:
+      case 1642:
+      case 1643:
+      case 1644:
+      case 1645:
+      case 1646:
+      case 1647:
+      case 1648:
+      case 1649:
+      case 1650:
+      case 1651:
+      case 1652:
+      case 1653:
+      case 1654:
+      case 1655:
+      case 1656:
+      case 1657:
+      case 1658:
+      case 1659:
+      case 1660:
+      case 1661:
+      case 1662:
+      case 1663:
+      case 1664:
+      case 1665:
+      case 1666:
+      case 1667:
+      case 1668:
+      case 1669:
+      case 1670:
+      case 1671:
+      case 1672:
+      case 1673:
+      case 1674:
+      case 1675:
+      case 1676:
+      case 1677:
+      case 1678:
+      case 1679:
+      case 1680:
+      case 1681:
+      case 1682:
+      case 1683:
+      case 1684:
+      case 1685:
+      case 1686:
+      case 1687:
+      case 1688:
+      case 1689:
+      case 1690:
+      case 1691:
+      case 1692:
+      case 1693:
+      case 1694:
+      case 1695:
+      case 1696:
+      case 1697:
+      case 1698:
+      case 1699:
+      case 1700:
+      case 1701:
+      case 1702:
+      case 1703:
+      case 1807:
+      case 1808:
+      case 1809:
+      case 1810:
+      case 1812:
+      case 1813:
+      case 1814:
+      case 1815:
+      case 1816:
+      case 1817:
+      case 1818:
+      case 1819:
+      case 1834:
+      case 1835:
+      case 1836:
+      case 1837:
+      case 1838:
+      case 1839:
+      case 1840:
+      case 1841:
+      case 1842:
+      case 1843:
+      case 1844:
+      case 1845:
+      case 1846:
+      case 1847:
+      case 1848:
+      case 1849:
+      case 1850:
+      case 1874:
+      case 1875:
+      case 1891:
+      case 1892:
+      case 1893:
+      case 1923:
+      case 1956:
+      case 1957:
+      case 1958:
+      case 1959:
+      case 1960:
+      case 1961:
+      case 1962:
+      case 1963:
+      case 1964:
+      case 1965:
+      case 1975:
+      case 1976:
+      case 1977:
+      case 1978:
+      case 1979:
+      case 1988:
+      case 1990:
+      case 1991:
+      case 1992:
+      case 1993:
+      case 2079:
+      case 2080:
+      case 2081:
+      case 2082:
+      case 3124:
+      case 3130:
+         return TRUE;
+   }
+
+   // cribbed from prc_inc_skills::PerformJump()
+   if (GetLevelByClass(CLASS_TYPE_MONK, oCreature) >= 7 ||
+       GetLevelByClass(CLASS_TYPE_NINJA_SPY, oCreature) >= 3 ||
+       spellsIsFlying(oCreature))
+   {
+      return TRUE;
+   }
+
+   if (GetCreatureWingType(oCreature) != CREATURE_WING_TYPE_NONE) return TRUE;
+
+   if (GetSkillRank(SKILL_JUMP, oCreature) +
+       GetAbilityModifier(ABILITY_STRENGTH, oCreature) >= 40)
+   {
+      return JUMP_ANYWHERE;
+   }
+
+   return FALSE;
+}
+
+void main(){} // Testing/compiling purposes

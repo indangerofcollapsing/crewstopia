@@ -1,0 +1,56 @@
+Added a bunch of Psion disciplines as chosen Feats.
+**Level_One_Powers**Chosen**                   ****      **** ****           ****
+AstralConstruct                                21032     1    -1             1
+CharmPerson                                    21004     1    -1             1
+ThickenSkin                                    21026     1    -1             1
+Burst                                          21034     1    -1             1
+DestinyDissonance                              21035     1    -1             1
+Precognition                                   21036     1    -1             1
+
+**Level_Two_Powers**Chosen**                   ****      **** ****           ****
+BrainLock                                      21052     1    -1             1
+ControlAir                                     21071     1    -1             1
+RepairDamage                                   21073     1    -1             1
+Aversion                                       21074     1    -1             1
+
+**Level_Three_Powers**Chosen**                 ****      **** ****           ****
+GreaterAmorpha                                 21102     1    -1             1
+Hustle                                         21118     1    -1             1
+EctoCocoon                                     21121     1    -1             1
+CrisisBreath                                   21122     1    -1             1
+EmpathicTransferHostile                        21123     1    -1             1
+FateLink                                       21124     1    -1             1
+
+**Level_Four_Powers**Chosen**                  ****      **** ****           ****
+InertialBar                                    21151     1    -1             1
+DimensionalAnchor                              21160     1    -1             1
+Dismissal                                      21161     1    -1             1
+PsionicDominate                                21163     1    -1             1
+
+**Level_Five_Powers**Chosen**                  ****      **** ****           ****
+BalefulTeleport                                21191     1    -1             1
+HailOfCrystals                                 21199     1    -1             1
+SecondChance                                   21200     1    -1             1
+Teleport                                       21201     1    -1             1
+
+**Level_Six_Powers**Chosen**                   ****      **** ****           ****
+Crystallize                                    21233     1    -1             1
+Banishment                                     21237     1    -1             1
+GreaterPrecognition                            21238     1    -1             1
+
+**Level_Seven_Powers**Chosen**                 ****      **** ****           ****
+CrisisLife                                     21271     1    -1             1
+EctoCocoonMass                                 21280     1    -1             1
+EtherealJaunt                                  21281     1    -1             1
+
+**Level_Eight_Powers**Chosen**                 ****      **** ****           ****
+AstralSeed                                     21306     1    -1             1
+TimeHopMass                                    21307     1    -1             1
+HyperCognition                                 21308     1    -1             1
+
+**Level_Nine_Powers**Chosen**                  ****      **** ****           ****
+Genesis                                        21335     1    -1             1
+PsychicChirurgery                              21336     1    -1             1
+TeleportationCircle                            21337     1    -1             1
+
+

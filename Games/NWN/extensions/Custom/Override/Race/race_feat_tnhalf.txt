@@ -1,0 +1,2 @@
+Cold Resist 5/-
+8 ResistEnergyCold    427

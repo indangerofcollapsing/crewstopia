@@ -1,0 +1,27 @@
+2DA V2.0
+
+   FeatLabel                          FeatIndex
+0  immunitysleep                      235
+1  hardinessenchantment               236
+2  skillaffinitylisten                237
+3  skillaffinitysearch                238
+4  skillaffinityspot                  239
+5  FEAT_EPIC_ENERGY_RESISTANCE_FIRE_1 553
+6  LowLightVision                     354
+7  ****                               ****
+8  Damage_Reduction_10                4747
+9  Hardiness_Electricity              4727
+10 hardinesspoisons                   229
+11 skillaffinityhide                  178
+12 SkillAff_Bluff                     4753
+13 FEAT_FEYRI_CHARMPERSON             4675
+14 FEAT_FEYRI_CLAIRAUDIENCE           4676
+15 FEAT_FEYRI_DARKNESS                4677
+16 FEAT_FEYRI_ENERVATION              4678
+17 FEAT_FEYRI_ALTER                   4679
+18 Race_Elven                         4711
+19 Race_Outsider                      4716
+20 Feyri_Change_Shape                 4680
+21 WP_Elven_Lightblade                7935
+22 WP_Elven_Thinblade                 7936
+23 WP_Elven_Courtblade                7937

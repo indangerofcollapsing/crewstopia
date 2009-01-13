@@ -1,0 +1,2 @@
+Grant Shape Mindblade at 1st level (along with replacement dialog)
+11  Shape_Mindblade                                3607      3    1              1

@@ -1,0 +1,9 @@
+Soulknife:
+131        Soulknife                          5608    5609          4         STR         50     ****     ****      ****      ****        ****            PackFTFight1   PackSKFight1   PackEQSoulk1   0          1
+
+Ninja:
+132        Ninja                              6924    6925          8         DEX         100    ****     ****      ****      ****        ****            PackFTRog1     PackSKRog1     PackEQNinja1   0          1
+
+Psion/Wilder:
+133        Psion                              5633    5634          10        INT         75     0        ****      ****      0           PackSPWiz1      PackFTWiz1     PackSKWiz1     PackEQPsion1   0          1
+134        Wilder                             5633    5634          10        CHA         75     0        ****      ****      0           PackSPWiz1      PackFTWiz1     PackSKWiz1     PackEQPsion1   0          1

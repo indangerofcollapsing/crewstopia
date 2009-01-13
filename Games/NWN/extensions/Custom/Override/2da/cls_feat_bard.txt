@@ -1,0 +1,2 @@
+Bards get Rogue weapon proficiency instead of Simple
+11  WeapProfRogue                                    50        3    1              0      

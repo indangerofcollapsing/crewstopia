@@ -1,0 +1,12 @@
+* Added Practiced Shifter
+141 FEAT_PRACTISED_SHIFTER                    4514      0    -1             0
+
+* Racial Shifter available as Chosen Feat
+142 FEAT_SHIFTER_SHIFTING                     4566      0    -1             0
+
+* Unarmed Melee Feats (@CHECK do they work better than Creature Feats?)
+143 WeapFocUnArm                              100       0    -1             0
+144 ImpCritUnArm                              62        0    -1             0
+145 FEAT_EPIC_WEAPON_FOCUS_UNARMED            630       0    -1             0
+146 FEAT_EPIC_OVERWHELMING_CRITICAL_UNARMED   720       0    -1             0
+147 FEAT_EPIC_DEVASTATING_CRITICAL_UNARMED    506       0    -1             0
