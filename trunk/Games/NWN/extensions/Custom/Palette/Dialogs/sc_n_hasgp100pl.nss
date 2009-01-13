@@ -1,0 +1,9 @@
+// Does PC NOT have at least 100 gp per level?
+int StartingConditional()
+{
+   object oPC = GetPCSpeaker();
+   int nLevel = GetLevelByPosition(1, oPC) + GetLevelByPosition(2, oPC) +
+      GetLevelByPosition(3, oPC);
+   int nGold = GetGold(oPC);
+   return (nGold < (nLevel * 100));
+}
