@@ -1,0 +1,20 @@
+# Title for the HIF.
+Title : CEP 2.0 - standard
+
+# Add the PrC pack version and specify at minimum NWN version to install.
+Version : CEP 2.0
+MinNWNVersion: 1.67, XP1, XP2
+
+# CEP Customizations and Overrides
+#module.Hak : cep_custom.hak
+
+# CEP 2.0 Core, Scripts, Placeables, Critters, Items
+module.Hak : cep2_top_v1.hak
+module.Hak : cep2_add_sb_v1.hak
+module.Hak : cep2_core5.hak
+module.Hak : cep2_core4.hak
+module.Hak : cep2_core3.hak
+module.Hak : cep2_core2.hak
+module.Hak : cep2_core1.hak
+
+module.CustomTlk : cep2.tlk

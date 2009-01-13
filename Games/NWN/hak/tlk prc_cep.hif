@@ -1,0 +1,7 @@
+Title: TLK Merge PrC+CEP21
+
+Version: CEP 2.1
+MinNWNVersion: 1.69
+
+module.CustomTlk: prc_consortium.tlk
+module.CustomTlk: cep21_v1.tlk

@@ -1,0 +1,94 @@
+# Title for the HIF.
+Title : PRC Pack + dac_prc
+
+# Add the PRC pack version and specify at least 1.69 to install.
+Version : 3.2
+MinNWNVersion: 1.69, XP1, XP2
+
+# ERF with the required areas.
+erf : prc_consortium.erf
+erf : dac_mod_events.erf
+
+# Haks used by the prc pack.
+module.Hak : _debug.hak
+module.Hak : dac_prc.hak
+module.Hak : prc_2das.hak
+module.Hak : prc_scripts.hak
+module.Hak : prc_newspellbook.hak
+module.Hak : prc_spells.hak
+module.Hak : prc_epicspells.hak
+module.Hak : prc_psionics.hak
+module.Hak : prc_race.hak
+module.Hak : prc_textures.hak
+module.Hak : prc_misc.hak
+module.Hak : prc_craft2das.hak
+
+# Custom tlk used by the prc pack.
+module.CustomTlk : prc_dug.tlk
+
+# Events that need to be wired up.
+module.OnAcquireItem       : mod_onaquire
+module.OnActivateItem      : mod_onactivate
+module.OnClientEnter       : mod_onenter
+module.OnClientLeave       : mod_onexit
+module.OnCutsceneAbort     : mod_oncutabort
+module.OnHeartbeat         : mod_onheartbeat
+module.OnModuleLoad        : mod_onmodload
+module.OnPlayerDeath       : mod_ondeath
+module.OnPlayerDying       : mod_ondying
+module.OnPlayerEquipItem   : mod_onequip
+module.OnPlayerLevelUp     : mod_onlevelup
+module.OnPlayerRest        : mod_onrest
+module.OnPlayerRespawn     : mod_onrespawn
+module.OnUnaquireItem      : mod_onunaquire
+module.OnPlayerUnequipItem : mod_onunequip
+module.OnUserDefined       : mod_onuserdef
+
+# Cache PRC scripts for better performance.
+module.Cache : prc_onaquire
+module.Cache : prc_onactivate
+module.Cache : prc_onenter
+module.Cache : prc_onleave
+module.Cache : prc_oncutabort
+module.Cache : prc_onheartbeat
+module.Cache : prc_onmodload
+module.Cache : prc_ondeath
+module.Cache : prc_ondying
+module.Cache : prc_equip
+module.Cache : prc_levelup
+module.Cache : prc_rest
+module.Cache : prc_onrespawn
+module.Cache : prc_onunaquire
+module.Cache : prc_unequip
+module.Cache : prc_onuserdef
+module.Cache : prc_hitcast
+module.Cache : mod_onaquire
+module.Cache : mod_onactivate
+module.Cache : mod_onheartbeat
+module.Cache : mod_onequip
+module.Cache : mod_onunaquire
+module.Cache : mod_onunequip
+module.Cache : mod_onuserdef
+
+# Cache bioware summon AI scripts
+module.Cache : nw_ch_ac5
+module.Cache : nw_ch_ace
+module.Cache : nw_ch_ac3
+module.Cache : nw_ch_ac4
+module.Cache : nw_ch_ac6
+module.Cache : nw_ch_ac7
+module.Cache : nw_ch_ac8
+module.Cache : nw_ch_ac1
+module.Cache : nw_ch_ac2
+module.Cache : nw_ch_aca
+module.Cache : nw_ch_summon_9
+module.Cache : nw_ch_acb
+module.Cache : nw_ch_acd
+
+# Cache Bioware event scripts
+module.Cache : nw_c2_default2
+module.Cache : nw_c2_default4
+module.Cache : nw_c2_default6
+module.Cache : nw_c2_default7
+module.Cache : nw_c2_default9
+module.Cache : nw_c2_defaultd

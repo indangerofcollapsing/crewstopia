@@ -1,0 +1,6 @@
+Title : _debug
+
+Version : 1.0
+MinNWNVersion: 1.69
+
+module.Hak : _debug.hak
