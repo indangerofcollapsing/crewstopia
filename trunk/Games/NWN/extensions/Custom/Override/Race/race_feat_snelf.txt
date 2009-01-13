@@ -1,0 +1,6 @@
+Cold Resist 5/-
+9 ResistEnergyCold     427
+
+10 WP_Elven_Lightblade 7935
+11 WP_Elven_Thinblade  7936
+12 WP_Elven_Courtblade 7937

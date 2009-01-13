@@ -1,0 +1,8 @@
+Merged Bioware 1.69, CEP, and ACP phenotypes.
+
+Lost the following Bioware phenos:
+5   Large_M     111016      2
+6   N_Joust_M   111017      0
+7   ****        ****        0
+8   L_Joust_M   111018      2
+

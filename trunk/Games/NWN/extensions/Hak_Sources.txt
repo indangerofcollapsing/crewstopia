@@ -1,0 +1,217 @@
+Compilation of:
+aurora_tdt.hak - Sea Caves tileset data from Pirates of the Sword Coast for NWN 1.67
+aurora_tdtinfo.hak - Sea Caves tileset control files from Pirates of the Sword Coast for NWN 1.67
+aurora_ttz.hak - Tropical tileset data from Pirates of the Sword Coast for NWN 1.67
+aurora_ttz.hak - Tropical tileset control files from Pirates of the Sword Coast for NWN 1.67
+Aztec Exterior Redux 1.2 by Chandigar - http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=6048
+Rocky Mountains Final v1.02 by Bloodmonkey - http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=3936
+CODI Sigil Tilesets by City of Doors Initiative - http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=6222
+DLA Canopied Forest by DLA Team - http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=3992
+DLA Sewer Tileset by DLA Team - http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=3993
+Heed's Dungeon Tileset by Heed - http://nwvault.ign.com/View.php?view=hakpaks.Detail&id=6776
+Desert City by Pasilli - http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=3895
+Desert City Add-on 1 by Pasilli & Kert - http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=3897
+Rocky Mountains Final v1.02 - http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=3936
+Ships Ahoy! & Above! by Valya Val'istar - http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=4617
+DLA Canopied Forest - http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=3992
+DLA Sewer Tileset by DLA Team - http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=3993
+
+
+***
+
+Improved NoCobble CRF based on DOA
+NoCobbleCRFv1.40.rar
+http://nwvault.ign.com/View.php?view=hakpaks.Detail&id=5077
+
+Heed's Armour Designer by Heed
+Heed_Armour_Designer_v1_12.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=23764&id=6705
+
+Heed's Ship Decks by Heed
+Heed_Ship_v1_0.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=23764&id=1381
+
+Revised Vrock (Wings/Weapons)
+RVrock.rar
+http://nwvault.ign.com/View.php?view=hakpaks.Detail&id=6772
+
+Heed's Dungeon Tileset by Heed
+Heed_Dungeon_SA_v1_1.rar
+http://nwvault.ign.com/View.php?view=hakpaks.Detail&id=6776
+
+CODI Content Package
+codi_content1b.zip
+http://nwvault.ign.com/View.php?view=hakpaks.Detail&id=6800
+
+Desert City by Pasilli
+Pasilli1086817090381PasDesCity1a.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=3895
+
+Desert City Add-on 1 by Pasilli & Kert
+PasilliKert1084056809893PasDesertAd1a.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=3897
+
+Rocky Mountains Final v1.02
+BMMountainsv102.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=3936
+
+Ships Ahoy! & Above! by Valya Val'istar
+Valya_Valistar1100109053484ShipsAhoyAbove.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=4617
+
+DLA Canopied Forest
+dlacanopyforest103.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=3992
+
+DLA Sewer Tileset by DLA Team
+DLASewerv12.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=3993
+
+Dynamic Illithid V0.9
+Monferrat1109653078610MonDynIllithid02.zip
+illhed2a.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=5288
+
+Undersea Tile-Creatures V1.1a
+Undersea_Hak._Fish_Sharks_Turtles_Leviathan.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=5991
+
+Turtle Pack by Hydromancerx
+turtle.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=4931
+
+Shark Pack by Hydromancerx
+shark.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=4932
+
+Lobster and Crab Pack by Hydromancerx
+crablobster.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=3941
+
+Leviathan by Hydromancerx
+Hydromancerx1113439605754levathan.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=5627
+
+Frog Pack by Hydromancerx
+frog2.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=3734
+
+Croc Pack by Hydromancerx
+croc4.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=4188
+
+Mermaids_Js_V1.1 by Ceoltoiri_Js
+CeoltoiriJs1076485249243mermaids.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=1913
+
+Songbird Pack by Hydromancerx
+songbird2.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=2785
+
+Sea Bird Pack by Hydromancerx
+seabirds2.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=3714
+
+Rodent Pack by Hydromancerx
+Hydromancerx1077935667880rodent.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=2495
+
+Monkey Pack by Hydromancerx
+Hydromancerx1098929021957monkey.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=4523
+
+Lizard Pack by Hydromancerx
+lizard.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=4930
+
+Fowl Pack by Hydromancerx
+fowl3.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=1188
+
+Ceratops Pack by Hydromancerx
+Hydromancerx1076547600780ceratops.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=5019
+
+Aarakocra by Hydromancerx
+Hydromancerx_Mythical1104903740170aarakocra.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=4964
+
+Elephant, Rhino, Hippo Pack by Hydromancerx
+elephant.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=1013
+
+Fishy Pack
+fishy.zip
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=11158&id=4927
+
+Aztec Exterior Redux 1.2 by Chandigar
+aztec_exterior_redux_1_2.zip
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=6048
+
+CODI Sigil Tilesets by City of Doors Initiative
+codi_sigil_tiles_v2_0.zip
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=6222
+
+Threat of Dreams Carriage v1.0 by   GhostFactory
+GhostFactory1099019113437ToD_Carriage.zip
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=13457&id=4532
+
+Elven City Tileset by LittleBaron & PogoMudder
+ElvenCityV1.26.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=4852
+
+Elven City Expansion by Little Baron
+ElvenExpansion1.1.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=3846
+
+Elven City Interiors by Pasilli
+PasElfCitInt1c.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=4379
+
+Pasilli's Doors by Pasilli
+Pasilli1109262161980PasDoors1a.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=5250
+
+Rocky Mountains by Pasilli
+TPRS1Rocky_Mountain_SoU_1.0.exe
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=2493
+
+Lost Valley by Pasilli
+Pasilli1077481789533PasLValley1a.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=1794
+
+Full Forest Hak (with Hills) Updated by Kert_Wettian
+FullForestRurav101.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=4517
+
+Core Tileset and Doors for CEP v2.0
+SPFORCEPv2.zip
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=4384
+
+[rtc] v1.14
+rtc.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=5762
+
+Overhead Placeable Water (now includes double-sided water)
+Jackal_GB_ovrheadplcwatrV2.zip
+http://nwvault.ign.com/View.php?view=hakpaks.Detail&id=6849
+
+Customize Character Override Hak
+[MK Craft Dialog ]CC391402.zip
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=6445
+
+Goblins Override
+Goblins_Override.rar
+http://nwvault.ign.com/View.php?view=Creatures.Detail&id=601
+
+Undead Redux
+skeletons_redux_25.7z, undead_redux_vampire_v1b.7z, undead_redux_lich_v1.7z, undead_redux_gore.7z
+http://nwvault.ign.com/View.php?view=Creatures.Detail&id=598
+
+Updated Werewolf Model
+Worm_WWolfv2_override.zip
+http://nwvault.ign.com/View.php?view=Models.Detail&id=330/
+
+WoRms (8) New Tilesets
+wrm_undersea.rar, wrm_ScorchE.rar
+http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=6631/

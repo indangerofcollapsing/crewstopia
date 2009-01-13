@@ -1,0 +1,1044 @@
+#MAXMODEL ASCII
+# model: stone_door_61
+filedependancy stone_door_61.max
+newmodel stone_door_61
+setsupermodel stone_door_61 NULL
+classification door
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom stone_door_61
+node dummy stone_door_61
+  parent NULL
+  #part-number 0
+endnode
+node dummy TIN01_B13_05
+  parent stone_door_61
+  #part-number 1
+  position 0 0 0
+  orientation 0 0 0 0
+endnode
+node trimesh Box07
+  parent TIN01_B13_05
+  #part-number 2
+  ambient 0.992156982 0.992156982 0.992156982
+  diffuse 0.992156982 0.992156982 0.992156982
+  specular 0.0496077985 0.0496077985 0.0496077985
+  shininess 26
+  bitmap stone_tex_57
+  verts 8
+    -1 -0.100000001 0
+    -1 0.100000001 0
+    1 0.100000001 0
+    1 -0.100000001 0
+    -1 -0.100000001 2.99000001
+    1 -0.100000001 2.99000001
+    1 0.100000001 2.99000001
+    -1 0.100000001 2.99000001
+  tverts 14
+    0.000499517017 0.000499606016 0
+    0.000499517017 0.000499606016 0
+    0.494269997 0.000499486981 0
+    0.494269997 0.000499486981 0
+    0.000499785005 0.825587988 0
+    0.49427101 0.825586975 0
+    0.49427101 0.869066 0
+    0.000499785005 0.869066 0
+    0.442957997 0.000499486981 0
+    0.49427101 0.873897016 0
+    0.442957997 0.873897016 0
+    0.0478647985 0.000499606016 0
+    0.0478651002 0.873897016 0
+    0.000499785005 0.873897016 0
+  faces 12
+    0 1 2 1 0 1 2 2
+    2 3 0 1 2 3 0 2
+    4 5 6 1 4 5 6 1
+    6 7 4 1 6 7 4 1
+    0 3 5 2 0 2 6 5
+    5 4 0 2 6 7 0 5
+    3 2 6 4 8 2 9 4
+    6 5 3 4 9 10 8 4
+    2 1 7 2 2 0 7 6
+    7 6 2 2 7 6 2 6
+    1 0 4 4 0 11 12 3
+    4 7 1 4 12 13 0 3
+  position 0 0 -.4
+  orientation 0 0 0 0
+endnode
+node trimesh sam
+  parent stone_door_61
+  #part-number 7
+  ambient 0.200000003 0.200000003 0.200000003
+  diffuse 0.800000012 0.800000012 0.800000012
+  specular 0 0 0
+  shininess 1
+  shadow 0
+  transparencyhint 1
+  bitmap NULL
+  verts 8
+    -0.00317644002 -0.00622909982 -1.83104999e-006
+    -0.00317644002 -2.00623012 -1.83104999e-006
+    -0.00317644002 -2.00623012 2.97000003
+    -0.00317644002 -0.00622909982 2.97000003
+    0.0340012982 -2.00623012 -1.83104999e-006
+    0.0340012982 -0.00622909982 -1.83104999e-006
+    0.0340012982 -2.00623012 2.97000003
+    0.0340012982 -0.00622909982 2.97000003
+  tverts 4
+    0.000499517017 0.000499666028 0
+    0.494269997 0.000499546994 0
+    0.49427101 0.876312017 0
+    0.000499814982 0.876312017 0
+  faces 4
+    0 1 2 1 0 1 2 18
+    2 3 0 1 2 3 0 18
+    4 5 6 1 1 0 2 18
+    7 6 5 1 3 2 0 18
+  position 0 0 0
+  orientation 0 0 0 0
+  alpha 0
+  scale 1
+  setfillumcolor 0.0705882013 0 1
+endnode
+node trimesh Mesh03
+  parent stone_door_61
+  #part-number 8
+  ambient 0.100000001 0.100000001 0.100000001
+  diffuse 0.101961002 0.101961002 0.101961002
+  specular 0.00509804022 0.00509804022 0.00509804022
+  shininess 26
+  bitmap DR_TRANS
+  verts 6
+    -1.13 0.143852994 -4.52991003e-007
+    -1.13 1.62412005e-006 -4.99432986e-007
+    1.13 0.143852994 -5.2223902e-007
+    1.13 1.67760004e-006 -5.30534976e-007
+    -1.13 -0.143852994 -4.69582005e-007
+    1.13 -0.143852994 -5.38830022e-007
+  tverts 6
+    0.662847996 0.173833996 0
+    0.67898798 0.173833996 0
+    0.662847996 0.507668018 0
+    0.67898798 0.507668018 0
+    0.663451016 0.173833996 0
+    0.663451016 0.507668018 0
+  faces 4
+    0 1 2 1 0 1 2 1
+    3 2 1 1 3 2 1 1
+    1 4 3 1 1 4 3 1
+    5 3 4 1 5 3 4 1
+  position 0 0 0.0189417005
+  orientation 0 0 0 0
+endnode
+node emitter fire!11
+  parent stone_door_61
+  #part-number 8
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  splat 0
+  inherit_part 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 1
+  blastRadius 0.200000003
+  blastLength 1
+  position -0.00162841997 0.0249237008 0.92890501
+  orientation 0 0 0 0
+  colorStart 0.474510014 0.439215988 0.36470601
+  colorEnd 0.819607973 0.79607898 0.709803998
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 4
+  sizeEnd 1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 24
+  birthrate 10
+  lifeExp 2.5
+  mass 0.0900000036
+  spread 2.96706009
+  particleRot 0.5
+  velocity 2
+  randvel 0.5
+  fps 10
+  xsize 100
+  ysize 99
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node dummy stone_door_61head
+  parent stone_door_61
+  #part-number 9
+  position 0 0 2.50063992
+  orientation 0 0 0 0
+endnode
+node dummy stone_door_61hhit
+  parent stone_door_61
+  #part-number 10
+  position 0 0 2.17507005
+  orientation 0 0 0 0
+endnode
+node dummy stone_door_61impc
+  parent stone_door_61
+  #part-number 11
+  position 0 0 1.63647997
+  orientation 0 0 0 0
+endnode
+node dummy stone_door_61grnd
+  parent stone_door_61
+  #part-number 12
+  position 0 0 0
+  orientation 0 0 0 0
+endnode
+endmodelgeom stone_door_61
+
+#MAXANIM ASCII
+newanim opening1 stone_door_61
+  length 1
+  transtime 0.25
+  animroot stone_door_61
+node dummy stone_door_61
+  parent NULL
+  #part-number 0
+endnode
+node dummy TIN01_B13_05
+  parent stone_door_61
+  #part-number 1
+  positionkey 3
+    0 0 0 0.426714003
+    0.0333333015 0 0 0.426714003
+    1 0 0 -3.88644004
+  orientationkey 3
+    0 0 0 0 0
+    0.0333333015 0 0 0 0
+    0.233333007 0 0 0 0
+endnode
+node dummy stone_door_61_DWK
+  parent stone_door_61
+  #part-number -1
+endnode
+node dummy 03_DWK_dp_open2_01
+  parent stone_door_61_DWK
+  #part-number 8
+endnode
+node dummy 03_DWK_dp_closed_02
+  parent stone_door_61_DWK
+  #part-number 9
+endnode
+node dummy 03_DWK_dp_closed_01
+  parent stone_door_61_DWK
+  #part-number 10
+endnode
+node dummy 03_DWK_dp_open1_01
+  parent stone_door_61_DWK
+  #part-number 11
+endnode
+node dummy 03_DWK_wg_closed
+  parent stone_door_61_DWK
+  #part-number 12
+endnode
+node dummy 03_DWK_wg_open1
+  parent stone_door_61_DWK
+  #part-number 13
+endnode
+node trimesh sam
+  parent stone_door_61
+  #part-number 7
+  ambient 0.200000003 0.200000003 0.200000003
+  diffuse 0.800000012 0.800000012 0.800000012
+  specular 0 0 0
+  shininess 1
+  alphakey 2
+    0 0
+    1 0
+endnode
+node dummy Mesh03
+  parent stone_door_61
+  #part-number 8
+endnode
+node emitter fire!11
+  parent stone_door_61
+  #part-number 9
+endnode
+node dummy stone_door_61grnd
+  parent stone_door_61
+  #part-number 10
+endnode
+node dummy stone_door_61impc
+  parent stone_door_61
+  #part-number 11
+endnode
+node dummy stone_door_61hhit
+  parent stone_door_61
+  #part-number 12
+endnode
+node dummy stone_door_61head
+  parent stone_door_61
+  #part-number 13
+endnode
+doneanim opening1 stone_door_61
+
+#MAXANIM ASCII
+newanim closing1 stone_door_61
+  length 1
+  transtime 0.25
+  animroot stone_door_61
+node dummy stone_door_61
+  parent NULL
+  #part-number 0
+endnode
+node dummy TIN01_B13_05
+  parent stone_door_61
+  #part-number 1
+  positionkey 3
+    0 0 0 -3.88644004
+    0.0333333015 0 0 -3.88644004
+    1 0 0 0.426714003
+endnode
+node dummy stone_door_61_DWK
+  parent stone_door_61
+  #part-number -1
+endnode
+node dummy 03_DWK_dp_open2_01
+  parent stone_door_61_DWK
+  #part-number 8
+endnode
+node dummy 03_DWK_dp_closed_02
+  parent stone_door_61_DWK
+  #part-number 9
+endnode
+node dummy 03_DWK_dp_closed_01
+  parent stone_door_61_DWK
+  #part-number 10
+endnode
+node dummy 03_DWK_dp_open1_01
+  parent stone_door_61_DWK
+  #part-number 11
+endnode
+node dummy 03_DWK_wg_closed
+  parent stone_door_61_DWK
+  #part-number 12
+endnode
+node dummy 03_DWK_wg_open1
+  parent stone_door_61_DWK
+  #part-number 13
+endnode
+node trimesh sam
+  parent stone_door_61
+  #part-number 7
+  ambient 0.200000003 0.200000003 0.200000003
+  diffuse 0.800000012 0.800000012 0.800000012
+  specular 0 0 0
+  shininess 1
+  alphakey 3
+    0 0
+    0.0333333015 0
+    1 0
+endnode
+node dummy Mesh03
+  parent stone_door_61
+  #part-number 8
+endnode
+node emitter fire!11
+  parent stone_door_61
+  #part-number 9
+endnode
+node dummy stone_door_61grnd
+  parent stone_door_61
+  #part-number 10
+endnode
+node dummy stone_door_61impc
+  parent stone_door_61
+  #part-number 11
+endnode
+node dummy stone_door_61hhit
+  parent stone_door_61
+  #part-number 12
+endnode
+node dummy stone_door_61head
+  parent stone_door_61
+  #part-number 13
+endnode
+doneanim closing1 stone_door_61
+
+#MAXANIM ASCII
+newanim opening2 stone_door_61
+  length 1
+  transtime 0.25
+  animroot stone_door_61
+node dummy stone_door_61
+  parent NULL
+  #part-number 0
+endnode
+node dummy TIN01_B13_05
+  parent stone_door_61
+  #part-number 1
+  positionkey 3
+    0 0 0 0.426714003
+    0.0333333015 0 0 0.426714003
+    1 0 0 -3.88644004
+  orientationkey 3
+    0 0 0 0 0
+    0.0333333015 0 0 0 0
+    0.233333007 0 0 0 0
+endnode
+node dummy stone_door_61_DWK
+  parent stone_door_61
+  #part-number -1
+endnode
+node dummy 03_DWK_dp_open2_01
+  parent stone_door_61_DWK
+  #part-number 8
+endnode
+node dummy 03_DWK_dp_closed_02
+  parent stone_door_61_DWK
+  #part-number 9
+endnode
+node dummy 03_DWK_dp_closed_01
+  parent stone_door_61_DWK
+  #part-number 10
+endnode
+node dummy 03_DWK_dp_open1_01
+  parent stone_door_61_DWK
+  #part-number 11
+endnode
+node dummy 03_DWK_wg_closed
+  parent stone_door_61_DWK
+  #part-number 12
+endnode
+node dummy 03_DWK_wg_open1
+  parent stone_door_61_DWK
+  #part-number 13
+endnode
+node trimesh sam
+  parent stone_door_61
+  #part-number 7
+  ambient 0.200000003 0.200000003 0.200000003
+  diffuse 0.800000012 0.800000012 0.800000012
+  specular 0 0 0
+  shininess 1
+  alphakey 2
+    0 0
+    1 0
+endnode
+node dummy Mesh03
+  parent stone_door_61
+  #part-number 8
+endnode
+node emitter fire!11
+  parent stone_door_61
+  #part-number 9
+endnode
+node dummy stone_door_61grnd
+  parent stone_door_61
+  #part-number 10
+endnode
+node dummy stone_door_61impc
+  parent stone_door_61
+  #part-number 11
+endnode
+node dummy stone_door_61hhit
+  parent stone_door_61
+  #part-number 12
+endnode
+node dummy stone_door_61head
+  parent stone_door_61
+  #part-number 13
+endnode
+doneanim opening2 stone_door_61
+
+#MAXANIM ASCII
+newanim closing2 stone_door_61
+  length 1
+  transtime 0.25
+  animroot stone_door_61
+node dummy stone_door_61
+  parent NULL
+  #part-number 0
+endnode
+node dummy TIN01_B13_05
+  parent stone_door_61
+  #part-number 1
+  positionkey 3
+    0 0 0 -3.88644004
+    0.0333333015 0 0 -3.88644004
+    1 0 0 0.426714003
+endnode
+node dummy stone_door_61_DWK
+  parent stone_door_61
+  #part-number -1
+endnode
+node dummy 03_DWK_dp_open2_01
+  parent stone_door_61_DWK
+  #part-number 8
+endnode
+node dummy 03_DWK_dp_closed_02
+  parent stone_door_61_DWK
+  #part-number 9
+endnode
+node dummy 03_DWK_dp_closed_01
+  parent stone_door_61_DWK
+  #part-number 10
+endnode
+node dummy 03_DWK_dp_open1_01
+  parent stone_door_61_DWK
+  #part-number 11
+endnode
+node dummy 03_DWK_wg_closed
+  parent stone_door_61_DWK
+  #part-number 12
+endnode
+node dummy 03_DWK_wg_open1
+  parent stone_door_61_DWK
+  #part-number 13
+endnode
+node trimesh sam
+  parent stone_door_61
+  #part-number 7
+  ambient 0.200000003 0.200000003 0.200000003
+  diffuse 0.800000012 0.800000012 0.800000012
+  specular 0 0 0
+  shininess 1
+  alphakey 3
+    0 0
+    0.0333333015 0
+    1 0
+endnode
+node dummy Mesh03
+  parent stone_door_61
+  #part-number 8
+endnode
+node emitter fire!11
+  parent stone_door_61
+  #part-number 9
+endnode
+node dummy stone_door_61grnd
+  parent stone_door_61
+  #part-number 10
+endnode
+node dummy stone_door_61impc
+  parent stone_door_61
+  #part-number 11
+endnode
+node dummy stone_door_61hhit
+  parent stone_door_61
+  #part-number 12
+endnode
+node dummy stone_door_61head
+  parent stone_door_61
+  #part-number 13
+endnode
+doneanim closing2 stone_door_61
+
+#MAXANIM ASCII
+newanim closed stone_door_61
+  length 0.0333333015
+  transtime 0.25
+  animroot stone_door_61
+node dummy stone_door_61
+  parent NULL
+  #part-number 0
+endnode
+node dummy TIN01_B13_05
+  parent stone_door_61
+  #part-number 1
+  positionkey 2
+    0 0 0 0.426714003
+    0.0333333015 0 0 0.426714003
+  orientationkey 2
+    0 0 0 0 0
+    0.0333333015 0 0 0 0
+endnode
+node dummy stone_door_61_DWK
+  parent stone_door_61
+  #part-number -1
+endnode
+node dummy 03_DWK_dp_open2_01
+  parent stone_door_61_DWK
+  #part-number 8
+endnode
+node dummy 03_DWK_dp_closed_02
+  parent stone_door_61_DWK
+  #part-number 9
+endnode
+node dummy 03_DWK_dp_closed_01
+  parent stone_door_61_DWK
+  #part-number 10
+endnode
+node dummy 03_DWK_dp_open1_01
+  parent stone_door_61_DWK
+  #part-number 11
+endnode
+node dummy 03_DWK_wg_closed
+  parent stone_door_61_DWK
+  #part-number 12
+endnode
+node dummy 03_DWK_wg_open1
+  parent stone_door_61_DWK
+  #part-number 13
+endnode
+node trimesh sam
+  parent stone_door_61
+  #part-number 7
+  ambient 0.200000003 0.200000003 0.200000003
+  diffuse 0.800000012 0.800000012 0.800000012
+  specular 0 0 0
+  shininess 1
+  alpha 0
+endnode
+node dummy Mesh03
+  parent stone_door_61
+  #part-number 8
+endnode
+node emitter fire!11
+  parent stone_door_61
+  #part-number 9
+endnode
+node dummy stone_door_61grnd
+  parent stone_door_61
+  #part-number 10
+endnode
+node dummy stone_door_61impc
+  parent stone_door_61
+  #part-number 11
+endnode
+node dummy stone_door_61hhit
+  parent stone_door_61
+  #part-number 12
+endnode
+node dummy stone_door_61head
+  parent stone_door_61
+  #part-number 13
+endnode
+doneanim closed stone_door_61
+
+#MAXANIM ASCII
+newanim opened2 stone_door_61
+  length 0.0333333015
+  transtime 0.25
+  animroot stone_door_61
+node dummy stone_door_61
+  parent NULL
+  #part-number 0
+endnode
+node dummy TIN01_B13_05
+  parent stone_door_61
+  #part-number 1
+  positionkey 2
+    0 0 0 -3.88644004
+    0.0333333015 0 0 -3.88644004
+endnode
+node dummy stone_door_61_DWK
+  parent stone_door_61
+  #part-number -1
+endnode
+node dummy 03_DWK_dp_open2_01
+  parent stone_door_61_DWK
+  #part-number 8
+endnode
+node dummy 03_DWK_dp_closed_02
+  parent stone_door_61_DWK
+  #part-number 9
+endnode
+node dummy 03_DWK_dp_closed_01
+  parent stone_door_61_DWK
+  #part-number 10
+endnode
+node dummy 03_DWK_dp_open1_01
+  parent stone_door_61_DWK
+  #part-number 11
+endnode
+node dummy 03_DWK_wg_closed
+  parent stone_door_61_DWK
+  #part-number 12
+endnode
+node dummy 03_DWK_wg_open1
+  parent stone_door_61_DWK
+  #part-number 13
+endnode
+node trimesh sam
+  parent stone_door_61
+  #part-number 7
+  ambient 0.200000003 0.200000003 0.200000003
+  diffuse 0.800000012 0.800000012 0.800000012
+  specular 0 0 0
+  shininess 1
+  alphakey 2
+    0 0
+    0.0333333015 0
+endnode
+node dummy Mesh03
+  parent stone_door_61
+  #part-number 8
+endnode
+node emitter fire!11
+  parent stone_door_61
+  #part-number 9
+endnode
+node dummy stone_door_61grnd
+  parent stone_door_61
+  #part-number 10
+endnode
+node dummy stone_door_61impc
+  parent stone_door_61
+  #part-number 11
+endnode
+node dummy stone_door_61hhit
+  parent stone_door_61
+  #part-number 12
+endnode
+node dummy stone_door_61head
+  parent stone_door_61
+  #part-number 13
+endnode
+doneanim opened2 stone_door_61
+
+#MAXANIM ASCII
+newanim opened1 stone_door_61
+  length 0.0333333015
+  transtime 0.25
+  animroot stone_door_61
+node dummy stone_door_61
+  parent NULL
+  #part-number 0
+endnode
+node dummy TIN01_B13_05
+  parent stone_door_61
+  #part-number 1
+  positionkey 2
+    0 0 0 -3.88644004
+    0.0333333015 0 0 -3.88644004
+endnode
+node dummy stone_door_61_DWK
+  parent stone_door_61
+  #part-number -1
+endnode
+node dummy 03_DWK_dp_open2_01
+  parent stone_door_61_DWK
+  #part-number 8
+endnode
+node dummy 03_DWK_dp_closed_02
+  parent stone_door_61_DWK
+  #part-number 9
+endnode
+node dummy 03_DWK_dp_closed_01
+  parent stone_door_61_DWK
+  #part-number 10
+endnode
+node dummy 03_DWK_dp_open1_01
+  parent stone_door_61_DWK
+  #part-number 11
+endnode
+node dummy 03_DWK_wg_closed
+  parent stone_door_61_DWK
+  #part-number 12
+endnode
+node dummy 03_DWK_wg_open1
+  parent stone_door_61_DWK
+  #part-number 13
+endnode
+node trimesh sam
+  parent stone_door_61
+  #part-number 7
+  ambient 0.200000003 0.200000003 0.200000003
+  diffuse 0.800000012 0.800000012 0.800000012
+  specular 0 0 0
+  shininess 1
+  alphakey 2
+    0 0
+    0.0333333015 0
+endnode
+node dummy Mesh03
+  parent stone_door_61
+  #part-number 8
+endnode
+node emitter fire!11
+  parent stone_door_61
+  #part-number 9
+endnode
+node dummy stone_door_61grnd
+  parent stone_door_61
+  #part-number 10
+endnode
+node dummy stone_door_61impc
+  parent stone_door_61
+  #part-number 11
+endnode
+node dummy stone_door_61hhit
+  parent stone_door_61
+  #part-number 12
+endnode
+node dummy stone_door_61head
+  parent stone_door_61
+  #part-number 13
+endnode
+doneanim opened1 stone_door_61
+
+#MAXANIM ASCII
+newanim trans stone_door_61
+  length 0.0333333015
+  transtime 0.25
+  animroot stone_door_61
+node dummy stone_door_61
+  parent NULL
+  #part-number 0
+endnode
+node dummy TIN01_B13_05
+  parent stone_door_61
+  #part-number 1
+endnode
+node dummy stone_door_61_DWK
+  parent stone_door_61
+  #part-number -1
+endnode
+node dummy 03_DWK_dp_open2_01
+  parent stone_door_61_DWK
+  #part-number 8
+endnode
+node dummy 03_DWK_dp_closed_02
+  parent stone_door_61_DWK
+  #part-number 9
+endnode
+node dummy 03_DWK_dp_closed_01
+  parent stone_door_61_DWK
+  #part-number 10
+endnode
+node dummy 03_DWK_dp_open1_01
+  parent stone_door_61_DWK
+  #part-number 11
+endnode
+node dummy 03_DWK_wg_closed
+  parent stone_door_61_DWK
+  #part-number 12
+endnode
+node dummy 03_DWK_wg_open1
+  parent stone_door_61_DWK
+  #part-number 13
+endnode
+node trimesh sam
+  parent stone_door_61
+  #part-number 7
+  ambient 0.200000003 0.200000003 0.200000003
+  diffuse 0.800000012 0.800000012 0.800000012
+  specular 0 0 0
+  shininess 1
+  alphakey 2
+    0 0.25
+    0.0333333015 0.25
+endnode
+node dummy Mesh03
+  parent stone_door_61
+  #part-number 8
+endnode
+node emitter fire!11
+  parent stone_door_61
+  #part-number 9
+endnode
+node dummy stone_door_61grnd
+  parent stone_door_61
+  #part-number 10
+endnode
+node dummy stone_door_61impc
+  parent stone_door_61
+  #part-number 11
+endnode
+node dummy stone_door_61hhit
+  parent stone_door_61
+  #part-number 12
+endnode
+node dummy stone_door_61head
+  parent stone_door_61
+  #part-number 13
+endnode
+doneanim trans stone_door_61
+
+#MAXANIM ASCII
+newanim die stone_door_61
+  length 0.5
+  transtime 0.25
+  animroot stone_door_61
+  event 0.0333333015 detonate
+node dummy stone_door_61
+  parent NULL
+  #part-number 0
+endnode
+node dummy TIN01_B13_05
+  parent stone_door_61
+  #part-number 1
+  positionkey 2
+    0 0 0 0.426714003
+    0.5 -0.31546101 -0.454824001 -4.08107996
+  orientationkey 3
+    0 0 0 0 0
+    0.0666666999 0.485620946 -0.0829305947 -0.87022686 -0.423723996
+    0.5 0.513970137 -0.140912011 -0.846155167 -1.14873004
+endnode
+node dummy stone_door_61_DWK
+  parent stone_door_61
+  #part-number -1
+endnode
+node dummy 03_DWK_dp_open2_01
+  parent stone_door_61_DWK
+  #part-number 8
+endnode
+node dummy 03_DWK_dp_closed_02
+  parent stone_door_61_DWK
+  #part-number 9
+endnode
+node dummy 03_DWK_dp_closed_01
+  parent stone_door_61_DWK
+  #part-number 10
+endnode
+node dummy 03_DWK_dp_open1_01
+  parent stone_door_61_DWK
+  #part-number 11
+endnode
+node dummy 03_DWK_wg_closed
+  parent stone_door_61_DWK
+  #part-number 12
+endnode
+node dummy 03_DWK_wg_open1
+  parent stone_door_61_DWK
+  #part-number 13
+endnode
+node trimesh sam
+  parent stone_door_61
+  #part-number 7
+  ambient 0.200000003 0.200000003 0.200000003
+  diffuse 0.800000012 0.800000012 0.800000012
+  specular 0 0 0
+  shininess 1
+endnode
+node dummy Mesh03
+  parent stone_door_61
+  #part-number 8
+endnode
+node emitter fire!11
+  parent stone_door_61
+  #part-number 9
+endnode
+node dummy stone_door_61grnd
+  parent stone_door_61
+  #part-number 10
+endnode
+node dummy stone_door_61impc
+  parent stone_door_61
+  #part-number 11
+endnode
+node dummy stone_door_61hhit
+  parent stone_door_61
+  #part-number 12
+endnode
+node dummy stone_door_61head
+  parent stone_door_61
+  #part-number 13
+endnode
+doneanim die stone_door_61
+
+#MAXANIM ASCII
+newanim dead stone_door_61
+  length 0.0333333015
+  transtime 0.25
+  animroot stone_door_61
+node dummy stone_door_61
+  parent NULL
+  #part-number 0
+endnode
+node dummy TIN01_B13_05
+  parent stone_door_61
+  #part-number 1
+  positionkey 2
+    0 -0.31546101 -0.454824001 -4.08107996
+    0.0333333015 -0.31546101 -0.454824001 -4.08107996
+  orientationkey 2
+    0 0.513970137 -0.140912011 -0.846155167 -1.14873004
+    0.0333333015 0.513970137 -0.140912011 -0.846155167 -1.14873004
+endnode
+node dummy stone_door_61_DWK
+  parent stone_door_61
+  #part-number -1
+endnode
+node dummy 03_DWK_dp_open2_01
+  parent stone_door_61_DWK
+  #part-number 8
+endnode
+node dummy 03_DWK_dp_closed_02
+  parent stone_door_61_DWK
+  #part-number 9
+endnode
+node dummy 03_DWK_dp_closed_01
+  parent stone_door_61_DWK
+  #part-number 10
+endnode
+node dummy 03_DWK_dp_open1_01
+  parent stone_door_61_DWK
+  #part-number 11
+endnode
+node dummy 03_DWK_wg_closed
+  parent stone_door_61_DWK
+  #part-number 12
+endnode
+node dummy 03_DWK_wg_open1
+  parent stone_door_61_DWK
+  #part-number 13
+endnode
+node trimesh sam
+  parent stone_door_61
+  #part-number 7
+  ambient 0.200000003 0.200000003 0.200000003
+  diffuse 0.800000012 0.800000012 0.800000012
+  specular 0 0 0
+  shininess 1
+endnode
+node dummy Mesh03
+  parent stone_door_61
+  #part-number 8
+endnode
+node emitter fire!11
+  parent stone_door_61
+  #part-number 9
+endnode
+node dummy stone_door_61grnd
+  parent stone_door_61
+  #part-number 10
+endnode
+node dummy stone_door_61impc
+  parent stone_door_61
+  #part-number 11
+endnode
+node dummy stone_door_61hhit
+  parent stone_door_61
+  #part-number 12
+endnode
+node dummy stone_door_61head
+  parent stone_door_61
+  #part-number 13
+endnode
+doneanim dead stone_door_61
+
+donemodel stone_door_61

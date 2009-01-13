@@ -1,0 +1,3 @@
+9  WP_Elven_Lightblade 7935
+10 WP_Elven_Thinblade  7936
+11 WP_Elven_Courtblade 7937

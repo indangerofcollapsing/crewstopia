@@ -1,0 +1,2 @@
+// CEP Weapon Feats (ImpCrit/OverCrit/DevCrit/WeaponOfChoice/etc.)
+210 ONHIT_CEP_WEAPON_FEATS       83675    1492       0.5
