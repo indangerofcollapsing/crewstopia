@@ -1,0 +1,140 @@
+LOTR (lvl 20):
+* theoden.bic
+* sarumanthewhite.bic
+* samwisegamgee.bic
+* radagastthebrow.bic
+* pippintook.bic
+* merrybrandybuck.bic
+* legolas.bic
+* gollum.bic
+* gimli.bic
+* gandalf.bic
+* galadriel.bic
+* frodobaggins.bic
+* faramir.bic
+* eowyn.bic
+* eomer.bic
+* elrond.bic
+* boromir.bic
+* bilbobaggins.bic
+* beorn.bic
+* arwen.bic
+* aragorn.bic
+
+OOTS/TLG (lvl 10):
+* zz'dtri.bic
+* yokyok.bic
+* yikyik.bic
+* vaarsuvius.bic
+* thog.bic
+* sabine.bic
+* roygreenhilt.bic
+* pompey.bic
+* nale.bic
+* mikomiyazaki.bic
+* juliagreenhilt.bic
+* hilgyafirehelm.bic
+* haleystarshine.bic
+* elan.bic
+* durkonthundershi.bic
+* belkarbitterleaf.bic
+
+Wicked (lvl 5):
+* turtleheart.bic
+* nessarosethropp.bic
+* madamemorrible.bic
+* glindathegood.bic
+* frexsparthropp.bic
+* fiyero.bic
+* elphabathropp.bic
+* dewizzerdove-oz.bic
+* chistery.bic
+* cawwardleelyon.bic
+* boq.bic
+
+1/2 Orcs:
+* wizragdemibrede.bic
+* sorcraggademibre.bic
+* rograggademibred.bic
+* paladrogdemibred.bic
+* monkroggademibre.bic
+* fittrogdemibrede.bic
+* druirogdemibrede.bic
+* clerroggademibre.bic
+* barrdroggademibr.bic
+* barrbrogdemibred.bic
+
+Halflings:
+* wizzaunderhill.bic
+* sorsaunderhill.bic
+* roggaunderhill.bic
+* rangaunderhill.bic
+* pallaunderhill.bic
+* munkaunderhill.bic
+* fitaunderhill.bic
+* drudaunderhill.bic
+* cleraunderhill.bic
+* bardaunderhill.bic
+* barbaunderhill.bic
+
+Gnomes:
+* wiizagaardendwel.bic
+* soorkagaardendwe.bic
+* roggagaardendwel.bic
+* raangagaardendwe.bic
+* paaladagaardendw.bic
+* muunkagaardendwe.bic
+* fiitagaardendwel.bic
+* druiidagaardendw.bic
+* cleerikagaardend.bic
+* baardagaardendwe.bic
+* baarbagaardendwe.bic
+
+Elves:
+* wiza'illafaerieb.bic
+* sorc'illafaerieb.bic
+* rogu'illafaerieb.bic
+* rang'illafaerieb.bic
+* pala'illafaerieb.bic
+* monq'illafaerieb.bic
+* fiti'illafaerieb.bic
+* drui'illafaerieb.bic
+* cler'illafaerieb.bic
+* bard'illafaerieb.bic
+* barb'illafaerieb.bic
+
+Dwarves:
+* sorccaschortscht.bic
+* sneezschortsch.bic
+* sleepschortsch.bic
+* roggaschortschtu.bic
+* ranggaschortscht.bic
+* pallaschortschtu.bic
+* happpschortsch.bic
+* grummpschortsc.bic
+* dokkschortschtuf.bic
+* do'ohpschortsc.bic
+* baschfulschortsc.bic
+
+Humans:
+* wizzichenshmin.bic
+* sorciehenshmin.bic
+* rogiehenshmin.bic
+* rangichenshmin.bic
+* paladrichenshmi.bic
+* moniquehenshmin.bic
+* fitricwphenshmi.bic
+* fitricsyhenshmi.bic
+* fitriclshenshmi.bic
+* fitriclbhenshmi.bic
+* fitrichfhenshmi.bic
+* fitricgshenshmi.bic
+* fitricdmhenshmi.bic
+* fitricdahenshmi.bic
+* fitricbshenshmi.bic
+* fitric2bshens.bic
+* druiehenshmin.bic
+* clerriehenshmin.bic
+* bardiehenshmin.bic
+* barbichenshmin.bic
+
