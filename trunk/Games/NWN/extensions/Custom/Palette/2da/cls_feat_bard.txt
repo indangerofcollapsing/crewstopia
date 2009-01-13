@@ -1,0 +1,1 @@
+Replace Weapon Proficiency Simple with Weapon Proficiency Bard.  This version is for henchmen who do not use PrC classes.  Copy cls_feat_bard.2da to override before creating henchmen; delete it afterward.
