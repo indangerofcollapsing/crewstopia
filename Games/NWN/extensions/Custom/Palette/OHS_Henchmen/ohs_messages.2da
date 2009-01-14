@@ -1,0 +1,336 @@
+2DA V2.0
+
+      StrRef   English Polish
+0     -1 "Casting " "Rzuca czar "
+1     -1 "I am now " "Jestem obecnie "
+2     -1 "I can't level up in " "Nie mogê awansowaæ w klasie "
+3     -1 "This door will unlock shortly. Please try again in a few seconds." "Drzwi nied³ugo siê otworz¹. Spróbuj ponownie za kilka sekund."
+4     -1 "someone else" "ktoœ inny"
+5     -1 "Certainly. If you pay me the remaining " "Oczywiœcie. Je¿eli zap³acisz mi zaleg³e "
+6     -1 "GP, I will return your " " sztuk z³ota, zwrócê twój zastaw: "
+7     -1 "The " "Polecenie "
+8     -1 " command is disabled." " jest zablokowane."
+9     0 **** ****
+10    5213 "Barbarian" "Barbarzyñca"
+11    2 "Bard" "Bard"
+12    4 "Cleric" "Kap³an"
+13    6 "Druid" "Druid"
+14    8 "Fighter" "Wojownik"
+15    10 "Monk" "Mnich"
+16    12 "Paladin" "Paladyn"
+17    14 "Ranger" "£owca"
+18    16 "Rogue" "£otrzyk"
+19    18 "Sorcerer" "Czarownik"
+20    20 "Wizard" "Czarodziej"
+21    525 "Aberration" "Wynaturzenie"
+22    526 "Animal" "Zwierzê"
+23    528 "Construct" "Konstrukt"
+24    1763 "Humanoid" "Humanoid"
+25    536 "Monstrous" "Potwornoœæ"
+26    539 "Elemental" "¯ywio³ak"
+27    540 "Fey" "Fey"
+28    529 "Dragon" "Smok"
+29    547 "Undead" "Nieumarli"
+30    2291 "Commoner" "Plebejusz"
+31    527 "Beast" "Bestia"
+32    541 "Giant" "Olbrzymy"
+33    542 "Magical Beast" "Magiczna bestia"
+34    4812 "Outsider" "Pozasferowiec"
+35    546 "Shapechanger" "Zmiennokszta³tny"
+36    548 "Vermin" "Robactwo"
+37    2944 "Shadowdancer" "Tancerz Cieni"
+38    2956 "Harper Scout" "Harfiarz Zwiadowca"
+39    9003 "Arcane Archer" "Mistyczny £ucznik"
+40    9007 "Assassin" "Zabójca"
+41    9011 "Blackguard" "Czarny Stra¿nik"
+42    9015 "Champion of Torm" "Czempion Torma"
+43    9019 "Weapon Master" "Mistrz broni"
+44    9020 "Pale Master" "Blady mistrz"
+45    9026 "Shifter" "Zmiennokszta³tny"
+46    76418 "Dwarven Defender" "Krasnoludzki obroñca"
+47    83489 "Red Dragon Disciple" "Uczeñ czerwonego smoka"
+48    84438 "Ooze" "Galareta"
+49    0 **** ****
+50    22 "Dwarf" "Krasnolud"
+51    24 "Elf" "Elf"
+52    26 "Gnome" "Gnom"
+53    28 "Halfling" "Nizio³ek"
+54    30 "Half-Elf" "Pó³elf"
+55    32 "Half-Orc" "Pó³ork"
+56    34 "Human" "Cz³owiek"
+57    525 "Aberration" "Wynaturzenie"
+58    526 "Animal" "Zwierzê"
+59    527 "Beast" "Bestia"
+60    528 "Construct" "Konstrukt"
+61    529 "Dragon" "Smok"
+62    533 "Goblinoid" "Goblinoid"
+63    536 "Monstrous" "Potwornoœæ"
+64    537 "Orc" "Ork"
+65    538 "Reptilian" "Reptillion"
+66    539 "Elemental" "¯ywio³ak"
+67    540 "Fey" "Fey"
+68    541 "Giant" "Olbrzymy"
+69    542 "Magical Beast" "Magiczna bestia"
+70    543 "Outsider" "Pozasferowiec"
+71    0 **** ****
+72    0 **** ****
+73    546 "Shapechanger" "Zmiennokszta³tny"
+74    547 "Undead" "Nieumarli"
+75    548 "Vermin" "Robactwo"
+76    0 **** ****
+77    0 **** ****
+78    0 **** ****
+79    84437 "Ooze" "Galareta"
+80    0 **** ****
+81    0 **** ****
+82    0 **** ****
+83    0 **** ****
+84    0 **** ****
+85    0 **** ****
+86    0 **** ****
+87    0 **** ****
+88    0 **** ****
+89    0 **** ****
+90    0 **** ****
+91    0 **** ****
+92    0 **** ****
+93    0 **** ****
+94    0 **** ****
+95    0 **** ****
+96    0 **** ****
+97    0 **** ****
+98    0 **** ****
+99    0 **** ****
+100   -1 "Your linkboy will be here soon." "Twój przewodnik wkrótce przybêdzie."
+101   -1 " has arrived." " przyby³."
+102   -1 "OHS Character Data Restored." "OHS - Wczytano dane postaci."
+103   -1 "Refreshed Stale Linkboy." "Przewodnik przywrócony."
+104   -1 "Henchman " "Najemnik "
+105   -1 " indexed." " w³¹czony do indeksu."
+106   -1 " stored." " zapisany."
+107   -1 " deleted." " usuniêty."
+108   -1 "Failed to store henchman " "Nie uda³o siê zapisaæ najemnika ";
+109   -1 ", your personal tally is now " ", twój osobisty indeks obejmuje obecnie "
+110   -1 " registrations." " rejestracji."
+111   -1 ", your personal tally now stands at " ", twój osobisty licznik indeksu wynosi "
+112   0 **** ****
+113   0 **** ****
+114   0 **** ****
+115   0 **** ****
+116   0 **** ****
+117   0 **** ****
+118   0 **** ****
+119   0 **** ****
+120   -1 "You currently have no-one to store." "Nie ma postaci do zapisania."
+121   -1 "You currently have no companions to store." "Nie posiadasz towarzyszy do zapisania."
+122   -1 "Stored 1 companion." "Zapisano 1 towarzysza."
+123   -1 "Restored 1 companion." "Wczytano 1 towarzysza."
+124   -1 "Stored " "Zapisano "
+125   -1 "Restored " "Wczytano "
+126   -1 " companions." " towarzyszy."
+127   -1 "Failed to store " "Wyst¹pi³ b³¹d przy zapisie "
+128   -1 "Failed to restore " "Nie uda³o siê wczytaæ "
+129   -1 "Your database is empty." "Twoja baza najemników jest pusta."
+130   -1 "Refreshed OHS data for " "Odœwie¿ono dane OHS dla "
+131   -1 "Faction Member " "Cz³onek frakcji "
+132   -1 "Changed Faction of " "Zmieniono frakcjê na "
+133   -1 "No valid faction member." "Brak cz³onków frakcji."
+134   -1 "Your PC has been stored as a possible companion for a different PC." "Twoja postaæ zosta³a zapisana jako kandydat na najemnika innego gracza.";
+135   -1 "There was a problem storing your Player Character" "Wyst¹pi³ b³¹d przy zapisie twojej postaci."
+136   -1 "OHS WEED VAULT is not implemented yet." "OHS WEED VAULT nie jest jeszcze dostêpny."
+137   0 **** ****
+138   0 **** ****
+139   0 **** ****
+140   -1 "Pink" "Ró¿owy"
+141   -1 "Yellow" "¯ó³ty"
+142   -1 "Grey" "Szary"
+143   -1 "Green" "Zielony"
+144   -1 "Blue" "Granatowy"
+145   -1 "Turquoise" "Turkusowy"
+146   -1 "Gold" "Z³oty"
+147   -1 "Brown" "Br¹zowy"
+148   -1 "Red" "Czerwony"
+149   -1 "Purple" "Purpurowy"
+150   -1 "Silver" "Srebrny"
+151   -1 "Black" "Czarny"
+152   -1 "White" "Bia³y"
+153   -1 "Olive" "Oliwkowy"
+154   0 **** ****
+155   0 **** ****
+156   0 **** ****
+157   0 **** ****
+158   0 **** ****
+159   0 **** ****
+160   156 "Male" "Mê¿czyzna"
+161   157 "Female" "Kobieta"
+162   264 "Neutral" "Neutralny"
+163   265 "Good" "Dobry"
+164   266 "Evil" "Z³y"
+165   267 "Chaotic" "Chaotyczny"
+166   268 "Lawful" "Praworz¹dny"
+167   4491 "sir" "sir"
+168   4492 "madam" "madam"
+169   -1 "slim build" "szczup³y"
+170   -1 "slim build" "szczup³a"
+171   -1 "of ample proportions" "o sporej tuszy"
+172   -1 "heavily built" "ciê¿kiej budowy"
+173   -1 "unusual appearance" "o niezwyk³ym wygl¹dzie"
+174   0 **** ****
+175   0 **** ****
+176   0 **** ****
+177   0 **** ****
+178   0 **** ****
+179   0 **** ****
+180   4860 "Boy" "Ch³opiec"
+181   4861 "Girl" "Dziewczynka"
+182   2173 "House Guard" "Stra¿nik"
+183   6975 "Waitress" "Kelnerka"
+184   8072 "Invisible" "Niewidzialny"
+185   5223 "Dragonfly" "Chochlik"
+186   5703 "Light" "Œwiecznik"
+187   5989 "Raven" "Sokó³"
+188   2146 "Dog" "Pies"
+189   0 **** ****
+190   -1 "Linkboy Pune" "£¹cznik"
+191   -1 "Lynkie" "£¹czniczka"
+192   -1 "Torch Bearer" "Stra¿nik"
+193   -1 "Serving Wench" "£¹czniczka"
+194   -1 "LinkDaemon" "£¹cznik"
+195   -1 "Linkfly" "£¹czniczka"
+196   -1 "LinkDaemon" "Œwiecznik"
+197   -1 "Nevermore" "Treehawk"
+198   -1 "Fido" "Azor"
+199   0 **** ****
+200   -1 "bare hand" "naga piêœæ"
+201   -1 "hand weapon" "broñ rêczna"
+202   -1 "present state" "stan obecny"
+203   -1 "Just " ****
+204   -1 "GP is sufficient." " sztuk z³ota w zupe³noœci wystarczy."
+205   -1 "I don't know." "Nie wiem."
+206   -1 "I really don't know." "Naprawdê nie wiem."
+207   -1 "Scroll of " "Zwój czaru "
+208   -1 "Amulet" "Amulet"
+209   -1 "Necklace" "Naszyjnik"
+210   -1 "Periapt" "Amulet"
+211   -1 "Scarab" "Skarabeusz"
+212   -1 "Talisman" "Talizman"
+213   -1 "item" "przedmiot"
+214   -1 "Belt" "Pas"
+215   -1 "Girdle" "Pasek"
+216   -1 "Sash" "Szarfa"
+217   0 **** ****
+218   0 **** ****
+219   0 **** ****
+220   106 "Short Sword" "Krótki miecz"
+221   166 "Longsword" "D³ugi miecz"
+222   169 "Battleaxe" "Topór bojowy"
+223   168 "Bastard Sword" "Miecz pó³torarêczny"
+224   176 "Light Flail" "Lekki korbacz"
+225   178 "Warhammer" "M³ot bojowy"
+226   173 "Heavy Crossbow" "Ciê¿ka Kusza"
+227   174 "Light Crossbow" "Lekka kusza"
+228   170 "Longbow" "D³ugi ³uk"
+229   177 "Mace" "Bu³awa"
+230   175 "Halberd" "Halabarda"
+231   171 "Shortbow" "Krótki ³uk"
+232   172 "Two-Bladed Sword" "Podwójny Miecz"
+233   167 "Greatsword" "Miecz Dwurêczny"
+234   179 "Small Shield" "Ma³a Tarcza"
+235   180 "Torch" "Pochodnia"
+236   335 "Armor" "Zbroja"
+237   182 "Helmet" "He³m"
+238   515 "Greataxe" "Topór Dwurêczny"
+239   1516 "Amulet" "Amulet"
+240   1517 "Arrow" "Strza³a"
+241   1518 "Belt" "Pas"
+242   191 "Dagger" "Sztylet"
+243   0 **** ****
+244   192 "Miscellaneous Small" "Ró¿ne, ma³e"
+245   1519 "Bolt" "Be³t"
+246   1520 "Boots" "Buty"
+247   1521 "Bullet" "Pocisk"
+248   1522 "Club" "Maczuga"
+249   1523 "Miscellaneous Medium" "Ró¿ne, œrednie"
+250   0 **** ****
+251   1525 "Dart" "Strza³ka"
+252   1526 "Dire Mace" "Wielka Bu³awa"
+253   1527 "Double Axe" "Podwójny topór"
+254   1528 "Miscellaneous Large" "Ró¿ne, du¿e"
+255   1529 "Heavy Flail" "Ciê¿ki Korbacz"
+256   1530 "Gauntlet" "Rêkawica"
+257   1531 "Light Hammer" "Lekki m³ot"
+258   1532 "Handaxe" "Toporek"
+259   1533 "Healer's Kit" "Torba Uzdrowiciela"
+260   1534 "Kama" "Kama"
+261   1535 "Katana" "Katana"
+262   1536 "Kukri" "Kukri"
+263   0 **** ****
+264   1538 "Magic Rod" "Magiczne Ber³o"
+265   1539 "Magic Staff" "Magiczna Laska"
+266   1540 "Magic Wand" "Magiczna Ró¿d¿ka"
+267   1541 "Morningstar" "Morgensztern"
+268   0 **** ****
+269   1543 "Potion" "Mikstura"
+270   1544 "Quarterstaff" "Kostur"
+271   1545 "Rapier" "Rapier"
+272   1546 "Ring" "Pierœcieñ"
+273   1547 "Scimitar" "Sejmitar"
+274   0 **** ****
+275   1549 "Scythe" "Kosa"
+276   1550 "Large Shield" "Du¿a tarcza"
+277   1551 "Tower Shield" "Pawê¿"
+278   1552 "Spear" "W³ócznia"
+279   1553 "Shuriken" "Shuriken"
+280   1554 "Sickle" "Sierp"
+281   1555 "Sling" "Proca"
+282   1556 "Thieves' Tools" "Z³odziejskie Narzêdzia"
+283   1557 "Throwing Axe" "Toporek do Rzucania"
+284   1558 "Trap Kit" "Zestaw do pu³apek"
+285   1560 "Key" "Klucz"
+286   1562 "Container" "Pojemnik"
+287   0 **** ****
+288   0 **** ****
+289   534 "Creature Slash Weapon" "Stworzenie, broñ sieczna"
+290   2188 "Creature Pierce Weapon" "Stwór, broñ k³uj¹ca"
+291   2189 "Creature Bludgeon Weapon" "Stwór, broñ obuchowa"
+292   2190 "Creature Slash Piercing Weapon" "Stworzenie, broñ sieczno-k³uj¹ca"
+293   530 "Creature Item" "Stwór, przedmiot"
+294   531 "Book" "Ksi¹¿ka"
+295   532 "Scroll" "Zwój"
+296   535 "Gold Piece" "Sztuka Z³ota"
+297   965 "Gem" "Klejnot"
+298   2194 "Bracer" "Bransoleta"
+299   2294 "Miscellaneous Thin" "Ró¿ne, cienkie"
+300   2220 "Cloak" "P³aszcz"
+301   2730 "Grenadelike" "Granat"
+302   0 **** ****
+303   0 **** ****
+304   0 **** ****
+305   0 **** ****
+306   0 **** ****
+307   0 **** ****
+308   0 **** ****
+309   0 **** ****
+310   0 **** ****
+311   0 **** ****
+312   0 **** ****
+313   0 **** ****
+314   0 **** ****
+315   67251 "Trident" "Trójz¹b"
+316   0 **** ****
+317   0 **** ****
+318   0 **** ****
+319   0 **** ****
+320   0 **** ****
+321   76389 "Potion Bottle" "Butelka na mikstury"
+322   76390 "Blank Scroll" "Czysty zwój"
+323   76391 "Wand (not enchanted)" "Ró¿d¿ka (niezaklêta)"
+324   83365 "Brewed Potion" "Uwarzona mikstura"
+325   83364 "Enchanted Scroll" "Zaklêty zwój"
+326   83363 "Crafted Wand" "Obrobiona ró¿d¿ka"
+327   0 **** ****
+328   83310 "Dwarven Waraxe" "Krasnoludzki topór bojowy"
+329   83379 "Basic Crafting Component" "Podstawowy sk³adnik rzemieœlniczy"
+330   83380 "Small Crafting Component " "Ma³y sk³adnik rzemieœlniczy"
+331   83617 "Whip" "Bicz"
+332   83664 "Crafting Base Material" "Podstawowy materia³ rzemieœlniczy"
