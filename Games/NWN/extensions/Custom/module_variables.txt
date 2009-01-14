@@ -1,0 +1,593 @@
+#include "prc_inc_switch"
+
+/** Bioware True Seeing can see stealthed creatures.
+ * This replaces the trueseeing effect with a See Invisible + Ultravision + Spot
+ * bonus.
+ * This affects the spell and power True Seeing and the Dragon Disciple class
+ */
+SetLocalInt(GetModule(), PRC_PNP_TRUESEEING, 1);
+
+/** Remove the cap PRC added to this spell */
+SetLocalInt(GetModule(), PRC_BIOWARE_GRRESTORE, 1);
+/** Remove the cap PRC added to this spell */
+SetLocalInt(GetModule(), PRC_BIOWARE_HEAL, 1);
+/** Remove the cap PRC added to this spell */
+SetLocalInt(GetModule(), PRC_BIOWARE_MASS_HEAL, 1);
+/** Remove the cap PRC added to this spell */
+SetLocalInt(GetModule(), PRC_BIOWARE_HARM, 1);
+/** Remove the cap PRC added to this spell */
+SetLocalInt(GetModule(), PRC_BIOWARE_NEUTRALIZE_POISON, 1);
+/** Remove the cap PRC added to this spell */
+SetLocalInt(GetModule(), PRC_BIOWARE_REMOVE_DISEASE, 1);
+
+/**
+ * Timestop has only a local affect, i.e doesn't stop people on the other areas of the module.
+ * Note that AOEs continue to act during a timestop, and durations/delayed events still occur.
+ */
+SetLocalInt(GetModule(), PRC_TIMESTOP_LOCAL, 1);
+
+/**
+ * Instead of Bioware's sequential summons it creates multiple elementals.
+ * Only works if PRC_MULTISUMMON is on
+ */
+SetLocalInt(GetModule(), PRC_PNP_ELEMENTAL_SWARM, 1);
+
+/**
+ * If you pass a save, you can't be affected by that aura for 24h.
+ * NOTE: Not implemented yet
+ */
+SetLocalInt(GetModule(), PRC_PNP_FEAR_AURAS, 1);
+
+/**
+ * Not a polymorph but ability bonuses instead.
+ */
+SetLocalInt(GetModule(), PRC_PNP_TENSERS_TRANSFORMATION, 1);
+
+/**
+ * Traps are only shown, not disarmed
+ */
+SetLocalInt(GetModule(), PRC_PNP_FIND_TRAPS, 1);
+
+/**
+ * Undead summons are permanent, but can only have 4HD/casterlevel in total
+ * Does not enforce the requirement for a corpse
+ */
+SetLocalInt(GetModule(), PRC_PNP_ANIMATE_DEAD, 1);
+
+/**
+ * "Word of Faith" spells use 3.5 ed rules rather than 3.0ed
+ * basically instead of 12+ / <12 / <8 / <4 its relative to caster level
+ * at >=CL / <CL / <CL-5 / <CL-10
+ * This basically makes it more powerful at higher levels
+ */
+SetLocalInt(GetModule(), PRC_35ED_WORD_OF_FAITH, 1);
+
+/*
+ * Undead created by Create Undead and Create Greater Undead are
+ * not automatically under the casters control
+ * If this is set, the undead are permanently created
+ */
+SetLocalInt(GetModule(), PRC_CREATE_UNDEAD_UNCONTROLLED, 1);
+
+/*
+ * Undead created by Create Undead and Create Greater Undead are
+ * not removed on resting etc
+ */
+SetLocalInt(GetModule(), PRC_CREATE_UNDEAD_PERMANENT, 1);
+
+/*
+ * This turns on the new improved imbue arrow functionallity
+ * so all the player has to do is cast the spell at an arrow in their inventory
+ * If this is off, players get the default bioware imbue arrow as a bonus feat on their hides
+*/
+SetLocalInt(GetModule(), PRC_USE_NEW_IMBUE_ARROW, 1);
+
+/** Epic Spells:
+ * Use caster's primary ability (divine casters Wis, arcane Int/Cha as appropriate)
+ * Defaults to: FALSE
+ */
+SetLocalInt(GetModule(), PRC_EPIC_PRIMARY_ABILITY_MODIFIER_RULE, 1);
+
+/** Epic Spells:
+ * Do school foci change the research and casting DC?
+ * Defaults to: TRUE
+ */
+SetLocalInt(GetModule(), PRC_EPIC_FOCI_ADJUST_DC, 1);
+
+/** Epic Spells:
+ * Probablity out of 100 of seeds being destroyed when learnt.
+ * Defaults to: 50
+ */
+SetLocalInt(GetModule(), PRC_EPIC_BOOK_DESTRUCTION, 100);
+
+/** Epic Spells:
+ * 100% immunity and 20h duration instead of 50% and casterlevel+10 rounds.
+ */
+SetLocalInt(GetModule(), PRC_PNP_UNIMPINGED, 1);
+SetLocalInt(GetModule(), PRC_PNP_IMPENETRABILITY, 1);
+SetLocalInt(GetModule(), PRC_PNP_DULLBLADES, 1);
+
+/** Epic Spells:
+ * 20h instead of rounds per level */
+SetLocalInt(GetModule(), PRC_PNP_CHAMPIONS_VALOR, 1);
+
+/**
+ * Spells cast from magic staffs use the wielder's casterlevel rather than the
+ * item's if the wielder's casterlevel is higher.
+ * This makes magic staffs more valuable to mages, especially at high levels.
+ */
+SetLocalInt(GetModule(), PRC_STAFF_CASTER_LEVEL, 1);
+
+/**
+ * NPCs go through spellhooking as if they are PCs.
+ */
+SetLocalInt(GetModule(), PRC_NPC_HAS_PC_SPELLCASTING, 1);
+
+/**
+ * Makes reaching 0 in an ability score have the special effects it should have
+ * according to PnP.
+ *
+ * @see inc_abil_damage.nss
+ */
+SetLocalInt(GetModule(), PRC_PNP_ABILITY_DAMAGE_EFFECTS, 1);
+
+/**
+ * Turns on the included version of supply based rest by demitious
+ * See inc_sbr_readme.nss for details
+ */
+//SetLocalInt(GetModule(), PRC_SUPPLY_BASED_REST, 1);
+
+/**
+ * Resting causes game time to advance.
+ * See inc_time.nss for details
+ */
+SetLocalInt(GetModule(), PRC_PNP_REST_TIME , 1);
+
+/**
+ * Players have a variable tracking how far ahead of the module clock they are
+ * and when all players are ahead, the module clock advances to catch up.
+ */
+SetLocalInt(GetModule(), PRC_PLAYER_TIME, 1);
+/**
+ * You must have at least 1 hand free to cast spells with somatic components.
+ * This means at most a small shield in the off hand and
+ * no dual weilded weapons, though ranged and doublehanded are OK.
+ */
+SetLocalInt(GetModule(), PRC_PNP_SOMATIC_COMPOMENTS, 1);
+
+/**
+ * You must have at least 1 hand free to use items that you do not have equipped.
+ * This means at most a small shield in the off hand and
+ * no dual weilded weapons, though ranged and doublehanded are OK.
+ */
+//SetLocalInt(GetModule(), PRC_PNP_SOMATIC_ITEMS, 1);
+
+/**
+ * Second or subsequent summons dont destroy the first.
+ * Can cause lag with high numbers of summons and/or tight spaces
+ */
+SetLocalInt(GetModule(), PRC_MULTISUMMON, 1);
+
+/**
+ * Sets the behaviour of the PRC Power Attack. Set this to either
+ * PRC_POWER_ATTACK_DISABLED or PRC_POWER_ATTACK_FULL_PNP if you give
+ * it a value.
+ *
+ * Default: One cannot use a higher power attack setting than one could using
+ *          Bioware Power Attack. ie, if one possessed PA, but not IPA, one
+ *          can only use PA up to 5. And up to 10 with IPA.
+ *
+ * @see PRC_POWER_ATTACK_DISABLED
+ * @see PRC_POWER_ATTACK_FULL_PNP
+ * @see PRC_POWER_ATTACK_STACK_WITH_BW
+ */
+SetLocalInt(GetModule(), PRC_POWER_ATTACK, PRC_POWER_ATTACK_STACK_WITH_BW);
+
+/**
+ * Setting this will stop the GUI automatically appearing when a player is
+ * petrified on hardcore.  You can use a script named "prc_pw_petrific" which
+ * will always be run at petrification (regardless of this switch) on hardcore
+ * to pop up the GUI as you want it, rather than being forced to use biowares.
+ */
+SetLocalInt(GetModule(), PRC_NO_PETRIFY_GUI, 1);
+
+
+/*
+ * Set this to remove the switch changing convo feat.
+ * This must be set for PWs to avoid players screwing around with switches
+ */
+SetLocalInt(GetModule(), PRC_DISABLE_SWITCH_CHANGING_CONVO, 1);
+
+/******************************************************************************\
+*                               ACP switches                              *
+\******************************************************************************/
+/*
+ * This is a set of settings for Ragnaroks Alternate Combat animations Pack (ACP)
+ * Main hak:
+ * http://nwvault.ign.com/View.php?view=hakpaks.Detail&id=5895
+ * CEP heads:
+ * http://nwvault.ign.com/View.php?view=hakpaks.Detail&id=5934
+ * CEP robes:
+ * http://nwvault.ign.com/View.php?view=hakpaks.Detail&id=5950
+ * (credit to USAgreco66kg for those CEP files)
+ * Note on haks: You should NOT add the acp_2da hak if you have the PRC installed
+ * already. Plus, once you press the OK button to add the ACP haks, make sure
+ * you press cancel as soon as it appears. Otherwise, the toolset will crash
+ * as it tries to compile the PRC scripts.
+ */
+
+/*
+ * Set this to give players radial feats to change combat animations
+ */
+SetLocalInt(GetModule(), PRC_ACP_MANUAL, 1);
+
+/*
+ * Set this so that players will change combat animations automatically
+ * based on weapons equiped and class
+ */
+//SetLocalInt(GetModule(), PRC_ACP_AUTOMATIC, 1);
+
+/*
+ * Set this so that NPCs will change combat animations automatically
+ * based on weapons equiped and class
+ * This can either be set on the module for a global setting
+ * or set on individual NPCs for specific individuals
+ */
+SetLocalInt(GetModule(), PRC_ACP_NPC_AUTOMATIC, 1);
+
+/*
+ * Set this for a number of minutes delay betwen changing animations
+ * This is useful to stop people spamming the server with changes
+ * If not set, it defaults to 90 seconds. To set to zero, set var to -1
+ */
+SetLocalInt(GetModule(), PRC_ACP_DELAY, -1);
+
+/**
+ * If this is set, uses the last three characters from the item's tag
+ * instead of the local variable 'pois_idx' to define the poison the item
+ * represents. The value is used as an index to poison.2da.
+ */
+//SetLocalInt(GetModule(), PRC_USE_TAGBASED_INDEX_FOR_POISON, 1);
+
+/**
+ * Number of times the poisoned item works. Or if PRC_USES_PER_ITEM_POISON_DIE
+ * is set, the number of dice rolled to determine it. Should be at least 1 if
+ * set.
+ * Default: 1
+ */
+SetLocalInt(GetModule(), PRC_USES_PER_ITEM_POISON_COUNT, 1);
+
+/**
+ * Size of dice used to determine number of times the poisoned item works. Value
+ * should be at least 2.
+ * If value is less than 2, the die roll is skipped.
+ * Default: No dice are rolled.
+ */
+SetLocalInt(GetModule(), PRC_USES_PER_ITEM_POISON_DIE, 4);
+
+//these three are strings not switches
+//SetLocalString(GetModule(), PRC_PRGT_XP_SCRIPT_TRIGGERED, "dac_prgt_trig");
+//SetLocalString(GetModule(), PRC_PRGT_XP_SCRIPT_DISARMED, "dac_prgt_disarm");
+//SetLocalString(GetModule(), PRC_PRGT_XP_SCRIPT_RECOVERED, "dac_prgt_recover");
+
+//SetLocalInt(GetModule(), PRC_PRGT_XP_AWARD_FOR_TRIGGERED, 1);
+SetLocalInt(GetModule(), PRC_PRGT_XP_AWARD_FOR_RECOVERED, 1);
+SetLocalInt(GetModule(), PRC_PRGT_XP_AWARD_FOR_DISARMED, 1);
+
+/**
+ * If this is set, use ac_appearances.2da to determine an Astral Construct's
+ * appearance instead of the values hardcoded into the script.
+ */
+//SetLocalInt(GetModule(), PRC_PSI_ASTRAL_CONSTRUCT_USE_2DA, 1);
+
+/**
+ * Use a Brawler character's size as a part of determining their unarmed
+ * damage.
+ * Default: A Brawler's size is ignored.
+ */
+SetLocalInt(GetModule(), PRC_BRAWLER_SIZE, 1);
+
+/**
+ * These three switches modify Bioware crafting so that the items produced have
+ * the casterlevel of the spellcaster who created them. Normally under Bioware,
+ * it is possible for a level 3 caster to produce level 9 items and for a level
+ * 40 caster to only produce level 5 items.
+ * This also allows metamagic to apply to crafting. i.e you produce a wand of
+ * maximized fireball.
+ *
+ * @see PRC_SCRIBE_SCROLL_CASTER_LEVEL
+ * @see PRC_CRAFT_WAND_CASTER_LEVEL
+ */
+SetLocalInt(GetModule(), PRC_BREW_POTION_CASTER_LEVEL, 1);
+SetLocalInt(GetModule(), PRC_SCRIBE_SCROLL_CASTER_LEVEL, 1);
+SetLocalInt(GetModule(), PRC_CRAFT_WAND_CASTER_LEVEL, 1);
+
+/*
+ * Max level of spells brewed into potions
+ * defaults to 3
+ */
+//SetLocalInt(GetModule(), X2_CI_BREWPOTION_MAXLEVEL, 3);
+
+/*
+ * Max level of spells crafted into wands
+ * defaults to 4
+ */
+SetLocalInt(GetModule(), X2_CI_CRAFTWAND_MAXLEVEL, 9);
+
+/******************************************************************************\
+*                          Persistent World switches                           *
+\******************************************************************************/
+
+/**
+ * Persistant time tracking.
+ * This is done on a player-by-player basis if PRC_PLAYER_TIME is on.
+ *
+ * TODO: Elaborate
+ */
+SetLocalInt(GetModule(), PRC_PW_TIME, 1);
+
+/**
+ * Number of rounds between exporting all characters.
+ */
+//SetLocalInt(GetModule(), PRC_PW_PC_AUTOEXPORT, 100);
+
+/**
+ * A player's HP is stored via persistant locals every HB and restored on logon.
+ */
+//SetLocalInt(GetModule(), PRC_PW_HP_TRACKING, 1);
+
+/**
+ * A player's location is stored via persistant locals every HB and restored
+ * on logon.
+ */
+SetLocalInt(GetModule(), PRC_PW_LOCATION_TRACKING, 1);
+
+/**
+ * Player places map pins are tracked via persistant locals and restored on
+ * logon.
+ */
+SetLocalInt(GetModule(), PRC_PW_MAPPIN_TRACKING, 1);
+
+/**
+ * Being dead is stored via persistant locals and restored on logon.
+ */
+//SetLocalInt(GetModule(), PRC_PW_DEATH_TRACKING, 1);
+
+/**
+ * Spells cast are tracked via persistant locals and restored on logon
+ */
+//SetLocalInt(GetModule(), PRC_PW_SPELL_TRACKING, 1);
+
+/**
+ * This modifies the amount of XP a character receives based on Level Adjustment
+ * - Doesn't take racial hit dice into account.
+ * - Should work with any prior XP system.
+ * - Use this on pre-exisitng modules.
+ */
+SetLocalInt(GetModule(), PRC_XP_USE_SIMPLE_LA                    = "PRC_XP_USE_SIMPLE_LA";
+
+/**
+ * Any new characters entering the module are automatically given racial hit dice
+ * Unlike PnP, they do not get to select what feats/skills the racial HD grant
+ * Instead the default bioware package will be used.
+ * Do not use if the ConvoCCs racial hit dice option is in use.
+ */
+SetLocalInt(GetModule(), PRC_XP_USE_SIMPLE_RACIAL_HD             = "PRC_XP_USE_SIMPLE_RACIAL_HD";
+
+/**
+ * Characters must earn their racial HD through the normal levelup process
+ * Player must still take all their racial HD before they can take more
+ * than one level in a non-racial class.
+ * PRC_XP_USE_SIMPLE_RACIAL_HD must be on, and the convoCC racial hit dice option
+ * must be off
+ */
+SetLocalInt(GetModule(), PRC_XP_USE_SIMPLE_RACIAL_HD_NO_FREE_XP  = "PRC_XP_USE_SIMPLE_RACIAL_HD_NO_FREE_XP";
+
+/**
+ * Characters are given racial HD via LevelupHenchman so can't select feats etc
+ * Uses the default packages for each class, which are poor to say the least
+ * PRC_XP_USE_SIMPLE_RACIAL_HD must be on, and the convoCC racial hit dice option
+ * must be off
+ */
+SetLocalInt(GetModule(), PRC_XP_USE_SIMPLE_RACIAL_HD_NO_SELECTION  = "PRC_XP_USE_SIMPLE_RACIAL_HD_NO_SELECTION";
+
+/**
+ * Use ECL for NPCs instead of CR.
+ * Should be close, but I dont know how Bioware CR calculations work with the
+ * PRC races.
+ * Also note ECL is a measure of power in a campaign, wheras CR is measure of
+ * power in a single encounter. Thus ECL weights use/day abilitieis more than
+ * CR does.
+ */
+SetLocalInt(GetModule(), PRC_XP_USE_ECL_NOT_CR                   = "PRC_XP_USE_ECL_NOT_CR";
+
+/**
+ * If this is set, ECL = LA + racial hit dice
+ * EVEN IF THE CHARACTER DOESNT HAVE ANY RACIAL HIT DICE!
+ * So it penalizes the power races far more than PnP because they don't get any
+ * of the other benefits of racial hit dice (BAB, HP, saves, skills, feats, etc)
+ */
+SetLocalInt(GetModule(), PRC_XP_INCLUDE_RACIAL_HIT_DIE_IN_LA     = "PRC_XP_INCLUDE_RACIAL_HIT_DIE_IN_LA";
+
+/**
+ * Set this if you are using NWNX and any sort of database.
+ */
+SetLocalInt(GetModule(), PRC_USE_DATABASE                        = "PRC_USE_DATABASE";
+
+/**
+ * Set this if you want to use the bioware db for 2da caching
+ * the value is the number of Hbs between caching runs
+ * Defaults to 600 (10 mins) if not set
+ * cache will be flushed automatically when the PRC version changes
+ */
+SetLocalInt(GetModule(), PRC_USE_BIOWARE_DATABASE                = "PRC_USE_BIOWARE_DATABASE";
+
+/**
+ * This will precache 2da files into the database.
+ * The first time a module runs with this set it will lag a lot for a long time
+ * as the game does 2da reads.
+ * Afterwards it will be much faster.
+ */
+SetLocalInt(GetModule(), PRC_DB_PRECACHE                         = "PRC_DB_PRECACHE";
+
+/**
+ * Set this if you are using SQLite (the built-in database in NWNX-ODBC2).
+ * This will use transactions and SQLite specific syntax.
+ */
+SetLocalInt(GetModule(), PRC_DB_SQLLITE                          = "PRC_DB_SQLLITE";
+
+/**
+ * This is the interval of each transaction. By default it is 600 seconds.
+ * Shorter will mean slower, but less data lost in the event of a server crash.
+ * Longer is visa versa.
+ */
+SetLocalInt(GetModule(), PRC_DB_SQLLITE_INTERVAL                 = "PRC_DB_SQLLITE_INTERVAL";
+
+/**
+ * Set this if you are using MySQL.
+ * This will not use transactions and will use MySQL specific syntax
+ */
+SetLocalInt(GetModule(), PRC_DB_MYSQL                            = "PRC_DB_MYSQL";
+
+/**
+ * TODO: Write description.
+ */
+SetLocalInt(GetModule(), PRC_USE_LETOSCRIPT                      = "PRC_USE_LETOSCRIPT";
+
+/**
+ * Set this to 1 to have Letoscript convert stat boosts on the hide to
+ * permanent ones.
+ */
+SetLocalInt(GetModule(), PRC_LETOSCRIPT_FIX_ABILITIES            = "PRC_LETOSCRIPT_FIX_ABILITIES";
+
+/**
+ * Letoscript needs a string named PRC_LETOSCRIPT_NWN_DIR set to the
+ * directory of NWN. If it doesnt work, try different slash options: // \\ / \
+ */
+SetLocalInt(GetModule(), PRC_LETOSCRIPT_NWN_DIR                  = "PRC_LETOSCRIPT_NWN_DIR";
+
+/**
+ * Activates the ConvoCC.
+ * This doesn't turn on the database and letoscript as well, which you must
+ * do yourself.
+ *
+ * @see PRC_USE_DATABASE
+ * @see PRC_USE_LETOSCRIPT
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_ENABLE                      = "PRC_CONVOCC_ENABLE";
+
+/**
+ * Avariel characters have bird wings.
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_AVARIEL_WINGS               = "PRC_CONVOCC_AVARIEL_WINGS";
+
+/**
+ * Fey'ri characters have bat wings.
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_FEYRI_WINGS                 = "PRC_CONVOCC_FEYRI_WINGS";
+
+/**
+ * Fey'ri characters have a demonic tail.
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_FEYRI_TAIL                  = "PRC_CONVOCC_FEYRI_TAIL";
+
+/**
+ * Force Drow characters to be of the correct gender for their race.
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_DROW_ENFORCE_GENDER         = "PRC_CONVOCC_DROW_ENFORCE_GENDER";
+
+/**
+ * Force Genasi clerics to select the relevant elemental domain as one of
+ * their feats.
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_GENASI_ENFORCE_DOMAINS      = "PRC_CONVOCC_GENASI_ENFORCE_DOMAINS";
+
+/**
+ * Female Rakshasha use the female rakshasha model.
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_RAKSHASHA_FEMALE_APPEARANCE = "PRC_CONVOCC_RAKSHASHA_FEMALE_APPEARANCE";
+
+/**
+ * Female Driders use the female drider model.
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_DRIDER_FEMALE_APPEARANCE    = "PRC_CONVOCC_DRIDER_FEMALE_APPEARANCE";
+
+/**
+ * A combination switch to turn on all the racial enforcement settings.
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_ENFORCE_PNP_RACIAL          = "PRC_CONVOCC_ENFORCE_PNP_RACIAL";
+
+/**
+ * A combination switch to turn on all the feat enforcement settings.
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_ENFORCE_FEATS               = "PRC_CONVOCC_ENFORCE_FEATS";
+
+/**
+ * Skips the select a voiceset step entirely, and players have to keep their
+ * current voiceset.
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_FORCE_KEEP_VOICESET         = "PRC_CONVOCC_FORCE_KEEP_VOICESET";
+
+/**
+ * Skips the select a portrait step entirely, and players have to keep their
+ * current portrait
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_FORCE_KEEP_PORTRAIT         = "PRC_CONVOCC_FORCE_KEEP_PORTRAIT";
+
+/**
+ * This enables players to select the hidden skin colours (metallics, matt
+ * black, matt white).
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_ALLOW_HIDDEN_SKIN_COLOURS   = "PRC_CONVOCC_ALLOW_HIDDEN_SKIN_COLOURS";
+
+/**
+ * This enables players to select the hidden hair colours (metallics, matt
+ * black, matt white).
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_ALLOW_HIDDEN_HAIR_COLOURS   = "PRC_CONVOCC_ALLOW_HIDDEN_HAIR_COLOURS";
+
+/**
+ * This enables players to select the hidden tattoo colours (metallics, matt
+ * black, matt white).
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_ALLOW_HIDDEN_TATTOO_COLOURS = "PRC_CONVOCC_ALLOW_HIDDEN_TATTOO_COLOURS";
+
+/**
+ * This option allows players to keep their skillpoints from one level to
+ * the next, if they want to.
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_ALLOW_SKILL_POINT_ROLLOVER  = "PRC_CONVOCC_ALLOW_SKILL_POINT_ROLLOVER";
+
+/**
+ * This will identify new characters based on XP as in v1.3
+ * This is less secure than using the encrypted key.
+ */
+SetLocalInt(GetModule(), PRC_CONVOCC_USE_XP_FOR_NEW_CHAR         = "PRC_CONVOCC_USE_XP_FOR_NEW_CHAR";
+
+PRC_TIMESTOP_LOCAL                        1
+PRC_PNP_ELEMENTAL_SWARM                   1
+PRC_PNP_FEAR_AURAS                        1 (not implemented yet)
+PRC_CREATE_UNDEAD_PERMANENT               1
+PRC_USE_NEW_IMBUE_ARROW                   1
+PRC_EPIC_PRIMARY_ABILITY_MODIFIER_RULE    1
+PRC_PNP_UNIMPINGED                        1
+PRC_PNP_IMPENETRABILITY                   1
+PRC_PNP_DULLBLADES                        1
+PRC_PNP_CHAMPIONS_VALOR                   1
+PRC_STAFF_CASTER_LEVEL                    1
+PRC_NPC_HAS_PC_SPELLCASTING               1
+PRC_MULTISUMMON                           1
+PRC_BRAWLER_SIZE                          1
+PRC_PW_HP_TRACKING                        1
+PRC_PW_LOCATION_TRACKING                  1
+PRC_PW_MAPPIN_TRACKING                    1
+PRC_PW_SPELL_TRACKING                     1
+PRC_XP_USE_SIMPLE_RACIAL_HD               0
+PRC_XP_SLIDER_x100                        100
+PRC_USE_DATABASE                          1
+PRC_DB_PRECACHE                           1
+PRC_USE_LETOSCRIPT                        1
+PRC_LETOSCRIPT_FIX_ABILITIES              1
+PRC_LETOSCRIPT_NWN_DIR                    /Games/NWN
+PRC_CONVOCC_DRIDER_FEMALE_APPEARANCE      1
+

@@ -1,0 +1,67 @@
+Respawning Doors
+There is a very simple respawning door system included in the PRC. It consists of two scripts, door_damaged and door_ud. Simply put the door_ud script in a doors OnUserDefinedEvents script slot, and put door_damaged in OnDamaged slot. You also have to set the doors HP to a very high number, 200 or higher.
+You may also want to set a local variable named DoorMaxHP of type int on the door, this controls the maximum number of hit point the door has. It is also a good idea to set another local variable named DoorHP of type int on the door as this is the number of hitpoints the door starts with.
+That's all there is to it. When you want the door to respawn, send it a userdefined event number 500. This does not lock the door in any way, it mearly makes it re-appear with full hit points.
+
+There is also a respawning ground trap system, which is undocumented at the moment.
+
+There is also an expanded poison system, which is undocumented at the moment.
+
+To enable builders to integrate the PRC into their modules better, a series of common scripts that the PRC overrides have had additional scripts added via ExecuteScript. These are:
+
+nw_c2_default7 (NPC OnDeath) runs a script named “prc_pwondeath” This is designed for custom XP use and all the normal OnDeath functions will work as usual.
+
+nw_s0_raisdead (spell script for raise dead) runs a script named “prc_pw_raisedead” This is designed for persistent death scripts. You can get the raised creature with GetSpellTargetObject().
+
+nw_s0_ressurec (spell script for ressurection) runs a script named “prc_pw_ressurection” This is designed for persistent death scripts. You can get the resurrected creature with GetSpellTargetObject().
+
+ss_ep_cont_resur (spell script for contingent ressurection) runs a script named “prc_pw_contress” This is designed for persistent death scripts. You can get the raised creature with OBJECT_SELF.
+
+ss_ep_armyunfall (spell script for army unfallen) runs a script named “prc_pw_armyunfall” This is designed for persistent death scripts. You can get the raised creature with OBJECT_SELF.
+
+psi_inc_psifunc AstralSeedRespawn() (function for astral seed psionic power ondeath) runs a script named “prc_pw_astralseed” This is designed for persistent death scripts. You can get the raised creature with OBJECT_SELF.
+
+x0_i0_spells (spell include for many things including petrification) runs a script named “prc_pw_petrific” This is designed for persistent death scripts. You can get the petrified creature with OBJECT_SELF. Note: this will only be run if on hard core rules or very difficult, since on other settings petrification is temporary.
+
+x0_s0_stoflesh (spell script for stone to flesh) runs a script named “prc_pw_unpetrif” This is designed for persistent death scripts. You can get the unpetrified creature with OBJECT_SELF. Note: this will only be run if on hard core rules or very difficult, since on other settings petrification is temporary.
+
+NOTE: The PRC will include built-in persistant death tracking, see the PRC_PW_DEATH_TRACKING and related switches above.
+
+NPCs and the PRC
+
+Ok then, here is a short introduction to getting NPCs to begin to work with the new PRC classes. The PRC has added some scripts you need to hook into NPC scripts in order to have the PRC passive abilities. Simply add ExecuteScript(“NAMEOFSCRIPT”, OBJECT_SELF); somewhere in the AI script for each event. Most of these scripts do not do anything at the moment, but they might do in future versions.
+
+OnBlocked prc_npc_blocked
+
+OnCombatRoundEnd prc_npc_combat
+
+OnConversation prc_npc_conv
+
+OnDamaged prc_npc_damaged
+
+OnDeath prc_npc_death
+
+OnDisturbed prc_npc_disturb
+
+OnHeartbeat prc_npc_hb
+
+OnPerception prc_npc_percep
+
+OnPhysicalAttacked prc_npc_physatt
+
+Onrested prc_npc_rested
+
+OnSpawns prc_npc_spawn
+
+OnSpellCastAt prc_npc_spellat
+
+OnUserdefined prc_npc_userdef
+
+
+
+That's it! Of course, this doesn’t mean that the NPC will actually use any of its new powers, but at least it is not missing out on anything. There are still some problems with NPCs
+
+1) They don't use the active powers in any intelligent manner. They may use them as part of the Talent functions, but don't bet on it! Bioware default AI is better for this than most others. The exception that proves the rule is the epic spells. A basic wrapper AI has been implemented for many of the new epic spells. In order to use it, you don’t have to do anything once the scripts are hooked as above. If you want to manually setup NPCs to have specific spells, simply add the correct feat to the character and the system will detect that they have been setup and will not give them any free epic spells. You might also want to adjust a local variable called NPC_XP, this is used to burn XP for certain epic spells that need it. It is treated exactly the same as PC XP, so that it can only go down to the minimum for the NPCs level. Once this is setup, be prepared for much tougher combats; any players will be shocked as spells such as Nailed To The Sky take out melee tanks, party members are trapped with Enslave, and the entire party is petrified with Audience Of Stone.
+
+2) The toolset will throw up errors whenever the LevelUp or Character Wizards are used with the certain classes. We are not sure why it does it, and it only does it with certain classes. The best way around the problem is to hand make them, but your doing that anyway, right?
+_________________
