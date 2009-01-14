@@ -1,0 +1,179 @@
+2DA V2.0
+
+      	Cloth                       Metal
+0	"Lightest Tan/Brown"        "Lightest Shiny Silver"
+1	"Light Tan/Brown"           "Light Shiny Silver"
+2	"Dark Tan/Brown"            "Dark Shiny Obsidian"
+3       "Darkest Tan/Brown"         "Darkest Shiny Obsidian"
+4       "Lightest Tan/Red"          "Lightest Dull Silver"
+5       "Light Tan/Red"             "Light Dull Silver"
+6       "Dark Tan/Red"              "Dark Dull Obsidian"
+7       "Darkest Tan/Red"           "Darkest Dull Obsidian"
+8       "Lightest Tan/Yellow"       "Lightest Gold"
+9       "Light Tan/Yellow"          "Light Gold"
+10      "Dark Tan/Yellow"           "Dark Gold"
+11      "Darkest Tan/Yellow"        "Darkest Gold"
+12      "Lightest Tan/Grey"         "Lightest Celestial Gold"
+13      "Light Tan/Grey"            "Light Celestial Gold"
+14      "Dark Tan/Grey"             "Dark Celestial Gold"
+15      "Darkest Tan/Grey"          "Darkest Celestial Gold"
+16      "Lightest Olive"            "Lightest Copper"
+17      "Light Olive"               "Light Copper"
+18      "Dark Olive"                "Dark Copper"
+19      "Darkest Olive"             "Darkest Copper"
+20      "White"                     "Lightest Brass"
+21      "Light Grey"                "Light Brass"
+22      "Dark Grey"                 "Dark Brass"
+23      "Charcoal"                  "Darkest Brass"
+24      "Light Blue"                "Light Red"
+25      "Dark Blue"                 "Dark Red"
+26      "Light Aqua"                "Light Dull Red"
+27      "Dark Aqua"                 "Dark Dull Red"
+28      "Light Teal"                "Light Purple"
+29      "Dark Teal"                 "Dark Purple"
+30      "Light Green"               "Light Dull Purple"
+31      "Dark Green"                "Dark Dull Purple"
+32      "Light Yellow"              "Light Blue"
+33      "Dark Yellow"               "Dark Blue"
+34      "Light Orange"              "Light Dull Blue"
+35      "Dark Orange"               "Dark Dull Blue"
+36      "Light Red"                 "Light Teal"
+37      "Dark Red"                  "Dark Teal"
+38      "Light Pink"                "Light Dull Teal"
+39      "Dark Pink"                 "Dark Dull Teal"
+40      "Light Purple"              "Light Green"
+41      "Dark Purple"               "Dark Green"
+42      "Light Violet"              "Light Dull Green"
+43      "Dark Violet"               "Dark Dull Green"
+44      "Shiny White"               "Light Olive"
+45      "Shiny Black"               "Dark Olive"
+46      "Shiny Blue"                "Light Dull Olive"
+47      "Shiny Aqua"                "Dark Dull Olive"
+48      "Shiny Teal"                "Light Prismatic"
+49      "Shiny Green"               "Dark Prismatic"
+50      "Shiny Yellow"              "Lightest Rust"
+51      "Shiny Orange"              "Light Rust"
+52      "Shiny Red"                 "Dark Rust"
+53      "Shiny Pink"                "Darkest Rust"
+54      "Shiny Purple"              "Light Aged Metal"
+55      "Shiny Violet"              "Dark Aged Metal"
+56      "Silver"                    ****
+57      "Obsidian"                  ****
+58      "Gold"                      ****
+59      "Copper"                    ****
+60      "Grey"                      ****
+61      "Mirror"                    ****
+62      "Pure White"                ****
+63      "Pure Black"                ****
+64      "Metallic Mauve"            ****
+65      "Greyed Metallic Mauve"     ****
+66      "Metallic Gold"             ****
+67      "Greyed Metallic Gold"      ****
+68      "Metallic Green"            ****
+69      "Greyed Metallic Green"     ****
+70      "Metallic Indigo"           ****
+71      "Greyed Metallic Indigo"    ****
+72      "Metallic Violet"           ****
+73      "Greyed Metallic Violet"    ****
+74      "Metallic Brown"            ****
+75      "Greyed Metallic Brown"     ****
+76      "Metallic Teal"             ****
+77      "Greyed Metallic Teal"      ****
+78      "Metallic Blue"             ****
+79      "Greyed Metallic Blue"      ****
+80      "Metallic Olive"            ****
+81      "Greyed Metallic Olive"     ****
+82      "Metallic Aqua"             ****
+83      "Greyed Metallic Aqua"      ****
+84      "Greyed Metallic Fern Green" ****
+85      "Metallic Marshland"        ****
+86      "Greyed Metallic Marshland" ****
+87      "Metallic Fern Green"       ****
+88      "Lightest Metallic Red"     ****
+89      "Light Metallic Red"        ****
+90      "Metallic Red"              ****
+91      "Dark Metallic Red"         ****
+92      "Lightest Metallic Yellow"  ****
+93      "Light Metallic Yellow"     ****
+94      "Metallic Yellow"           ****
+95      "Dark Metallic Yellow"      ****
+96      "Lightest Mauve"            ****
+97      "Light Mauve"               ****
+98      "Mauve"                     ****
+99      "Dark Mauve"                ****
+100     "Lightest Sangria"          ****
+101     "Light Sangria"             ****
+102     "Sangria"                   ****
+103     "Dark Sangria"              ****
+104     "Lightest Forest Green"     ****
+105     "Light Forest Green"        ****
+106     "Forest Green"              ****
+107     "Dark Forest Green"         ****
+108     "Lightest Clover"           ****
+109     "Light Clover"              ****
+110     "Clover"                    ****
+111     "Dark Clover"               ****
+112     "Lightest Marshland"        ****
+113     "Light Marshland"           ****
+114     "Marshland"                 ****
+115     "Dark Marshland"            ****
+116     "Lightest Sienna"           ****
+117     "Light Sienna"              ****
+118     "Sienna"                    ****
+119     "Dark Sienna"               ****
+120     "Lightest Acorn"            ****
+121     "Light Acorn"               ****
+122     "Acorn"                     ****
+123     "Dark Acorn"                ****
+124     "Lightest Gondola"          ****
+125     "Light Gondola"             ****
+126     "Gondola"                   ****
+127     "Dark Gondola"              ****
+128     "Lightest Ash Brown"        ****
+129     "Light Ash Brown"           ****
+130     "Ash Brown"                 ****
+131     "Dark Ash Brown"            ****
+132     "Lightest Mirage"           ****
+133     "Light Mirage"              ****
+134     "Mirage"                    ****
+135     "Dark Mirage"               ****
+136     "Lightest Midnight Blue"    ****
+137     "Light Midnight Blue"       ****
+138     "Midnight Blue"             ****
+139     "Dark Midnight Blue"        ****
+140     "Lightest Dull Teal"        ****
+141     "Light Dull Teal"           ****
+142     "Dull Teal"                 ****
+143     "Dark Dull Teal"            ****
+144     "Lightest Magenta"          ****
+145     "Light Magenta"             ****
+146     "Magenta"                   ****
+147     "Dark Magenta"              ****
+148     "Light Sky Blue"            ****
+149     "Sky Blue"                  ****
+150     "Light Mosque"              ****
+151     "Mosque"                    ****
+152     "Light Sap Green"           ****
+153     "Sap Green"                 ****
+154     "Light Buttered Rum"        ****
+155     "Buttered Rum"              ****
+156     "Light Burnt Sienna"        ****
+157     "Burnt Sienna"              ****
+158     "Light Cherrywood"          ****
+159     "Cherrywood"                ****
+160     "Light Blackberry"          ****
+161     "Blackberry"                ****
+162     "Firebrick"                 ****
+163     "Flirt"                     ****
+164     "Pale Sky"                  ****
+165     "Raincloud"                 ****
+166     "Snow"                      ****
+167     "Pine Tree"                 ****
+168     "Light Black Bean"          ****
+169     "Black Bean"                ****
+170     "Valentino"                 ****
+171     "Ebony Clay"                ****
+172     "Black Forest"              ****
+173     "Dark Cedar"                ****
+174     "Wood Brown"                ****
+175     "Speckled Gold"             ****
