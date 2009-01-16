@@ -8,10 +8,9 @@ From prc_inc_switch.nss:
  * implementation of certain switches.
  */
 
- /*
-
+/*
  Creating your personal switch settings
- For singleplayer, you can create a 2da file and place it in the overide
+ For singleplayer, you can create a 2da file and place it in the override
  Then via the PRC Options switch you can read that 2da and it will
  use it to set switches for you.
  This will not work in multiplayer.
@@ -71,13 +70,7 @@ From prc_inc_switch.nss:
 43  PRC_CRAFTING_BASE_ITEMS                 int        1
 44  PRC_XP_USE_SIMPLE_LA                    int        1
 45  PRC_XP_USE_SIMPLE_RACIAL_HD             int        1
-
- */
-
- /* This variable MUST be updated with every new version of the PRC!!! */
-
- const string PRC_VERSION                           = "PRC 3.2 Alpha 5";
-
+*/
 
 /******************************************************************************\
 *                                  Spell switches                              *
@@ -330,6 +323,32 @@ const string PRC_SPELLID_OVERRIDE                     = "PRC_SPELLID_OVERRIDE";
 
 const string PRC_AFTS_EXTRA_DAMAGE                         = "PRC_AFTS_EXTRA_DAMAGE";
 
+
+// switch whether unlearning spells for spont casters at level up should go according to PnP or Bioware rules
+// if on, will unlearn according to Bioware rules (e.g. as many as you want)
+const string PRC_BIO_UNLEARN = "PRC_BIO_UNLEARN";
+
+/** PRC_UNLEARN_SPELL_MAXNR
+If PRC_BIO_UNLEARN is ON, you may want to restrict the nr of spells that a spontaneous caster
+can unlearn to just a few spells ("normal" Bioware rules allow unlearning all spells at every level).
+When PRC_UNLEARN_SPELL_MAXNR is set to (hopefully) a small value, the spontaneous caster
+will still be able to unlearn spells at EVERY level up with no restrictions to the spell level that may
+be unlearned, but the maximum nr of spells that can be unlearned are determined by the value on the switch
+When PRC_UNLEARN_SPELL_MAXNR is not set and PRC_BIO_UNLEARN is ON, the spont caster
+may unlearn as many spells as he wishes at every level up
+
+If PRC_BIO_UNLEARN is Off, the maximum spell level that can be unlearned and the caster level
+at which unlearning a spell becomes possible will be determined according to PnP rules. However,
+you may want to give your spont casters more than one single spell to unlearn via this switch. If
+PRC_UNLEARN_SPELL_MAXNR is set to a positive value, this is the nr of spells that the spontaneous
+caster may unlearn (assuming he is allowed to unlearn at least one spell according to PnP rules). If
+PRC_UNLEARN_SPELL_MAXNR is not set and PRC_BIO_UNLEARN is Off, unlearning spells goes
+according to the exact PnP rules, e.g. at most one spell may be unlearned (at specific caster levels and
+with restrictions on the maximum spell level that can be unlearned)
+*/
+// holds the maximum nr of spells that can be unlearned when the spont caster is entitled to unlearn at least one spell
+const string PRC_UNLEARN_SPELL_MAXNR = "PRC_UNLEARN_SPELL_MAXNR";
+
 /******************************************************************************\
 *                                  Class switches                              *
 \******************************************************************************/
@@ -399,7 +418,7 @@ const string PRC_SAMURAI_VALUE_SCALAR_x100           = "PRC_SAMURAI_VALUE_SCALAR
  * Not allowing divine damage :                         PRC_SAMURAI_BAN_16_8_*_*
  * Not allowing divine damage vs undead:                PRC_SAMURAI_BAN_18_24_8_*
  * Not allowing +20 encancement weapons                 PRC_SAMURAI_BAN_6_*_*_20
- * see also DoSamuraiBanDefaults at the end of this file for more examples
+ * see also DoSamuraiBanDefaults in inc_switch_setup
  *
  */
 const string PRC_SAMURAI_BAN_                            = "PRC_SAMURAI_BAN_";
@@ -642,11 +661,6 @@ const string PRC_SPELLSLAB                           = "PRC_SPELLSLAB";
 const string PRC_SPELLSLAB_NOSCROLLS                 = "PRC_SPELLSLAB_NOSCROLLS";
 
 /**
- * Disables the sale of crafting recipes from the epic spell laboratory.
- */
-const string PRC_SPELLSLAB_NORECIPES                 = "PRC_SPELLSLAB_NORECIPES";
-
-/**
  * Makes reaching 0 in an ability score have the special effects it should have
  * according to PnP.
  *
@@ -726,12 +740,6 @@ const string PRC_PNP_FAMILIARS                       = "PRC_PNP_FAMILIARS";
  * through the conversation
  */
 const string PRC_PNP_FAMILIAR_FEEDING                = "PRC_PNP_FAMILIAR_FEEDING";
-
-/**
- * This disables the ability to reroll HP at levelup
- * It requires letoscript to work.
- */
-const string PRC_NO_HP_REROLL                        = "PRC_NO_HP_REROLL";
 
 /**
  * This disables the 2 free spells wizards get at levelup
@@ -1161,14 +1169,6 @@ const string FILE_END_PACKAGE                        = "FILE_END_PACKAGE";
 /** Defines the line after which none of the race_feat_*.2da have entries.
  * This will be set automatically to a default unless FILE_END_MANUAL is turned on */
 const string FILE_END_RACE_FEAT                      = "FILE_END_RACE_FEAT";
-
-/** Defines the line after which none of the race_feat_*.2da have entries.
- * This will be set automatically to a default unless FILE_END_MANUAL is turned on */
-const string FILE_END_IREQ                           = "FILE_END_IREQ";
-
-/** Defines the line after which none of the race_feat_*.2da have entries.
- * This will be set automatically to a default unless FILE_END_MANUAL is turned on */
-const string FILE_END_ITEM_TO_IREQ                   = "FILE_END_ITEM_TO_IREQ";
 
 /** Last line of baseitems.2da
  * This will be set automatically to a default unless FILE_END_MANUAL is turned on */
@@ -1869,12 +1869,7 @@ const string PRC_DISABLE_CREATURE_TELEPORT              = "PRC_DISABLE_CREATURE_
  * Persistant time tracking.
  * When the first player logs on, the clock is set forward to the last time that
  * player logged off.
- *
- * @DUG *********************************************************************
- * @DUG **** Do not enable *** This switch disables Sorcerer spellcasting ***
- * @DUG *********************************************************************
  */
-// @DUG Do not enable -- this switch disables Sorceror casting!
 const string PRC_PW_TIME                             = "PRC_PW_TIME";
 
 /**

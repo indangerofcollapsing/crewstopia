@@ -3,10 +3,14 @@ set PRC=%CD%
 if exist .\src\. goto prcVersionSet
 set PRC=%NWN_HOME%\extensions\PrC3.3
 :prcVersionSet
-set MINE=%NWN_HOME%\extensions\Custom\Override
 
+set MINE=%NWN_HOME%\extensions\Custom\Override
 for /F "usebackq" %%f in (`dir /b /s %MINE%\*.2da`) do call :findIt %%f
 for /F "usebackq" %%f in (`dir /b /s %MINE%\*.nss`) do call :findIt %%f
+
+set MINE=%NWN_HOME%\extensions\Custom\erf
+for /F "usebackq" %%f in (`dir /b /s %MINE%\*.nss`) do call :findIt %%f
+
 goto end
 
 :findIt
