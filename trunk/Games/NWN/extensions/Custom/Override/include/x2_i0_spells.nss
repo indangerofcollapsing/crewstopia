@@ -61,13 +61,11 @@ void CheckAndApplyTerrifyingRage(int nRounds);
 void DoMindBlast(int nDC, int nDuration, float fRange);
 
 
-void GZRemoveSpellEffects(int nID,object oTarget, int bMagicalEffectsOnly = TRUE); // @DUG
+void PRCRemoveSpellEffects(int nID,object oTarget, int bMagicalEffectsOnly = TRUE);
 int GZGetDelayedSpellEffectsExpired(int nSpell_ID, object oTarget, object oCaster);
 
-//#include "x2_inc_itemprop"
-#include "prc_x2_itemprop" // @DUG
+#include "x2_inc_itemprop" // @DUG
 #include "prcsp_reputation" // @DUG
-#include "nw_i0_generic" // @DUG
 
 //::///////////////////////////////////////////////
 //:: CreateBadTideEffectsLink
@@ -235,10 +233,10 @@ int spellsIsFlying(object oCreature)
         case 430: // Demi Lich
         case 472: // Hive mother
         case 291: // @DUG Seagull flying
-        case 455: // Wyvern
-        case 456: // Wyvern
-        case 457: // Wyvern
-        case 458: // Wyvern
+        case 455: // @DUG Wyvern
+        case 456: // @DUG Wyvern
+        case 457: // @DUG Wyvern
+        case 458: // @DUG Wyvern
         case 1046: // @DUG CEP creatures, see appearance.2da
         case 1050: // @DUG
         case 1073: // @DUG
@@ -797,7 +795,7 @@ int GetBestAOEBehavior(int nSpellID)
 // the spell can from only one caster anyway
 // By default, it will only cancel magical effects
 //--------------------------------------------------------------------------
-void GZRemoveSpellEffects(int nID,object oTarget, int bMagicalEffectsOnly = TRUE) // @DUG
+void PRCRemoveSpellEffects(int nID,object oTarget, int bMagicalEffectsOnly = TRUE)
 {
     effect eEff = GetFirstEffect(oTarget);
     while (GetIsEffectValid(eEff))
@@ -843,7 +841,7 @@ int GZGetDelayedSpellEffectsExpired(int nSpell_ID, object oTarget, object oCaste
     //--------------------------------------------------------------------------
     if( !GetIsObjectValid(oCaster))
     {
-        GZRemoveSpellEffects(nSpell_ID, oTarget); // @DUG
+        PRCRemoveSpellEffects(nSpell_ID, oTarget);
         DeleteLocalInt(oTarget,"XP2_L_SPELL_SAVE_DC_" + IntToString (nSpell_ID));
         return TRUE;
     }
@@ -851,7 +849,7 @@ int GZGetDelayedSpellEffectsExpired(int nSpell_ID, object oTarget, object oCaste
     if (GetIsDead(oCaster))
     {
         DeleteLocalInt(oTarget,"XP2_L_SPELL_SAVE_DC_" + IntToString (nSpell_ID));
-        GZRemoveSpellEffects(nSpell_ID, oTarget); // @DUG
+        PRCRemoveSpellEffects(nSpell_ID, oTarget);
         return TRUE;
     }
 

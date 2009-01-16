@@ -1,8 +1,5 @@
 #include "x2_inc_switches"
 
-// @DUG compile errors on x2_mod_def_equ without this
-int GetModuleSwitchValue(string  sModuleSwitchConstant);
-
 // * Generic reputation wrapper
 // * definition of constants:
 // * SPELL_TARGET_ALLALLIES = Will affect all allies, even those in my faction who don't like me

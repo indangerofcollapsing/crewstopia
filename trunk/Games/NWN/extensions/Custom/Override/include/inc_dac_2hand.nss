@@ -1,4 +1,4 @@
-#include "prc_x2_itemprop" //#include "x2_inc_itemprop"
+//#include "x2_inc_itemprop"
 #include "inc_nbde"
 #include "prc_alterations"
 #include "inc_debug_dac"
@@ -440,7 +440,7 @@ int getRawBonus(int nIPDamageBonus)
    return nDamageBonus;
 }
 
-//void main() {} // Testing/compiling purposes
+void main() {} // Testing/compiling purposes
 
 /* raw values
 IP_CONST_DAMAGEBONUS_1 = 1
