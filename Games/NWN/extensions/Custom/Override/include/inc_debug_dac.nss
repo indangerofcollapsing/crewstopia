@@ -20,7 +20,7 @@ string booleanToString(int bVarValue);
 string itempropertyToString(itemproperty ipVarValue);
 
 #include "x0_i0_position"
-#include "prc_x2_itemprop" //#include "x2_inc_itemprop"
+//#include "x2_inc_itemprop"
 
 void debugMsg(string sMsg)
 {

@@ -2,6 +2,7 @@
 #include "inc_race"
 #include "zep_inc_main"
 #include "aps_include"
+#include "inc_nbde"
 
 // how expensive is the loot generated?
 const float MONTY_HAUL_FACTOR = 0.25;

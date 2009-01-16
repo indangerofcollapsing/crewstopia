@@ -1,6 +1,3 @@
-Doppelganger
-31  Doppelganger           D1    16827206 16827207   16827208        16827209   16827210    1215       0         0         -2        2         -2        2         30        8       RACE_FEAT_DOPP   16826910  1          RACIAL_TYPE_SHAPECHANGER         18   25                  1
-
 Halfling subtypes     ST/DX/CN/IN/WS/CH   Favored
 Ghostwise Halfling    -2/  /  /+2/-2/+2   Barb
 Tundra Halfling       -1/+2/+1/-2/  /     Rang

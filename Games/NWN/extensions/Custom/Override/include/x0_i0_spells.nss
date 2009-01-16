@@ -53,11 +53,9 @@ void spellsDispelMagic(object oTarget, int nCasterLevel, effect eVis, effect eIm
 // * returns true if oCreature does not have a mind
 int spellsIsMindless(object oCreature);
 
-/* @DUG conflicts with x2_i0_spells
 // * Returns true or false depending on whether the creature is flying
 // * or not
 int spellsIsFlying(object oCreature);
-*/
 
 // * returns true if the creature has flesh
 int spellsIsImmuneToPetrification(object oCreature);
@@ -156,8 +154,6 @@ void spellsDispelAoE(object oTargetAoE, object oCaster, int nCasterLevel);
 //#include "prc_spellf_inc"
 #include "prcsp_engine"
 #include "prc_inc_function"
-#include "prc_add_spell_dc" // @DUG
-#include "x2_i0_spells" // @DUG
 
 //::///////////////////////////////////////////////
 //:: DoTrapSpike
@@ -1565,7 +1561,6 @@ int spellsIsImmuneToPetrification(object oCreature)
     return bImmune;
 }
 
-/* @DUG conflicts with x2_i0_spells
 // * Returns true or false depending on whether the creature is flying
 // * or not
 int spellsIsFlying(object oCreature)
@@ -1620,6 +1615,133 @@ int spellsIsFlying(object oCreature)
         case 419: // harpy
         case 430: // Demi Lich
         case 472: // Hive mother
+        case 291: // @DUG Seagull flying
+        case 455: // @DUG Wyvern
+        case 456: // @DUG Wyvern
+        case 457: // @DUG Wyvern
+        case 458: // @DUG Wyvern
+        case 1046: // @DUG CEP creatures, see appearance.2da
+        case 1050: // @DUG
+        case 1073: // @DUG
+        case 1171: // @DUG
+        case 1172: // @DUG
+        case 1275: // @DUG
+        case 1281: // @DUG
+        case 1282: // @DUG
+        case 1342: // @DUG
+        case 1343: // @DUG
+        case 1344: // @DUG
+        case 1345: // @DUG
+        case 1346: // @DUG
+        case 1347: // @DUG
+        case 1366: // @DUG
+        case 1367: // @DUG
+        case 1368: // @DUG
+        case 1372: // @DUG
+        case 1373: // @DUG
+        case 1374: // @DUG
+        case 1375: // @DUG
+        case 1376: // @DUG
+        case 1377: // @DUG
+        case 1387: // @DUG
+        case 1388: // @DUG
+        case 1389: // @DUG
+        case 1425: // @DUG
+        case 1426: // @DUG
+        case 1431: // @DUG
+        case 1432: // @DUG
+        case 1435: // @DUG
+        case 1436: // @DUG
+        case 1437: // @DUG
+        case 1493: // @DUG
+        case 1494: // @DUG
+        case 1508: // @DUG
+        case 1515: // @DUG
+        case 1516: // @DUG
+        case 1517: // @DUG
+        case 1518: // @DUG
+        case 1527: // @DUG
+        case 1528: // @DUG
+        case 1556: // @DUG
+        case 1557: // @DUG
+        case 1558: // @DUG
+        case 1559: // @DUG
+        case 1560: // @DUG
+        case 1561: // @DUG
+        case 1562: // @DUG
+        case 1563: // @DUG
+        case 1564: // @DUG
+        case 1565: // @DUG
+        case 1584: // @DUG
+        case 1596: // @DUG
+        case 1608: // @DUG
+        case 1620: // @DUG
+        case 1632: // @DUG
+        case 1644: // @DUG
+        case 1656: // @DUG
+        case 1668: // @DUG
+        case 1680: // @DUG
+        case 1692: // @DUG
+        case 1807: // @DUG
+        case 1808: // @DUG
+        case 1809: // @DUG
+        case 1810: // @DUG
+        case 1812: // @DUG
+        case 1813: // @DUG
+        case 1814: // @DUG
+        case 1815: // @DUG
+        case 1816: // @DUG
+        case 1817: // @DUG
+        case 1818: // @DUG
+        case 1819: // @DUG
+        case 1850: // @DUG
+        case 1874: // @DUG
+        case 1875: // @DUG
+        case 1891: // @DUG
+        case 1892: // @DUG
+        case 1893: // @DUG
+        case 1947: // @DUG
+        case 1948: // @DUG
+        case 1949: // @DUG
+        case 1950: // @DUG
+        case 1951: // @DUG
+        case 1952: // @DUG
+        case 1956: // @DUG
+        case 1957: // @DUG
+        case 1958: // @DUG
+        case 1959: // @DUG
+        case 1960: // @DUG
+        case 1961: // @DUG
+        case 1962: // @DUG
+        case 1963: // @DUG
+        case 1964: // @DUG
+        case 1965: // @DUG
+        case 1975: // @DUG
+        case 1976: // @DUG
+        case 1977: // @DUG
+        case 1978: // @DUG
+        case 1979: // @DUG
+        case 1988: // @DUG
+        case 1990: // @DUG
+        case 1991: // @DUG
+        case 1992: // @DUG
+        case 1993: // @DUG
+        case 1994: // @DUG
+        case 1995: // @DUG
+        case 1996: // @DUG
+        case 1997: // @DUG
+        case 1998: // @DUG
+        case 2079: // @DUG
+        case 2080: // @DUG
+        case 2081: // @DUG
+        case 2082: // @DUG
+        case 3120: // @DUG
+        case 1321: // @DUG
+        case 3122: // @DUG
+        case 3123: // @DUG
+        case 3124: // @DUG
+        case 3125: // @DUG
+        case 3130: // @DUG
         bFlying = TRUE;
     }
     if(!bFlying
@@ -1627,7 +1749,6 @@ int spellsIsFlying(object oCreature)
         bFlying = TRUE;
     return bFlying;
 }
-@DUG */
 
 // * returns true if oCreature does not have a mind
 int spellsIsMindless(object oCreature)
@@ -1862,18 +1983,4 @@ void spellsDispelAoE(object oTargetAoE, object oCaster, int nCasterLevel)
 
 }
 
-
-// Test main
-//void main(){}
-(oTargetAoE);
-    }
-    else
-    {
-        FloatingTextStrRefOnCreature(100930,oCaster); // "AoE not dispelled"
-    }
-
-}
-
-
-// Test main
-//void main(){}
+//void main(){} // Testing/compiling purposes

@@ -1,3 +1,6 @@
+// requires
+#include "mk_inc_tools"
+
 const int MK_CREATURE_PART_NEXT = 1;
 const int MK_CREATURE_PART_PREV = 2;
 
@@ -10,7 +13,15 @@ const int MK_CRAFTBODY_PHENOTYPE = 5;
 
 const int MK_CRAFTBODY_PORTRAIT = 7;
 const int MK_CRAFTBODY_BODY = 8;
-const int MK_CRAFTBODY_NUMBER_OF_BODYPARTS = 8;
+const int MK_CRAFTBODY_HORSE = 9;
+
+const int MK_CRAFTBODY_COLOR = 10;
+
+const int MK_CRAFTBODY_NUMBER_OF_BODYPARTS = 10;
+
+const int MK_CRAFTBODY_SAVERESTORE = 21;
+
+const int MK_CRAFTBODY_NUMBER_OF_SLOTS = 10;
 
 const int MK_CRAFTBODY_NEXT = 1;
 const int MK_CRAFTBODY_PREV = 2;
@@ -26,6 +37,18 @@ const string MK_CRAFTBODY_SAVE = "MK_CRAFTBODY_SAVE";
 
 const int MK_CRAFTBODY_TOKEN_NAME = 14422;
 const int MK_CRAFTBODY_TOKEN_NUMBER = 14423;
+
+const string MK_2DA_RIDE_PHENO = "mk_ride_pheno";
+const string MK_2DA_RIDE_HORSES = "mk_horses";
+
+const string MK_VAR_CURRENT_HORSE = "MK_CurrentHorse";
+const string MK_VAR_CURRENT_TAIL = "MK_CurrentTail";
+
+const int MK_HORSE_1 = 16;
+const int MK_HORSE_2 = 29;
+const int MK_HORSE_3 = 42;
+const int MK_HORSE_4 = 55;
+const int MK_HORSE_5 = 68;
 
 
 // ----------------------------------------------------------------------------
@@ -92,7 +115,37 @@ int MK_GetBodyPart(object oCreature, int nBodyPartToBeModified, int nSubBodyPart
 // ----------------------------------------------------------------------------
 // Sets the current body part number
 // ----------------------------------------------------------------------------
-void MK_SetBodyPart(int nBodyPart, object oCreature, int nBodyPartToBeModified, int nSubBodyPart=0);
+void MK_SetBodyPart(int nBodyPart, object oCreature, int nBodyPartToBeModified, int nSubBodyPart=0); // @DUG
+
+// ----------------------------------------------------------------------------
+// Calculates the save bodypart string
+// ----------------------------------------------------------------------------
+string MK_GetSaveBodyPartString(object oCreature, int nBodyPart);
+
+// ----------------------------------------------------------------------------
+// Restores appearance of bodypart nBodyPart from string sSaveString
+// ----------------------------------------------------------------------------
+void MK_RestoreBodyPartFromString(object oCreature, int nBodyPart, string sSaveString, float fDelay=0.0);
+
+// ----------------------------------------------------------------------------
+// Saves the current body appearance to slot nSlot
+// ----------------------------------------------------------------------------
+void MK_SaveBody(object oCreature, int nSlot);
+
+// ----------------------------------------------------------------------------
+// Compares the current body appearance with appearance in slot nSlot
+// ----------------------------------------------------------------------------
+int MK_CompareBody(object oCreature, int nSlot);
+
+// ----------------------------------------------------------------------------
+// Returns TRUE if slot nSlot stores a body appearance
+// ----------------------------------------------------------------------------
+int MK_GetIsUsedSaveBodySlot(object oCreature, int nSlot);
+
+// ----------------------------------------------------------------------------
+// Restores the body appearance from slot nSlot
+// ----------------------------------------------------------------------------
+void MK_RestoreBody(object oCreature, int nSlot);
 
 // ----------------------------------------------------------------------------
 // Saves the current body part so it can be restored
@@ -117,12 +170,17 @@ void MK_CleanUpBodyPart(object oCreature);
 // ----------------------------------------------------------------------------
 // Returns TRUE if nBodyPart is valid
 // ----------------------------------------------------------------------------
-int MK_GetIsValidBodyPart(int nPartToBeModfied, int nBodyPart);
+int MK_GetIsValidBodyPart(int nPartToBeModfied, int nBodyPart, string sUser2DA="", string sColumn="");
 
 // ----------------------------------------------------------------------------
 // Returns the name of nBodyPart
 // ----------------------------------------------------------------------------
 string MK_GetBodyPartName(int nPartToBeModified, int nBodyPart);
+
+// ----------------------------------------------------------------------------
+// Returns the name of the current horse
+// ----------------------------------------------------------------------------
+string MK_GetHorseName(int nHorse);
 
 // ----------------------------------------------------------------------------
 // Changes the body part
@@ -140,9 +198,24 @@ void MK_NewBodyPart(object oCreature, int nMode);
 // ----------------------------------------------------------------------------
 void MK_SetBodyPartTokens(object oCreature);
 
+// ----------------------------------------------------------------------------
+// Sets the tokens 14422/14423
+// ----------------------------------------------------------------------------
+void MK_SetBodyPartTokens2(string sPartName, string sBodyPart);
 
 // ----------------------------------------------------------------------------
 int MK_GetMaxBodyPartID(int nCreaturePart);
+
+// ----------------------------------------------------------------------------
+// Initializes the horse selection for oCreature:
+// - sets the phenotype to riding
+// - sets the tail to the current horse or the starting horse of no
+//   current horse exists.
+// ----------------------------------------------------------------------------
+int MK_InitializeHorseSelection(object oCreature);
+
+// ----------------------------------------------------------------------------
+int MK_GetIsRiding(object oCreature);
 
 // ----------------------------------------------------------------------------
 // implementation
@@ -283,6 +356,9 @@ int MK_GetBodyPart(object oCreature, int nBodyPartToBeModified, int nSubBodyPart
     case MK_CRAFTBODY_TAIL:
         nBodyPart = GetCreatureTailType(oCreature);
         break;
+    case MK_CRAFTBODY_HORSE:
+        nBodyPart = GetCreatureTailType(oCreature);
+        break;
     case MK_CRAFTBODY_WINGS:
         nBodyPart = GetCreatureWingType(oCreature);
         break;
@@ -291,6 +367,9 @@ int MK_GetBodyPart(object oCreature, int nBodyPartToBeModified, int nSubBodyPart
         break;
     case MK_CRAFTBODY_PORTRAIT:
         nBodyPart = MK_GetPortraitId(oCreature);
+        break;
+    case MK_CRAFTBODY_COLOR:
+        nBodyPart = GetColor(oCreature, nSubBodyPart);
         break;
     }
     return nBodyPart;
@@ -318,6 +397,9 @@ void MK_SetBodyPart(int nBodyPart, object oCreature, int nBodyPartToBeModified, 
     case MK_CRAFTBODY_TAIL:
         SetCreatureTailType(nBodyPart, oCreature);
         break;
+    case MK_CRAFTBODY_HORSE:
+        SetCreatureTailType(nBodyPart, oCreature);
+        break;
     case MK_CRAFTBODY_WINGS:
         SetCreatureWingType(nBodyPart, oCreature);
         break;
@@ -327,22 +409,103 @@ void MK_SetBodyPart(int nBodyPart, object oCreature, int nBodyPartToBeModified, 
     case MK_CRAFTBODY_PORTRAIT:
         SetPortraitId(oCreature, nBodyPart);
         break;
+    case MK_CRAFTBODY_COLOR:
+        SetColor(oCreature, nSubBodyPart, nBodyPart);
+        break;
     }
 }
 
-string MK_IntToString(int nInteger, int nLen)
+int MK_GetIsUsedSaveBodySlot(object oCreature, int nSlot)
 {
-    string s = IntToString(nInteger);
-    while (GetStringLength(s)<nLen)
+    if (nSlot>=0)
     {
-        s=" "+s;
+        string sPrefix = "MK_SaveSlot"+MK_IntToString(nSlot,2,"0")+"_";
+        int nBodyPart;
+        for (nBodyPart=1; nBodyPart<=MK_CRAFTBODY_NUMBER_OF_BODYPARTS; nBodyPart++)
+        {
+            string sVariable = sPrefix+"Part"+MK_IntToString(nBodyPart,2,"0");
+            string sSaveString = GetLocalString(oCreature, sVariable);
+
+            if (sSaveString!="") return TRUE;
+        }
+        return FALSE;
     }
-    return s;
+    else
+    {
+        int nSlotQ;
+        for (nSlotQ=1; nSlotQ<=MK_CRAFTBODY_NUMBER_OF_SLOTS; nSlotQ++)
+        {
+            if (MK_GetIsUsedSaveBodySlot(oCreature, nSlotQ))
+            {
+                return TRUE;
+            }
+        }
+        return FALSE;
+    }
 }
-string MK_GetSaveBodyPartString(object oCreature)
+
+void MK_SaveBody(object oCreature, int nSlot)
+{
+    string sPrefix = "MK_SaveSlot"+MK_IntToString(nSlot,2,"0")+"_";
+    int nBodyPart;
+    for (nBodyPart=1; nBodyPart<=MK_CRAFTBODY_NUMBER_OF_BODYPARTS; nBodyPart++)
+    {
+        string sSaveString = MK_GetSaveBodyPartString(oCreature, nBodyPart);
+        string sVariable = sPrefix+"Part"+MK_IntToString(nBodyPart,2,"0");
+//        SendMessageToPC(oCreature, "Variable: "+sVariable+", Wert: "+sSaveString);
+        SetLocalString(oCreature, sVariable, sSaveString);
+    }
+}
+
+void MK_RestoreBody(object oCreature, int nSlot)
+{
+    string sPrefix1 = "MK_SaveSlot"+MK_IntToString(nSlot,2,"0")+"_Part";
+    string sVariable1;
+    string sSaveString1, sSaveString0;
+
+    float fDelay = GetLocalFloat(OBJECT_SELF, "MK_RESTOREBODY_DELAY");
+
+    int nBodyPart;
+    for (nBodyPart=1; nBodyPart<=MK_CRAFTBODY_NUMBER_OF_BODYPARTS; nBodyPart++)
+    {
+        sVariable1 = sPrefix1+MK_IntToString(nBodyPart,2,"0");
+
+        sSaveString1 = GetLocalString(oCreature, sVariable1);
+        sSaveString0 = MK_GetSaveBodyPartString(oCreature, nBodyPart);
+
+//        SendMessageToPC(oCreature, "Variable: "+sVariable1+", Wert: "+sSaveString1+", Aktuell: "+sSaveString0);
+
+        if (sSaveString1!=sSaveString0)
+        {
+            MK_RestoreBodyPartFromString(oCreature, nBodyPart, sSaveString1, fDelay);
+            ActionPauseConversation();
+            ActionWait(fDelay);
+            ActionResumeConversation();
+        }
+    }
+}
+
+int MK_CompareBody(object oCreature, int nSlot)
+{
+    string sPrefix = "MK_SaveSlot"+MK_IntToString(nSlot,2,"0")+"_";
+    int nBodyPart;
+    for (nBodyPart=1; nBodyPart<=MK_CRAFTBODY_NUMBER_OF_BODYPARTS; nBodyPart++)
+    {
+        string sSaveString = MK_GetSaveBodyPartString(oCreature, nBodyPart);
+        string sVariable = sPrefix+"Part"+MK_IntToString(nBodyPart,2,"0");
+        if (GetLocalString(oCreature, sVariable)!=sSaveString)
+        {
+            return FALSE;
+        }
+    }
+    return TRUE;
+}
+
+string MK_GetSaveBodyPartString(object oCreature, int nBodyPart)
 {
     string sSave="";
-    switch (MK_GetBodyPartToBeModified(oCreature))
+    switch (nBodyPart)
+//    switch (MK_GetBodyPartToBeModified(oCreature))
     {
     case MK_CRAFTBODY_HEAD:
         sSave = IntToString(GetCreatureBodyPart(CREATURE_PART_HEAD, oCreature));
@@ -356,6 +519,16 @@ string MK_GetSaveBodyPartString(object oCreature)
             }
         }
         break;
+    case MK_CRAFTBODY_COLOR:
+        {
+            int i;
+            int nColorChannel;
+            for (i=0; i<=3; i++)
+            {
+                sSave+=MK_IntToString(GetColor(oCreature, i),3);
+            }
+        }
+        break;
     case MK_CRAFTBODY_TAIL:
         sSave = IntToString(GetCreatureTailType(oCreature));
         break;
@@ -364,6 +537,10 @@ string MK_GetSaveBodyPartString(object oCreature)
         break;
     case MK_CRAFTBODY_PHENOTYPE:
         sSave = IntToString(GetPhenoType(oCreature));
+        break;
+    case MK_CRAFTBODY_HORSE:
+        sSave = MK_IntToString(GetPhenoType(oCreature),3)
+              + MK_IntToString(GetCreatureTailType(oCreature),3);
         break;
     case MK_CRAFTBODY_PORTRAIT:
         {
@@ -384,62 +561,114 @@ string MK_GetSaveBodyPartString(object oCreature)
 
 void MK_SaveBodyPart(object oCreature)
 {
-    string sSave=MK_GetSaveBodyPartString(oCreature);
+    string sSave=MK_GetSaveBodyPartString(oCreature,
+        MK_GetBodyPartToBeModified(oCreature));
     SetLocalString(oCreature, MK_CRAFTBODY_SAVE, sSave);
 }
 
-void MK_RestoreBodyPart(object oCreature)
+void MK_RestoreBodyPartFromString(object oCreature, int nBodyPart, string sSaveString, float fDelay)
 {
-    string sSave=GetLocalString(oCreature, MK_CRAFTBODY_SAVE);
-
-    switch (MK_GetBodyPartToBeModified(oCreature))
+    switch (nBodyPart)
     {
     case MK_CRAFTBODY_HEAD:
-        SetCreatureBodyPart(CREATURE_PART_HEAD, StringToInt(sSave), oCreature);
+        SetCreatureBodyPart(CREATURE_PART_HEAD, StringToInt(sSaveString), oCreature);
         break;
     case MK_CRAFTBODY_BODY:
         {
             int i;
+            int nNewBodyPart;
+            int nCurrentBodyPart;
             for (i=0; i<=17; i++)
             {
-                SetCreatureBodyPart(
-                    i,
-                    StringToInt(GetSubString(sSave,i*3,3)),
-                    oCreature);
+                nNewBodyPart = StringToInt(GetSubString(sSaveString,i*3,3));
+                nCurrentBodyPart = GetCreatureBodyPart(i, oCreature);
+
+                if (nNewBodyPart!=nCurrentBodyPart)
+                {
+                    SetCreatureBodyPart(
+                        i,
+                        nNewBodyPart,
+                        oCreature);
+                    ActionPauseConversation();
+                    ActionWait(fDelay);
+                    ActionResumeConversation();
+                }
+            }
+        }
+        break;
+    case MK_CRAFTBODY_COLOR:
+        {
+            int i, nNewColor, nCurrentColor;
+            for (i=0; i<=3; i++)
+            {
+                nNewColor = StringToInt(GetSubString(sSaveString,i*3,3));
+                nCurrentColor = GetColor(oCreature, i);
+
+                if (nNewColor!=nCurrentColor)
+                {
+                    SetColor(oCreature, i, nNewColor);
+
+                    ActionPauseConversation();
+                    ActionWait(fDelay);
+                    ActionResumeConversation();
+                }
             }
         }
         break;
     case MK_CRAFTBODY_TAIL:
-        SetCreatureTailType(StringToInt(sSave), oCreature);
+        SetCreatureTailType(StringToInt(sSaveString), oCreature);
         break;
     case MK_CRAFTBODY_WINGS:
-        SetCreatureWingType(StringToInt(sSave), oCreature);
+        SetCreatureWingType(StringToInt(sSaveString), oCreature);
         break;
     case MK_CRAFTBODY_PHENOTYPE:
-        SetPhenoType(StringToInt(sSave), oCreature);
+        SetPhenoType(StringToInt(sSaveString), oCreature);
+        break;
+    case MK_CRAFTBODY_HORSE:
+        SetCreatureTailType(StringToInt(GetStringRight(sSaveString,3)), oCreature);
+        SetPhenoType(StringToInt(GetStringLeft(sSaveString,3)), oCreature);
         break;
     case MK_CRAFTBODY_PORTRAIT:
         {
-            if (GetStringLeft(sSave,3)=="ID=")
+            if (GetStringLeft(sSaveString,3)=="ID=")
             {
-                int nId = StringToInt(GetSubString(sSave,3,GetStringLength(sSave)-3));
+                int nId = StringToInt(GetSubString(sSaveString,3,GetStringLength(sSaveString)-3));
                 SetPortraitId(oCreature,nId);
             }
-            else if (GetStringLeft(sSave,7)=="ResRef=")
+            else if (GetStringLeft(sSaveString,7)=="ResRef=")
             {
-                string sResRef = GetSubString(sSave,7,GetStringLength(sSave)-7);
+                string sResRef = GetSubString(sSaveString,7,GetStringLength(sSaveString)-7);
                 SetPortraitResRef(oCreature, sResRef);
             }
         }
         break;
     }
-    MK_CleanUpBodyPart(oCreature);
+}
+
+void MK_RestoreBodyPart(object oCreature)
+{
+    string sSave=GetLocalString(oCreature, MK_CRAFTBODY_SAVE);
+    int nBodyPart = MK_GetBodyPartToBeModified(oCreature);
+
+    MK_RestoreBodyPartFromString(oCreature, nBodyPart, sSave);
+
+//    MK_CleanUpBodyPart(oCreature);
 }
 
 int MK_GetIsBodyModified(object oCreature)
 {
-    int bModified =
-        (MK_GetSaveBodyPartString(oCreature) != GetLocalString(oCreature, MK_CRAFTBODY_SAVE));
+    int bModified=FALSE;
+
+    int nBodyPart = MK_GetBodyPartToBeModified(oCreature);
+    if (nBodyPart==MK_CRAFTBODY_SAVERESTORE)
+    {
+        bModified = !MK_CompareBody(oCreature, 0);
+    }
+    else
+    {
+        bModified =
+            (MK_GetSaveBodyPartString(oCreature, nBodyPart) != GetLocalString(oCreature, MK_CRAFTBODY_SAVE));
+    }
     return bModified;
 }
 
@@ -461,10 +690,24 @@ void MK_CleanUpBodyPart(object oCreature)
             DeleteLocalInt(OBJECT_SELF, "MK_"+sColumn+"_MAX_ID");
         }
     }
+    for (i=1; i<=MK_CRAFTBODY_NUMBER_OF_BODYPARTS; i++)
+    {
+        DeleteLocalInt(oCreature, "MK_SaveSlot00_Part"+MK_IntToString(i,2,"0"));
+    }
 }
 
 void MK_DoneBodyPart(object oCreature)
 {
+    int nBodyPart = MK_GetBodyPartToBeModified(oCreature);
+    switch (nBodyPart)
+    {
+    case MK_CRAFTBODY_HORSE:
+        if (MK_GetIsRiding(oCreature))
+        {
+            SetLocalInt(oCreature,MK_VAR_CURRENT_HORSE,GetCreatureTailType(oCreature));
+        }
+        break;
+    }
     MK_CleanUpBodyPart(oCreature);
 }
 
@@ -483,6 +726,10 @@ string MK_GetBodyPartName(int nPartToBeModified, int nBodyPart)
         s2DA = "TailModel";
         sColumn = "Label";
         break;
+    case MK_CRAFTBODY_HORSE:
+        s2DA = "TailModel";
+        sColumn = "Label";
+        break;
     case MK_CRAFTBODY_WINGS:
         s2DA = "WingModel";
         sColumn = "Label";
@@ -495,6 +742,8 @@ string MK_GetBodyPartName(int nPartToBeModified, int nBodyPart)
         s2DA = "Portraits";
         sColumn = "BaseResRef";
         break;
+    case MK_CRAFTBODY_COLOR:
+        break;
     }
 
     string sPartName = "";
@@ -506,12 +755,78 @@ string MK_GetBodyPartName(int nPartToBeModified, int nBodyPart)
     return sPartName;
 }
 
-int MK_GetIsValidBodyPart(int nPartToBeModified, int nBodyPart)
+string MK_GetHorseName(int nHorse)
+{
+    string sHorseName;
+    string sUser2DA = GetLocalString(OBJECT_SELF, "MK_2DA_VALID_HORSES");
+    string sColumn = "Default";
+
+    if (MK_GetIsValidBodyPart(MK_CRAFTBODY_HORSE, nHorse, sUser2DA, sColumn))
+    {
+        sHorseName=MK_GetBodyPartName(MK_CRAFTBODY_HORSE, nHorse);
+    }
+    else
+    {
+        sHorseName="No Horse";
+    }
+    return sHorseName;
+}
+
+string MK_GetRacialTypeAsString(object oCreature)
+{
+    string sRacialType="";
+    int nRacialType = GetRacialType(oCreature);
+    switch (nRacialType)
+    {
+    case RACIAL_TYPE_DWARF:
+        sRacialType = "Dwarf";
+        break;
+    case RACIAL_TYPE_ELF:
+        sRacialType = "Elf";
+        break;
+    case RACIAL_TYPE_GNOME:
+        sRacialType = "Gnome";
+        break;
+    case RACIAL_TYPE_HALFELF:
+        sRacialType = "Halfelf";
+        break;
+    case RACIAL_TYPE_HALFLING:
+        sRacialType = "Halfling";
+        break;
+    case RACIAL_TYPE_HALFORC:
+        sRacialType = "Halforc";
+        break;
+    case RACIAL_TYPE_HUMAN:
+        sRacialType = "Human";
+        break;
+    default:
+        sRacialType = IntToString(nRacialType);
+        break;
+    }
+    return sRacialType;
+}
+
+string MK_GetGenderAsString(object oCreature)
+{
+    string sGender="";
+    int nGender = GetGender(oCreature);
+    switch (nGender)
+    {
+    case GENDER_FEMALE:
+        sGender = "Female";
+        break;
+    case GENDER_MALE:
+        sGender = "Male";
+        break;
+    }
+    return sGender;
+}
+
+int MK_GetIsValidBodyPart(int nPartToBeModified, int nBodyPart, string sUser2DA, string sColumn)
 {
     string sPartName = MK_GetBodyPartName(nPartToBeModified, nBodyPart);
 
     int bOk = FALSE;
-
     switch (nPartToBeModified)
     {
     case MK_CRAFTBODY_HEAD:
@@ -521,14 +836,30 @@ int MK_GetIsValidBodyPart(int nPartToBeModified, int nBodyPart)
         bOk = TRUE;
         break;
     case MK_CRAFTBODY_TAIL:
+        bOk = (sPartName!="");
+        break;
     case MK_CRAFTBODY_WINGS:
+        bOk = (sPartName!="");
+        break;
     case MK_CRAFTBODY_PHENOTYPE:
         bOk = (sPartName!="");
+        break;
+    case MK_CRAFTBODY_HORSE:
+        bOk = TRUE;
         break;
     case MK_CRAFTBODY_PORTRAIT:
         bOk = TRUE;
         break;
+    case MK_CRAFTBODY_COLOR:
+        bOk = TRUE;
+        break;
     }
+
+    if ((bOk) && (sUser2DA!=""))
+    {
+        bOk = StringToInt(Get2DAString(sUser2DA, sColumn, nBodyPart))>0;
+    }
+
     return bOk;
 }
 
@@ -540,6 +871,8 @@ int MK_GetMaxBodyPart(int nBodyPart)
         return GetLocalInt(OBJECT_SELF, "MK_HEAD_MAX_ID");
     case MK_CRAFTBODY_PORTRAIT:
         return 0;
+    case MK_CRAFTBODY_COLOR:
+        return 175;
     }
 
     string sVarName = "MK_BODYPART_"+IntToString(nBodyPart)+"_MAX_ID";
@@ -556,6 +889,10 @@ int MK_GetMaxBodyPart(int nBodyPart)
         case MK_CRAFTBODY_TAIL:
             s2DA = "tailmodel";
             sColumn = "LABEL";
+            break;
+        case MK_CRAFTBODY_HORSE:
+            s2DA = "mk_horses";
+            sColumn = "Default";
             break;
         case MK_CRAFTBODY_WINGS:
             s2DA = "wingmodel";
@@ -616,6 +953,29 @@ void MK_NewBodyPart(object oCreature, int nMode)
 
     int nBodyPart = MK_GetBodyPart(oCreature, nBodyPartToBeModified, nSubPartToBeModified);
 
+    string sUser2DA="";
+    string sColumn="Default";
+
+    switch (nBodyPartToBeModified)
+    {
+    case MK_CRAFTBODY_HEAD:
+        sUser2DA = GetLocalString(oCreature, "MK_2DA_VALID_HEADS");
+        sColumn = MK_GetRacialTypeAsString(oCreature)+"_"+MK_GetGenderAsString(oCreature);
+        break;
+    case MK_CRAFTBODY_TAIL:
+        sUser2DA = GetLocalString(oCreature, "MK_2DA_VALID_TAILS");
+        break;
+    case MK_CRAFTBODY_WINGS:
+        sUser2DA = GetLocalString(oCreature, "MK_2DA_VALID_WINGS");
+        break;
+    case MK_CRAFTBODY_PHENOTYPE:
+        sUser2DA = GetLocalString(oCreature, "MK_2DA_VALID_PHENOTYPES");
+        break;
+    case MK_CRAFTBODY_HORSE:
+        sUser2DA = GetLocalString(oCreature, "MK_2DA_VALID_HORSES");
+        break;
+    }
+
     do
     {
         switch (nMode)
@@ -628,7 +988,7 @@ void MK_NewBodyPart(object oCreature, int nMode)
             break;
         }
     }
-    while (!MK_GetIsValidBodyPart(nBodyPartToBeModified, nBodyPart));
+    while (!MK_GetIsValidBodyPart(nBodyPartToBeModified, nBodyPart, sUser2DA, sColumn));
 
     MK_SetBodyPart(nBodyPart,oCreature,nBodyPartToBeModified,nSubPartToBeModified);
 
@@ -671,7 +1031,13 @@ void MK_SetBodyPartTokens(object oCreature)
         sPartName = MK_GetBodyPartName(nToBeModified,nBodyPart);
         sBodyPart = IntToString(nBodyPart);
     }
+    MK_SetBodyPartTokens2(sPartName, sBodyPart);
+//    SetCustomToken(MK_CRAFTBODY_TOKEN_NAME, sPartName);
+//    SetCustomToken(MK_CRAFTBODY_TOKEN_NUMBER, sBodyPart);
+}
 
+void MK_SetBodyPartTokens2(string sPartName, string sBodyPart)
+{
     SetCustomToken(MK_CRAFTBODY_TOKEN_NAME, sPartName);
     SetCustomToken(MK_CRAFTBODY_TOKEN_NUMBER, sBodyPart);
 }
@@ -870,11 +1236,76 @@ int MK_GetMaxBodyPartID(int nCreaturePart)
     return nMax;
 }
 
-
-
-/*
-void main()
+int MK_PhenoTypeNormal2Ride(int nPhenoType)
 {
-
+    return StringToInt(Get2DAString(MK_2DA_RIDE_PHENO, "Ride", nPhenoType));
 }
-/**/
+
+int MK_PhenoTypeRide2Normal(int nPhenoType)
+{
+    return StringToInt(Get2DAString(MK_2DA_RIDE_PHENO, "Normal", nPhenoType));
+}
+
+int MK_GetIsRiding(object oCreature)
+{
+    int nPhenoTypeNormal = GetPhenoType(oCreature);
+    int nPhenoTypeRide = MK_PhenoTypeNormal2Ride(nPhenoTypeNormal);
+
+    return (nPhenoTypeRide==0);
+}
+
+int MK_CreatureMountHorse(object oCreature, int nHorse)
+{
+    int nPhenoTypeNormal, nPhenoTypeRide, nTailType;
+    if (nHorse==0)
+    {
+        nPhenoTypeRide = GetPhenoType(oCreature);
+        nPhenoTypeNormal = MK_PhenoTypeRide2Normal(nPhenoTypeRide);
+
+        nTailType = GetLocalInt(oCreature, MK_VAR_CURRENT_TAIL);
+
+        SetPhenoType(nPhenoTypeNormal, oCreature);
+        SetCreatureTailType(nTailType, oCreature);
+    }
+    else if (nHorse>0)
+    {
+        nPhenoTypeNormal = GetPhenoType(oCreature);
+        nPhenoTypeRide = MK_PhenoTypeNormal2Ride(nPhenoTypeNormal);
+        if (nPhenoTypeRide!=0)
+        {
+            nTailType = GetCreatureTailType(oCreature);
+
+            SetLocalInt(oCreature, MK_VAR_CURRENT_TAIL, nTailType);
+            SetPhenoType(nPhenoTypeRide, oCreature);
+        }
+        SetCreatureTailType(nHorse, oCreature);
+    }
+    return TRUE;
+}
+
+void MK_SetCustomTokenToHorseName(int nCustomTokenNumber, int nHorse)
+{
+    string sHorseName = MK_GetHorseName(nHorse);
+    SetCustomToken(nCustomTokenNumber,
+        sHorseName + "(" + IntToString(nHorse) + ")");
+}
+
+int MK_InitializeHorseSelection(object oCreature)
+{
+    int bIsRiding = MK_GetIsRiding(oCreature);
+    int nCurrentHorse = GetLocalInt(oCreature, MK_VAR_CURRENT_HORSE);
+
+    if (nCurrentHorse != 0)
+    {
+        MK_SetCustomTokenToHorseName(14440,nCurrentHorse);
+    }
+    MK_SetCustomTokenToHorseName(14441,MK_HORSE_1);
+    MK_SetCustomTokenToHorseName(14442,MK_HORSE_2);
+    MK_SetCustomTokenToHorseName(14443,MK_HORSE_3);
+    MK_SetCustomTokenToHorseName(14444,MK_HORSE_4);
+    MK_SetCustomTokenToHorseName(14445,MK_HORSE_5);
+
+    return TRUE;
+}
+
+//void main() {} // Testing/compiling purposes

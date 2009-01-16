@@ -4,7 +4,7 @@
 #include "zep_inc_main"
 #include "inc_g_cutscene"
 #include "inc_heartbeat"
-#include "x0_i0_spells"
+//#include "x0_i0_spells"
 //#include "inc_debug_dac"
 
 /* For future reference, and setting variables on placeables:
@@ -703,4 +703,3 @@ void seigeEngineBludgeoningAttack(object oSiegeEngine)
 }
 
 //void main() {} // testing/compiling purposes
-

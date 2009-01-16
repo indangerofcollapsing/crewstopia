@@ -58,33 +58,6 @@ void MK_init()
 {
     int nLine=0;
     while (MK_ProcessLine(nLine++)) {}
-
-/*
-    SetCustomToken(14435, "</c>"); // CLOSE tag
-
-
-
-    string s2DA = "mk_init";
-    string sColumn = "Value";
-
-    // Read number of color groups and set number of colors per group;
-    int nGroups = StringToInt(Get2DAString(s2DA, sColumn, 0));
-    if ((nGroups>0) && (nGroups<=22))
-    {
-        SetLocalInt(OBJECT_SELF, "MK_NUMBER_OF_COLOR_GROUPS", nGroups);
-        SetLocalInt(OBJECT_SELF, "MK_NUMBER_OF_COLORS_PER_GROUP", 176 / nGroups);
-    }
-
-    // Read color tokens;
-    int iToken;
-    for (iToken=0; iToken<4; iToken++)
-    {
-        SetCustomToken(14436+iToken, Get2DAString(s2DA,sColumn, 10+iToken));
-    }
-
-    SetLocalString(OBJECT_SELF, "MK_TOKEN_COLOR1", Get2DAString(s2DA, sColumn, 20));
-    SetLocalString(OBJECT_SELF, "MK_TOKEN_COLOR2", Get2DAString(s2DA, sColumn, 21));
-*/
 }
 
 

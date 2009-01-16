@@ -2,8 +2,9 @@ int canFly(object oCreature);
 
 const int JUMP_ANYWHERE = 2;
 
-#include "prc_inc_clsfunc"
 #include "x2_i0_spells"
+#include "prc_class_const"
+#include "prc_misc_const"
 
 // Returns FALSE if creature cannot fly
 //         TRUE if creature can fly
@@ -340,4 +341,4 @@ int canFly(object oCreature)
    return FALSE;
 }
 
-void main(){} // Testing/compiling purposes
+//void main(){} // Testing/compiling purposes

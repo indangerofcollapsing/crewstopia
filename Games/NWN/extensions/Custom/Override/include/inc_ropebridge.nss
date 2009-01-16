@@ -297,4 +297,4 @@ void ActionUseRopeBridge(object oCreature, object oBridge)
    useRopeBridge(oCreature, oBridge);
 }
 
-void main() {} // testing/compiling purposes
+//void main() {} // testing/compiling purposes

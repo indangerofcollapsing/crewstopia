@@ -1,6 +1,7 @@
 #include "zep_inc_scrptdlg"
 
-#include "prc_inc_newip" // @DAC const int ITEM_PROPERTY_USE_LIMITATION_GENDER = 150;
+#include "prc_inc_newip" // @DUG
+// @DUG const int ITEM_PROPERTY_USE_LIMITATION_GENDER = 150;
 
 //Baseitem: New Weapon Types
 const int BASE_ITEM_TRIDENT_1H = 300;

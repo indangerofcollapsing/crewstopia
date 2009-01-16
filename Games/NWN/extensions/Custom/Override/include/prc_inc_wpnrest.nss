@@ -16,6 +16,7 @@
 #include "prc_x2_itemprop"
 #include "inc_cep_weapfeat" // @DUG
 #include "prc_inc_racial" // @DUG
+#include "zep_inc_main" // @DUG
 
 /**
  * All of the following functions use the following parameters:
@@ -681,6 +682,8 @@ void DoWeaponEquip(object oPC, object oItem, int nHand)
 {
     if(GetIsDM(oPC)) return;
 
+    ZEPGenderRestrict(oItem, oPC); // @DUG
+
     //initialize variables
     int nRealSize = PRCGetCreatureSize(oPC);  //size for Finesse/TWF
     int nSize = nRealSize;                    //size for equipment restrictions
@@ -690,7 +693,8 @@ void DoWeaponEquip(object oPC, object oItem, int nHand)
     int nDexMod = GetAbilityModifier(ABILITY_DEXTERITY, oPC);
     int nStrMod = GetAbilityModifier(ABILITY_STRENGTH, oPC);
     int nElfFinesse = nDexMod - nStrMod;
-    int nTHFDmgBonus = nStrMod / 2;
+    // Give 'em a break -- minimum +1 damage bonus no matter how weak.
+    int nTHFDmgBonus = max(nStrMod / 2, 1); // @DUG
 
     //Powerful Build bonus
     if(GetHasFeat(FEAT_RACE_POWERFUL_BUILD, oPC))
@@ -734,14 +738,21 @@ void DoWeaponEquip(object oPC, object oItem, int nHand)
    int nWeaponWield = StringToInt(Get2DAString("baseitems", "WeaponWield",
       GetBaseItemType(oItem)));
     //Two-hand damage bonus
-    if (nWeaponSize == nSize + 1 ||
+   // @DUG
+   // Melee weapons of the same size as the wielder, wielded alone, get the
+   // two-handed strength damage bonus.
+   if ((IPGetIsMeleeWeapon(oItem) && nWeaponSize == nSize && // @DUG
+       nWeaponWield == 0) || // @DUG
+// @DUG    if (nWeaponSize == nSize + 1 ||
+       (nWeaponSize == nSize + 1 ||
         (nWeaponSize == nRealSize + 1 &&
-         GetItemInSlot(INVENTORY_SLOT_LEFTHAND, oPC) == OBJECT_INVALID) &&
-        nWeaponWield == 0) // @DUG
+        GetItemInSlot(INVENTORY_SLOT_LEFTHAND, oPC) == OBJECT_INVALID) &&
+        nRealSize > CREATURE_SIZE_SMALL)
+       ) // @DUG
     {
         nTHFDmgBonus += IPGetWeaponEnhancementBonus(oItem, ITEM_PROPERTY_ENHANCEMENT_BONUS, FALSE);//include temp effects here
         if(DEBUG) DoDebug("Applying THF damage bonus");
-        FloatingTextStringOnCreature("You are wielding your " + GetName(oItem) +
+        FloatingTextStringOnCreature("Wielding " + GetName(oItem) +
            " with two hands.", oPC, FALSE); // @DUG
         SetCompositeDamageBonusT(oItem, "THFBonus", nTHFDmgBonus);
     }
@@ -774,3 +785,5 @@ void DoWeaponEquip(object oPC, object oItem, int nHand)
     else if(GetBaseItemType(oItem) == BASE_ITEM_ELF_COURTBLADE)
         DoEquipCourtblade(oPC, oItem, nHand);
 }
+
+//void main(){} // Testing/compiling purposes
