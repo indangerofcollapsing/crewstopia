@@ -7,7 +7,7 @@ MinNWNVersion: 1.69, XP1, XP2
 
 # ERF with the required areas.
 erf : prc_consortium.erf
-erf : dac_mod_events.erf
+erf : dac.erf
 
 # Haks used by the prc pack.
 module.Hak : _debug.hak
