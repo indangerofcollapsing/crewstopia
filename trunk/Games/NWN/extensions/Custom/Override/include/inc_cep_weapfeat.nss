@@ -111,7 +111,7 @@ void onEquipCEPWeapon()
 
    if (iSlot == -1) return; // Not a weapon
 */
-   debugVarObject("handling CEP weapon feats for", oWeapon);
+   //debugVarObject("handling CEP weapon feats for", oWeapon);
 
    // used for weapon specialization; if this default value gets through, it
    // indicates a script error.
@@ -335,7 +335,7 @@ void onEquipCEPWeapon()
       {
          nBonus += (GetLevelByClass(CLASS_TYPE_WEAPON_MASTER, oPC) - 10) / 3;
       }
-      debugVarInt("weapon focus bonus", nBonus);
+      //debugVarInt("weapon focus bonus", nBonus);
 
       SetCompositeBonusT(oWeapon, "CEPWeaponAtk", nBonus,
          ITEM_PROPERTY_ATTACK_BONUS);
@@ -377,7 +377,7 @@ void onEquipCEPWeapon()
       //debugVarObject("hasWeaponSpec", oPC);
       int nBonus = 2;
       if (bHasEpicWeaponSpec) nBonus += 4;
-      debugVarInt("weapon spec bonus", nBonus);
+      //debugVarInt("weapon spec bonus", nBonus);
       //debugVarInt("IP constant", IPGetDamageBonusConstantFromNumber(nBonus));
       //debugVarInt("1", IPGetDamageBonusConstantFromNumber(1));
       //debugVarInt("2", IPGetDamageBonusConstantFromNumber(2));
@@ -390,7 +390,7 @@ void onEquipCEPWeapon()
       //debugVarInt("9", IPGetDamageBonusConstantFromNumber(9));
       //debugVarInt("10", IPGetDamageBonusConstantFromNumber(10));
 
-      debugVarInt("nDamageType", nDamageType);
+      //debugVarInt("nDamageType", nDamageType);
       SetCompositeBonusT(oWeapon, "CEPWeaponDam", nBonus,
          ITEM_PROPERTY_DAMAGE_BONUS, nDamageType);
 /*
@@ -448,23 +448,23 @@ void onEquipCEPWeapon()
 
    if (bHasImpCrit | bHasDevCrit | bHasOverCrit | bHasWeaponOfChoice)
    {
-      debugVarObject("adding onhit event", oWeapon);
+      //debugVarObject("adding onhit event", oWeapon);
       itemproperty ip = ItemPropertyOnHitCastSpell(IP_CONST_ONHIT_CEP_WEAPON,
          1);
-      debugVarItemProperty("ip", ip);
+      //debugVarItemProperty("ip", ip);
       IPSafeAddItemProperty(oWeapon, ip);
    }
 }
 
 void onUnequipCEPWeapon()
 {
-   debugVarObject("onUnequipCEPWeapon()", OBJECT_SELF);
+   //debugVarObject("onUnequipCEPWeapon()", OBJECT_SELF);
 
    object oWeapon = GetPCItemLastUnequipped();
-   debugVarObject("oWeapon", oWeapon);
+   //debugVarObject("oWeapon", oWeapon);
    if (! IPGetIsMeleeWeapon(oWeapon) && ! IPGetIsRangedWeapon(oWeapon)) return;
    object oPC = GetPCItemLastUnequippedBy();
-   debugVarObject("oPC", oPC);
+   //debugVarObject("oPC", oPC);
 
    // Reset to original values as needed
 
@@ -472,12 +472,12 @@ void onUnequipCEPWeapon()
    int nAttackBonus = GetLocalInt(oWeapon, VAR_IP_ATTACK_BONUS_VALUE);
    if (nAttackBonus)
    {
-      debugVarInt("removing attack bonus", nAttackBonus);
+      //debugVarInt("removing attack bonus", nAttackBonus);
       SetCompositeBonusT(oWeapon, "CEPWeaponAtk", 0,
          ITEM_PROPERTY_ATTACK_BONUS);
 /*
       itemproperty ip = ItemPropertyAttackBonus(nAttackBonus);
-      debugVarItemProperty("removing", ip);
+      //debugVarItemProperty("removing", ip);
       IPRemoveMatchingItemProperties(oWeapon, ITEM_PROPERTY_ATTACK_BONUS,
          DURATION_TYPE_PERMANENT);
 */
@@ -500,8 +500,8 @@ void onUnequipCEPWeapon()
 
    // [Epic] Weapon Specialization
    int nDamageType = GetLocalInt(oWeapon, VAR_DAMAGE_TYPE);
-   debugVarObject("removing damage bonus", oWeapon);
-   debugVarInt("nDamageType", nDamageType);
+   //debugVarObject("removing damage bonus", oWeapon);
+   //debugVarInt("nDamageType", nDamageType);
    SetCompositeBonusT(oWeapon, "CEPWeaponDam", 0,
       ITEM_PROPERTY_DAMAGE_BONUS, nDamageType);
 /*

@@ -70,7 +70,7 @@ void RestoreObjects(object oCreature)
             sIP = persistant_array_get_string(oCreature, "PRC_NPF_ItemList_" + sItem, j);
             iptemp = GetIpStructFromString(sIP);
             ip = ConstructIP(iptemp.type, iptemp.subtype, iptemp.costtablevalue, iptemp.param1value);
-            debugVarItemProperty("prc_onenter ip", ip);
+            //debugVarItemProperty("prc_onenter ip", ip);
             IPSafeAddItemProperty(oItem, ip, 0.0, X2_IP_ADDPROP_POLICY_REPLACE_EXISTING);
             if(DEBUG) DoDebug("RestoreObjects: " + sCreature + ", " + sItem + ", " + sIP);
         }
@@ -82,7 +82,7 @@ void RestoreObjects(object oCreature)
 
 void main()
 {
-    debugVarObject("prc_onenter", OBJECT_SELF);
+    //debugVarObject("prc_onenter", OBJECT_SELF);
     //The composite properties system gets confused when an exported
     //character re-enters.  Local Variables are lost and most properties
     //get re-added, sometimes resulting in larger than normal bonuses.
@@ -91,7 +91,7 @@ void main()
     //hopefully in the next update
     //  -Aaon Graywolf
     object oPC = GetEnteringObject();
-    debugVarObject("oPC", oPC);
+    //debugVarObject("oPC", oPC);
 
     //FloatingTextStringOnCreature("PRC on enter was called", oPC, FALSE);
 
@@ -101,7 +101,7 @@ void main()
     // but not in MP games, so check if it's single player or not!!
     if(GetLocalInt(oPC, "PRC_ModuleOnEnterDone") && (GetPCPublicCDKey(oPC) == ""))
     { // @DUG
-        debugMsg("saved game, returning immediately");
+        //debugMsg("saved game, returning immediately");
         return;
     } // @DUG
     // Use a local integer to mark the event as done for the PC, so that it gets
@@ -112,7 +112,7 @@ void main()
     //if server is loading, boot player
     if(GetLocalInt(GetModule(), PRC_PW_LOGON_DELAY+"_TIMER"))
     {
-        debugMsg("server loading");
+        //debugMsg("server loading");
         BootPC(oPC);
         return;
     }
@@ -120,7 +120,7 @@ void main()
     // return here for DMs as they don't need all this stuff
     if(GetIsDM(oPC))
     { // @DUG
-        debugMsg("DM, returning immediately");
+        //debugMsg("DM, returning immediately");
         return;
     } // @DUG
 
@@ -130,12 +130,12 @@ void main()
     if(GetPRCSwitch(PRC_CONVOCC_ENABLE) && !GetIsDM(oPC)
         && !GetPRCSwitch(PRC_CONVOCC_CUSTOM_START_LOCATION) && ExecuteScriptAndReturnInt("prc_ccc_main", OBJECT_SELF))
     { // @DUG
-        debugMsg("ConvoCC enabled, returning");
+        //debugMsg("ConvoCC enabled, returning");
         return;
     } // @DUG
 
     object oSkin = GetPCSkin(oPC);
-    debugVarObject("oSkin", oSkin);
+    //debugVarObject("oSkin", oSkin);
     ScrubPCSkin(oPC, oSkin);
     DeletePRCLocalInts(oSkin);
 
@@ -322,7 +322,7 @@ void main()
         RestoreObjects(oPC);
     }
 
-    debugVarObject("calling tob_evnt_recover", oPC);
+    //debugVarObject("calling tob_evnt_recover", oPC);
     ExecuteScript("tob_evnt_recover", oPC);
 
     // Execute scripts hooked to this event for the player triggering it
@@ -330,5 +330,5 @@ void main()
     //Some stuff may have gone "When this PC next logs in, run script X" - Ornedan
     ExecuteAllScriptsHookedToEvent(oPC, EVENT_ONCLIENTENTER);
 
-    debugVarObject("prc_onenter COMPLETE", OBJECT_SELF);
+    //debugVarObject("prc_onenter COMPLETE", OBJECT_SELF);
 }

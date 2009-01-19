@@ -1,3 +1,5 @@
+*** Custom TLK entries are offset by 16777216 ***
+
 49986
 Autotarget
 

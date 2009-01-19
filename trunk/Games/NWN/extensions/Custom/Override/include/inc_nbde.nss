@@ -228,9 +228,9 @@ void setPersistentVector(object oObject, string sVarName, vector vVarValue)
 // @TODO this appears to be bugged for non-NWNX use.
 int testODBC()
 {
-   debugVarObject("testODBC()", OBJECT_SELF);
+   //debugVarObject("testODBC()", OBJECT_SELF);
    int nEnabled = GetLocalInt(GetModule(), VAR_NWNX_ODBC_ENABLED);
-   debugVarInt("nEnabled", nEnabled);
+   //debugVarInt("nEnabled", nEnabled);
    switch(nEnabled)
    {
       case -1: return FALSE; break;
@@ -239,7 +239,7 @@ int testODBC()
       default:
          SQLExecDirect("SELECT 'X'");
          int nFetchSuccess = SQLFetch();
-         debugVarInt("nFetchSuccess", nFetchSuccess);
+         //debugVarInt("nFetchSuccess", nFetchSuccess);
          nEnabled = (nFetchSuccess == SQL_SUCCESS);
          SetLocalInt(GetModule(), VAR_NWNX_ODBC_ENABLED, nEnabled ? 1 : -1);
          logError("ODBC connection " + (nEnabled ? "is" : "NOT") + " active.");

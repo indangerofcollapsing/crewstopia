@@ -26,7 +26,7 @@ void main()
    ExecuteScript("get_pc_startpt", OBJECT_SELF);
    location lStart = GetLocation(GetWaypointByTag(GetLocalString(oPC, "START_POINT")));
    if (! isLocationValid(lStart)) lStart = GetStartingLocation();
-   
+
    if (GetLocalInt(GetModule(), "PRC_PW_LOCATION_TRACKING"))
    {
       debugMsg("Using PrC location tracking.");
@@ -128,10 +128,17 @@ void main()
       }
    }
 
+// This is handled by an on-rest event now
    // OHS Henchman system
-   if (GetItemPossessedBy(oPC, "dac_ohs_lbsummon") == OBJECT_INVALID)
+//   if (GetItemPossessedBy(oPC, "dac_ohs_lbsummon") == OBJECT_INVALID)
+//   {
+//      CreateItemOnObject("dac_ohs_lbsummon", oPC);
+//   }
+
+   // Snow Globe!
+   if (GetItemPossessedBy(oPC, "dac_snowglobe") == OBJECT_INVALID)
    {
-      CreateItemOnObject("dac_ohs_lbsummon", oPC);
+      CreateItemOnObject("dac_snowglobe", oPC);
    }
 
    ExecuteScript("save_pc", oPC);

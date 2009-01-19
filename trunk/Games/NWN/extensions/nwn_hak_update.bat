@@ -64,7 +64,6 @@ REM for /D %%d in (*) do call :compileAndUpdateHak %%d _debug.hak
 goto end
 
 :compileAndUpdateHak
-echo %0 %*
 echo %0 %* | tee -a %logfile%
 if "%1" == ".svn" goto :EOF
 cd %tempHOME%\%1
