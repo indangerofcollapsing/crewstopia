@@ -62,20 +62,20 @@ int _GetLoopEnd(int nClass)
 
 void main()
 {
-   debugVarObject("tob_moverdy", OBJECT_SELF);
+   //debugVarObject("tob_moverdy", OBJECT_SELF);
     object oPC = GetPCSpeaker();
-    debugVarObject("oPC", oPC);
+    //debugVarObject("oPC", oPC);
     int nValue = GetLocalInt(oPC, DYNCONV_VARIABLE);
-    debugVarInt("nValue", nValue);
+    //debugVarInt("nValue", nValue);
     int nStage = GetStage(oPC);
-    debugVarInt("nStage", nStage);
+    //debugVarInt("nStage", nStage);
 
     int nClass = GetLocalInt(oPC, "nClass");
-    debugVarInt("nClass", nClass);
+    //debugVarInt("nClass", nClass);
     string sPsiFile = GetAMSKnownFileName(nClass);
-    debugVarString("sPsiFile", sPsiFile);
+    //debugVarString("sPsiFile", sPsiFile);
     string sManeuverFile = GetAMSDefinitionFileName(nClass);
-    debugVarString("sManeuverFile", sManeuverFile);
+    //debugVarString("sManeuverFile", sManeuverFile);
 
     // Check which of the conversation scripts called the scripts
     if(nValue == 0) // All of them set the DynConv_Var to non-zero value, so something is wrong -> abort
@@ -83,18 +83,18 @@ void main()
 
     if(nValue == DYNCONV_SETUP_STAGE)
     {
-        debugVarInt("tob_moverdy: setup stage", nStage);
+        //debugVarInt("tob_moverdy: setup stage", nStage);
         if(DEBUG) DoDebug("tob_moverdy: Running setup stage for stage " + IntToString(nStage));
         // Check if this stage is marked as already set up
         // This stops list duplication when scrolling
         if(!GetIsStageSetUp(nStage, oPC))
         {
-            debugMsg("tob_moverdy: stage not setup");
+            //debugMsg("tob_moverdy: stage not setup");
             if(DEBUG) DoDebug("tob_moverdy: Stage was not set up already");
             // Level selection stage
             if(nStage == STAGE_SELECT_LEVEL)
             {
-                debugMsg("tob_moverdy: building level selection");
+                //debugMsg("tob_moverdy: building level selection");
                 if(DEBUG) DoDebug("tob_moverdy: Building level selection");
                 SetHeader("Select the level of maneuvers to ready.");
 
@@ -102,12 +102,12 @@ void main()
                 // Initiators get new maneuvers at the same levels as wizards
                 // See ToB p39, table 3-1
                 int nMaxLevel = (GetInitiatorLevel(oPC, nClass) + 1)/2;
-                debugVarInt("nMaxLevel", nMaxLevel);
+                //debugVarInt("nMaxLevel", nMaxLevel);
 
                 // Set the tokens
                 int i;
                 for(i = 0; i < nMaxLevel; i++){
-                    debugVarString("choice added", GetStringByStrRef(LEVEL_STRREF_START - i));
+                    //debugVarString("choice added", GetStringByStrRef(LEVEL_STRREF_START - i));
                     AddChoice(GetStringByStrRef(LEVEL_STRREF_START - i), // The minus is correct, these are stored in inverse order in the TLK. Whoops
                               i + 1
                               );
@@ -121,14 +121,14 @@ void main()
             // Maneuver selection stage
             if(nStage == STAGE_SELECT_MANEUVER)
             {
-                debugMsg("tob_moverdy: building maneuvers");
+                //debugMsg("tob_moverdy: building maneuvers");
                 if(DEBUG) DoDebug("tob_moverdy: Building maneuver selection");
                 int nBrowseLevel = GetLocalInt(oPC, "nManeuverLevelToBrowse");
-                debugVarInt("nBrowseLevel", nBrowseLevel);
+                //debugVarInt("nBrowseLevel", nBrowseLevel);
                 int nMaxReady   = GetMaxReadiedCount(oPC, nClass);
-                debugVarInt("nMaxReady", nMaxReady);
+                //debugVarInt("nMaxReady", nMaxReady);
                 int nCountReady = GetReadiedCount(oPC, nClass);
-                debugVarInt("nCountReady", nCountReady);
+                //debugVarInt("nCountReady", nCountReady);
                 int nMoveId;
                 string sToken = "Select a Maneuver to ready. \n" + "You can select ";
                 sToken += IntToString(nMaxReady-nCountReady) + " more maneuvers to ready.";
@@ -139,21 +139,20 @@ void main()
       for(i = 0; i < _GetLoopEnd(nClass); i++)
       {  // Checks to see if its the appropriate level
          int nMoveId = StringToInt(Get2DACache(sManeuverFile, "RealSpellID", i));
-         debugVarInt("level from 2da", StringToInt(Get2DACache(sManeuverFile, "Level", i)));
-         debugVarInt("stance from 2da", StringToInt(Get2DACache(sManeuverFile, "Stance", i)));
+         //debugVarInt("level from 2da", StringToInt(Get2DACache(sManeuverFile, "Level", i)));
+         //debugVarInt("stance from 2da", StringToInt(Get2DACache(sManeuverFile, "Stance", i)));
          if (GetHasManeuver(nMoveId, oPC) &&
              nBrowseLevel == StringToInt(Get2DACache(sManeuverFile, "Level", i)) &&
              1 != StringToInt(Get2DACache(sManeuverFile, "Stance", i)))
          {
             if (!GetIsManeuverReadied(oPC, nClass, nMoveId))
             {
-               debugVarString("adding maneuver", GetManeuverName(nMoveId));
+               //debugVarString("adding maneuver", GetManeuverName(nMoveId));
                AddChoice(GetManeuverName(nMoveId), i);
             }
-else { debugVarInt("maneuver not readied", nMoveId); }
          }
                 }
-                debugVarInt("tob_moverdy: getendloop", _GetLoopEnd(nClass));
+                //debugVarInt("tob_moverdy: getendloop", _GetLoopEnd(nClass));
                 if(DEBUG) DoDebug("tob_moverdy: GetEndLoop: " + IntToString(_GetLoopEnd(nClass)));
 
                 // Set the first choice to be return to level selection stage
@@ -164,7 +163,7 @@ else { debugVarInt("maneuver not readied", nMoveId); }
             // Selection confirmation stage
             else if(nStage == STAGE_CONFIRM_SELECTION)
             {
-                debugMsg("tob_moverdy: building selection confirm");
+                //debugMsg("tob_moverdy: building selection confirm");
                 if(DEBUG) DoDebug("tob_moverdy: Building selection confirmation");
                 // Build the confirmantion query
                 string sToken = GetStringByStrRef(STRREF_SELECTED_HEADER1) + "\n\n"; // "You have selected:"
@@ -181,7 +180,7 @@ else { debugVarInt("maneuver not readied", nMoveId); }
             // Conversation finished stage
             else if(nStage == STAGE_ALL_MANEUVERS_SELECTED)
             {
-                debugMsg("tob_moverdy: building finish note");
+                //debugMsg("tob_moverdy: building finish note");
                 if(DEBUG) DoDebug("tob_moverdy: Building finish note");
                 SetHeader(GetStringByStrRef(STRREF_END_HEADER));
                 // Set the convo quit text to "Finish"
@@ -195,7 +194,7 @@ else { debugVarInt("maneuver not readied", nMoveId); }
     }
     else if(nValue == DYNCONV_EXITED)
     {
-        debugMsg("tob_moverdy: exit handler");
+        //debugMsg("tob_moverdy: exit handler");
         if(DEBUG) DoDebug("tob_moverdy: Running exit handler");
         // End of conversation cleanup
         DeleteLocalInt(oPC, "nClass");
@@ -205,7 +204,7 @@ else { debugVarInt("maneuver not readied", nMoveId); }
     }
     else if(nValue == DYNCONV_ABORTED)
     {
-        debugMsg("tob_moverdy: abort handler");
+        //debugMsg("tob_moverdy: abort handler");
         // This section should never be run, since aborting this conversation should
         // always be forbidden and as such, any attempts to abort the conversation
         // should be handled transparently by the system
@@ -214,9 +213,9 @@ else { debugVarInt("maneuver not readied", nMoveId); }
     // Handle PC response
     else
     {
-        debugMsg("tob_moverdy: PC response handler");
+        //debugMsg("tob_moverdy: PC response handler");
         int nChoice = GetChoice(oPC);
-        debugVarInt("nChoice", nChoice);
+        //debugVarInt("nChoice", nChoice);
         if(DEBUG) DoDebug("tob_moverdy: Handling PC response, stage = " + IntToString(nStage) + "; nChoice = " + IntToString(nChoice) + "; choice text = '" + GetChoiceText(oPC) +  "'");
         if(nStage == STAGE_SELECT_LEVEL)
         {

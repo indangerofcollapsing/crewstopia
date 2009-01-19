@@ -12,6 +12,12 @@
 //:: Created By: Knat
 //:: Created On: 8/2004
 //:://////////////////////////////////////////////
+
+#include "inc_debug_dac" // @DUG
+
+// @DUG
+object getNBDEVault();
+
 /*
 
 Natural Bioware Database Extension v1.0
@@ -577,13 +583,14 @@ object NBDE_GetCampaignDatabaseObject(string sCampaignName)
   // retrieve/create database if not indexed already
   if(!GetIsObjectValid(oDatabase))
   {
+    object oVault = getNBDEVault();
     // get database vault object
     // this container holds all database objects/items
-    object oVault = GetObjectByTag(NBDE_VAULT_TAG);
+// @DUG    object oVault = GetObjectByTag(NBDE_VAULT_TAG);
     // check for valid vault
     if(!GetIsObjectValid(oVault))
     {
-      WriteTimestampedLogEntry("NBDE> Error: unable to locate '"+NBDE_VAULT_TAG+"' vault container object");
+      WriteTimestampedLogEntry("NBDE> Error: unable to locate '"+NBDE_VAULT_TAG+"' vault container object in NBDE_GetCampaignDatabaseObject()"); // @DUG
       return OBJECT_INVALID;
     }
     // one time load
@@ -593,7 +600,7 @@ object NBDE_GetCampaignDatabaseObject(string sCampaignName)
     // check for valid database object
     if(!GetIsObjectValid(oDatabase))
     {
-      WriteTimestampedLogEntry("NBDE> Error: unable to create '"+sCampaignName+"' database object");
+      WriteTimestampedLogEntry("NBDE> Error: unable to create '"+sCampaignName+"' database object " + NBDE_DATABASE_ITEM_RESREF + " on vault " + objectToString(oVault)); // @DUG
       return OBJECT_INVALID;
     }
     // index item for fast access
@@ -611,7 +618,7 @@ object NBDE_GetCampaignDatabaseObject(string sCampaignName)
 void NBDE_FlushCampaignDatabase(string sCampaignName)
 {
   // get database vault, it holds all database items
-  object oVault = GetObjectByTag(NBDE_VAULT_TAG);
+  object oVault = getNBDEVault(); // @DUG GetObjectByTag(NBDE_VAULT_TAG);
   if(GetIsObjectValid(oVault))
   {
     // get database item
@@ -628,13 +635,13 @@ void NBDE_FlushCampaignDatabase(string sCampaignName)
     // database not loaded, no need to flush...
   }
   else // vault container missing
-    WriteTimestampedLogEntry("NBDE> Error: unable to locate '"+NBDE_VAULT_TAG+"' vault container object");
+    WriteTimestampedLogEntry("NBDE> Error: unable to locate '"+NBDE_VAULT_TAG+"' vault container object in NBDE_FlushCampaignDatabase()"); // @DUG
 }
 
 void NBDE_UnloadCampaignDatabase(string sCampaignName)
 {
   // get database vault, it holds all database items
-  object oVault = GetObjectByTag(NBDE_VAULT_TAG);
+  object oVault = getNBDEVault(); // @DUG GetObjectByTag(NBDE_VAULT_TAG);
   if(GetIsObjectValid(oVault))
   {
     // get database item
@@ -649,7 +656,7 @@ void NBDE_UnloadCampaignDatabase(string sCampaignName)
     // database not loaded, do nothing
   }
   else // vault container missing
-    WriteTimestampedLogEntry("NBDE> Error: unable to locate '"+NBDE_VAULT_TAG+"' vault container object");
+    WriteTimestampedLogEntry("NBDE> Error: unable to locate '"+NBDE_VAULT_TAG+"' vault container object in NBDE_UnloadCampaignDatabase()"); // @DUG
 }
 
 void NBDE_SetCampaignInt(string sCampaignName, string sVarname, int nInt, object oPlayer = OBJECT_INVALID)
@@ -744,4 +751,25 @@ void NBDE_DeleteCampaignVector(string sCampaignName, string sVarname, object oPl
    NBDE_VEC_PREFIX + ((GetIsObjectValid(oPlayer)) ? NBDE_GetPlayerKey(oPlayer) : "") + sVarname);
 }
 
+// @DUG
+object getNBDEVault()
+{
+   // get database vault object
+   // this container holds all database objects/items
+   object oVault = GetObjectByTag(NBDE_VAULT_TAG);
+   // check for valid vault
+   if (! GetIsObjectValid(oVault))
+   {
+      // @DUG Okay, one last try before admitting defeat.  Create an invisible
+      //      object that can have inventory (x1_hen_inv) at the start point.
+      object oVault = CreateObject(OBJECT_TYPE_PLACEABLE, "x1_hen_inv",
+         GetStartingLocation(), FALSE, NBDE_VAULT_TAG); // @DUG
+      if (oVault == OBJECT_INVALID) // @DUG
+      { // @DUG
+         WriteTimestampedLogEntry("NBDE> Error: unable to locate or create '"+NBDE_VAULT_TAG + "' vault container object");
+      } // @DUG
+   }
+   return oVault;
+}
 
+//void main() {} // Testing/compiling purposes
