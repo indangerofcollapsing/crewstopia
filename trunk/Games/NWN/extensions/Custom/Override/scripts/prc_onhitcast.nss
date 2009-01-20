@@ -39,9 +39,9 @@ void DoImprovedRicochet(object oPC, object oTarget);
 
 void main()
 {
-   debugVarObject("prc_onhitcast", OBJECT_SELF);
+   //debugVarObject("prc_onhitcast", OBJECT_SELF);
    object oSpellOrigin = OBJECT_SELF; // On a weapon: The one wielding the weapon. On an armor: The one wearing an armor
-   debugVarObject("oSpellOrigin", oSpellOrigin);
+   //debugVarObject("oSpellOrigin", oSpellOrigin);
 
     // Call the normal OnHitCastSpell: Unique script
     if (DEBUG) DoDebug("prc_onhitcast: entered, executing normal onhitcastspell unique power script x2_s3_onhitcast for "+GetName(oSpellOrigin));
@@ -53,12 +53,12 @@ void main()
     SetLocalInt(oSpellOrigin, "prc_ohc", TRUE);
 
     object oSpellTarget = PRCGetSpellTargetObject(oSpellOrigin); // On a weapon: The one being hit. On an armor: The one hitting the armor
-    debugVarObject("oSpellTarget", oSpellTarget);
+    //debugVarObject("oSpellTarget", oSpellTarget);
 
     // motu99: replacing call to Bioware's GetSpellCastItem with new PRC wrapper function
     // will ensure that we retrieve a valid item when we are called from scripted combat (prc_inc_combat) or
     object oItem = PRCGetSpellCastItem(oSpellOrigin); // The item casting triggering this spellscript
-    debugVarObject("oItem", oItem);
+    //debugVarObject("oItem", oItem);
     int iItemBaseType = GetBaseItemType(oItem);
 
 
