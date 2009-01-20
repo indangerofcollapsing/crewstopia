@@ -76,6 +76,7 @@ if exist *.ut? call erf.bat -u %NWN_HOME%\hak\%2 *.ut? | tee -a %logfile%
 if exist *.dlg call erf.bat -u %NWN_HOME%\hak\%2 *.dlg | tee -a %logfile%
 if exist *.tga call erf.bat -u %NWN_HOME%\hak\%2 *.tga | tee -a %logfile%
 if exist *.mdl call erf.bat -u %NWN_HOME%\hak\%2 *.mdl | tee -a %logfile%
+if exist *.plt call erf.bat -u %NWN_HOME%\hak\%2 *.plt | tee -a %logfile%
 if exist *.dds call erf.bat -u %NWN_HOME%\hak\%2 *.dds | tee -a %logfile%
 if exist *.dwk call erf.bat -u %NWN_HOME%\hak\%2 *.dwk | tee -a %logfile%
 if exist *.wav call erf.bat -u %NWN_HOME%\hak\%2 *.wav | tee -a %logfile%
