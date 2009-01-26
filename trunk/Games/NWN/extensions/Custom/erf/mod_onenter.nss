@@ -23,6 +23,30 @@ void main()
       CreateItemOnObject("dac_recallrune", oPC, 10);
    }
 
+   object oSkin = GetItemInSlot(INVENTORY_SLOT_CARMOUR, oPC);
+   if (oSkin == OBJECT_INVALID) oSkin = CreateItemOnObject("base_prc_skin",oPC);
+   // Player Tools
+   if (! GetHasFeat(IP_CONST_FEAT_PLAYER_TOOL_08, oPC))
+   {
+      IPSafeAddItemProperty(oSkin, ItemPropertyBonusFeat(
+         IP_CONST_FEAT_PLAYER_TOOL_08));
+   }
+   if (! GetHasFeat(IP_CONST_FEAT_PLAYER_TOOL_09, oPC))
+   {
+      IPSafeAddItemProperty(oSkin, ItemPropertyBonusFeat(
+         IP_CONST_FEAT_PLAYER_TOOL_09));
+   }
+   if (! GetHasFeat(IP_CONST_FEAT_PLAYER_TOOL_10, oPC))
+   {
+      IPSafeAddItemProperty(oSkin, ItemPropertyBonusFeat(
+         IP_CONST_FEAT_PLAYER_TOOL_10));
+   }
+   // Climb
+   if (! GetHasFeat(3112, oPC))
+   {
+      IPSafeAddItemProperty(oSkin, ItemPropertyBonusFeat(3112));
+   }
+
    ExecuteScript("get_pc_startpt", OBJECT_SELF);
    location lStart = GetLocation(GetWaypointByTag(GetLocalString(oPC, "START_POINT")));
    if (! isLocationValid(lStart)) lStart = GetStartingLocation();
