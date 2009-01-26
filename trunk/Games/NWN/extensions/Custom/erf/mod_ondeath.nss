@@ -3,7 +3,7 @@
 #include "inc_debug_dac"
 void main()
 {
-   //debugVarObject("_mod_on_death", OBJECT_SELF);
+   //debugVarObject("mod_ondeath", OBJECT_SELF);
 
    ExecuteScript("nw_o0_death", OBJECT_SELF); // Default On Player Death event
    ExecuteScript("prc_ondeath", OBJECT_SELF);

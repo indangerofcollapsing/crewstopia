@@ -4,6 +4,10 @@
 void main()
 {
    //debugVarObject("trap_on_trigger", OBJECT_SELF);
+
+   // CEP trap triggered event
+   ExecuteScript("trap_fire", OBJECT_SELF);
+
    object oSelf = OBJECT_SELF;
    if (oSelf == OBJECT_INVALID) return; // No point in continuing
 
