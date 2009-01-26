@@ -6,6 +6,10 @@ void main()
    //debugVarObject("trap_on_disarm", OBJECT_SELF);
    //debugVarObject("disarmer", GetLastDisarmed()); '
    //debugVarInt("DC", GetTrapDisarmDC(OBJECT_SELF));
+
+   // CEP disarm script
+   ExecuteScript("trap_disarm", OBJECT_SELF);
+
    object oSelf = OBJECT_SELF;
 
    onTrapDisarm(OBJECT_SELF);
