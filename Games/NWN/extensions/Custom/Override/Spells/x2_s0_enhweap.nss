@@ -84,12 +84,12 @@ int PRCGetSlashingWeapon(object oItem)
 
 void ApplyEffectsToWeapon(object oItem, int nSpellID, float fDuration, object oCaster, int nCasterLevel)
 {
-    debugVarObject("ApplyEffectsToWeapon()", OBJECT_SELF);
-    debugVarObject("oItem", oItem);
-    debugVarInt("nSpellID", nSpellID);
-    debugVarFloat("fDuration", fDuration);
-    debugVarObject("oCaster", oCaster);
-    debugVarInt("nCasterLevel", nCasterLevel);
+    //debugVarObject("ApplyEffectsToWeapon()", OBJECT_SELF);
+    //debugVarObject("oItem", oItem);
+    //debugVarInt("nSpellID", nSpellID);
+    //debugVarFloat("fDuration", fDuration);
+    //debugVarObject("oCaster", oCaster);
+    //debugVarInt("nCasterLevel", nCasterLevel);
 
     switch(nSpellID)
     {
@@ -117,7 +117,7 @@ void ApplyEffectsToWeapon(object oItem, int nSpellID, float fDuration, object oC
         case SPELL_DARKFIRE:
         case SPELL_FLAME_WEAPON:
         {
-            debugMsg("Darkfire or FlameWeapon");
+            //debugMsg("Darkfire or FlameWeapon");
             int nAppearanceType = ITEM_VISUAL_FIRE;
             int nDamageType = ChangedElementalDamage(oCaster, DAMAGE_TYPE_FIRE);
             int bDarkfire = (nSpellID == SPELL_DARKFIRE);
@@ -156,13 +156,13 @@ void ApplyEffectsToWeapon(object oItem, int nSpellID, float fDuration, object oC
                 // @DUG
                 itemproperty ip = ItemPropertyOnHitCastSpell(bDarkfire ? 127 :
                    124, nCasterLevel);
-                debugVarItemProperty("ip", ip);
+                //debugVarItemProperty("ip", ip);
                 IPSafeAddItemProperty(oItem, ip, fDuration,
                    X2_IP_ADDPROP_POLICY_REPLACE_EXISTING);
             } // @DUG
             // @DUG
             itemproperty ipVisual = ItemPropertyVisualEffect(nAppearanceType);
-            debugVarItemProperty("ipVisual", ipVisual);
+            //debugVarItemProperty("ipVisual", ipVisual);
             IPSafeAddItemProperty(oItem, ipVisual, fDuration,
                X2_IP_ADDPROP_POLICY_REPLACE_EXISTING, FALSE, TRUE);
             //DelayCommand(fDuration, DeleteTheInts(oItem));

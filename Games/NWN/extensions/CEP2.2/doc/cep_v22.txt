@@ -1,0 +1,93 @@
+CEP v2.2 CHANGES
+
+- Fixed Torch/Flag/HolySymbol item properties [Acaos]
+- Fixed appearance.2da conflicts between Bioware 1.69 and CEP [Barry_1066]
+    #492-#495 - PERSPACE and HEIGHT were different
+    #869-#870 - missing troglodyte references
+
+- Fixed inventory icon conflicts with Bioware by moving them elsewhere [Barry_1066 and Acaos]
+    iit_smlmisc_099 - iit_smlmisc_101
+    iit_thnmisc_061 - iit_thnmisc_064
+    iit_midmisc_151 - iit_midmisc_165
+
+- Fixed conflicts with fish clubs [Barry_1066]
+- Fixed conflict with Ruby Golem [Barry_1066]
+- Fixed conflict with Satyr [Barry_1066]
+- Fixed Scrying Orb crashing bug [Acaos]
+- Fixes for radial crafting menu by The_Krit [Barry_1066]
+
+- Moved loadscreens.2da to cep2_add_sb_v1.hak
+
+- Added ~600 CEP 2.1/2.2 pheno heads for riding NIC horses [Barry_1066]
+- Added brownie/wemic to the tailor and adjusted for new heads, plus other improvements [420]
+- Added Higher Ground wing/tail visual effects [Acaos]
+- Added Okto's VFX as wings/tails [Acaos]
+- Added numerous other wing/tail visual effects [Acaos]
+- Added most CEP appearances to tailmodel.2da [Acaos]
+- Added wands as fashion accessories [Acaos]
+- Added bucklers and 3-part shields for NWNX worlds [Acaos]
+- Added alternate-AC-type items [Acaos]:
+    Amulet: Armor, Deflection, Shield
+    Belt: Armor, Natural, Shield
+    Bracer: Shield
+    Cloak: Armor, Dodge, Natural, Shield
+    Ring: Armor, Natural, Shield
+    Torch: Shield
+
+- Added brownie heads by Ghetteran (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=5805) [Barry_1066]
+- Added brownie race heads by Daemon_Blackrazor (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=6177) [Barry_1066]
+- Added Drakin heads by Fantu (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7408) [Barry_1066]
+
+- Integrated CRAP by Rosietreats, Plywood Chicken, Accerak, and others [Barry_1066]
+    http://nwvault.ign.com/View.php?view=Creatures.Detail&id=502
+    http://nwvault.ign.com/View.php?view=Creatures.Detail&id=506
+    http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=5180
+    http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7035
+    INTERVIEW: http://nwvault.ign.com/View.php?view=Interviews.Detail&id=234
+    VIDEO: http://nwvault.ign.com/View.php?view=Movies.Detail&id=435
+
+
+- New creature appearances:
+    Crane Pack by HydromancerX (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=4928) [Barry_1066]
+    Leucrotta by SirOtus (http://nwvault.ign.com/View.php?view=Creatures.Detail&id=556) [Barry_1066]
+
+    Doom Pumpkin [Barry_1066]
+    Piranha [Barry_1066]
+
+    Invisible VFX creature appearances [Acaos]
+    Invisible creature appearances without targeting glow [Acaos]
+
+- New placeable appearances:
+    Flowing Liquids v1.1 by the Amethyst Dragon (http://nwvault.ign.com/View.php?view=hakpaks.Detail&id=7407)
+    NWN2 Placeables by thegeorge, cleaned up by Acaos:
+      NWN2 Books (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7520)
+      NWN2 Chairs/Beds (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7597)
+      NWN2 Containers (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7628)
+      NWN2 Corpses (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7637)
+      NWN2 Doors (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7595)
+      NWN2 Hobbies (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7621)
+      NWN2 Houses (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7583)
+      NWN2 Kitchen (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7559)
+      NWN2 Military (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7626)
+      NWN2 Nautical (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7631)
+      NWN2 Pillars (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7627)
+      NWN2 Rocks (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7516)
+      NWN2 Rural (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7634)
+      NWN2 Signs (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7616)
+      NWN2 Statues (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7474)
+      NWN2 Tables (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7580)
+      NWN2 Temples (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7635)
+      NWN2 Trees (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7569)
+      NWN2 Wizardstuff (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7605)
+      NWN2 Workbenches (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7539)
+      NWN2 Walls (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=7607) 
+
+- New visual effects:
+    Recolored healing VFX [Acaos]
+    Fire/freeze/odd rain [Acaos]
+    Dispel/Dust/Freeze/Grey/Holy/Odd Fog [Acaos]
+    Acid/Dust/Evil/Freeze/Grease/Grey/Holy/Mind/Nature/Odd Wall [Acaos]
+
+
+- Added generic doors (see cep_tilesets.txt for details)
+- Added extensions to Bioware tilesets (see cep_tilesets.txt for details)

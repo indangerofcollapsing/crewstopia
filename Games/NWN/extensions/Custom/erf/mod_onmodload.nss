@@ -509,7 +509,7 @@ void main()
    SetLocalInt(oMod, "PRC_REMOVE_PLAYER_SPEED", TRUE);
 
    // Enforces racial appearance as defined in racialtypes.2da
-   //SetLocalInt(oMod, "PRC_ENFORCE_RACIAL_APPEARANCE", FALSE);
+   SetLocalInt(oMod, "PRC_ENFORCE_RACIAL_APPEARANCE", FALSE);
 
    // By default, on acquire script for races only runs for NPCs if they have
    // a PC as a master.

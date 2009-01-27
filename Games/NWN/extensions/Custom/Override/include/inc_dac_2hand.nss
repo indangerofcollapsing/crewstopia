@@ -440,7 +440,7 @@ int getRawBonus(int nIPDamageBonus)
    return nDamageBonus;
 }
 
-void main() {} // Testing/compiling purposes
+//void main() {} // Testing/compiling purposes
 
 /* raw values
 IP_CONST_DAMAGEBONUS_1 = 1

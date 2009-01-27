@@ -7,7 +7,7 @@
 
 void main()
 {
-   //debugVarObject("_mod_on_enter", OBJECT_SELF);
+   //debugVarObject("mod_onenter", OBJECT_SELF);
 
    ExecuteScript("prc_onenter", OBJECT_SELF);
 
@@ -26,23 +26,22 @@ void main()
    object oSkin = GetItemInSlot(INVENTORY_SLOT_CARMOUR, oPC);
    if (oSkin == OBJECT_INVALID) oSkin = CreateItemOnObject("base_prc_skin",oPC);
    // Player Tools
-   if (! GetHasFeat(IP_CONST_FEAT_PLAYER_TOOL_08, oPC))
+   if (! GetHasFeat(IP_CONST_FEAT_PLAYER_TOOL_08, oPC)) // OHS Henchmen
    {
       IPSafeAddItemProperty(oSkin, ItemPropertyBonusFeat(
          IP_CONST_FEAT_PLAYER_TOOL_08));
    }
-   if (! GetHasFeat(IP_CONST_FEAT_PLAYER_TOOL_09, oPC))
+   if (! GetHasFeat(IP_CONST_FEAT_PLAYER_TOOL_09, oPC)) // Psionic Status
    {
       IPSafeAddItemProperty(oSkin, ItemPropertyBonusFeat(
          IP_CONST_FEAT_PLAYER_TOOL_09));
    }
-   if (! GetHasFeat(IP_CONST_FEAT_PLAYER_TOOL_10, oPC))
+   if (! GetHasFeat(IP_CONST_FEAT_PLAYER_TOOL_10, oPC)) // Autotarget
    {
       IPSafeAddItemProperty(oSkin, ItemPropertyBonusFeat(
          IP_CONST_FEAT_PLAYER_TOOL_10));
    }
-   // Climb
-   if (! GetHasFeat(3112, oPC))
+   if (! GetHasFeat(3112, oPC)) // Climb
    {
       IPSafeAddItemProperty(oSkin, ItemPropertyBonusFeat(3112));
    }

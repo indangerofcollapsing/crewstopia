@@ -58,7 +58,7 @@
 Title : PRC Pack
 
 # Add the PRC pack version and specify at least 1.62 to install.
-Version : 3.3Beta1
+Version : 3.3a
 MinNWNVersion: 1.67, XP1, XP2
 
 # ERF with the required areas.

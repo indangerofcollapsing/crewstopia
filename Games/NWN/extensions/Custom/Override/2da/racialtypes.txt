@@ -1,4 +1,4 @@
-Halfling subtypes     ST/DX/CN/IN/WS/CH   Favored
+* Halfling subtypes     ST/DX/CN/IN/WS/CH   Favored
 Ghostwise Halfling    -2/  /  /+2/-2/+2   Barb
 Tundra Halfling       -1/+2/+1/-2/  /     Rang
 Strongheart Halfling  -2/  /  /+1/+1/     Rogue
@@ -10,7 +10,7 @@ Deep Halfling         -1/  /+2/  /  /-1   Fighter (4)
 193 Tallfellow_Halfling    Th    16826926 16826926   16826927        16826928   16826929    3          -2        2         0         2         0         -2        20        9       RACE_FEAT_THALF  8160      1          RACIAL_TYPE_TALLFELLOW_HALFLING  20   9                   1
 194 Deep_Halfling          Dh    16826930 16826930   16826931        16826932   16826933    3          -1        0         0         -1        0         2         20        4       RACE_FEAT_DHALF  8160      1          RACIAL_TYPE_DEEP_HALFLING        20   4                   1
 
-Gnome subtypes        ST/DX/CN/IN/WS/CH   Favored
+* Gnome subtypes        ST/DX/CN/IN/WS/CH   Favored
 Gnome                 -2/  /+2/  /  /     Wiz    (no change, listed for comparison)
 Forest Gnome          -2/  /  /+2/  /     Wiz
 Rock Gnome            -2/  /  /  /  /+2   Bard
@@ -19,7 +19,7 @@ Whisper Gnome         -2/+2/+2/  /  /-2   Rogue  (no change, listed for comparis
 175 Forest_Gnome           Fg    16826782 16826783   16826784        16826785   16826786    2          -2        0         2         0         0         0         20        10      RACE_FEAT_FGNOME 16826911  1          RACIAL_TYPE_FOR_GNOME            45   10                  1
 176 Rock_Gnome             Rg    16826787 16826788   16826789        16826790   16826791    2          -2        0         0         2         0         0         20        1       RACE_FEAT_RGNOME 8159      1          RACIAL_TYPE_ROCK_GNOME           45   1                   1
 
-Elf subtypes          ST/DX/CN/IN/WS/CH   Favored
+* Elf subtypes          ST/DX/CN/IN/WS/CH   Favored
 Aquatic Elf             /+2/  /-2/  /     Fighter (no change, listed for comparison)
 Avariel                 /+4/-2/+2/+2/     Cleric  (no change, listed for comparison)
 Drow Male               /+2/-2/+2/  /+2   Wizard  (no change, listed for comparison)
@@ -32,8 +32,11 @@ Wild Elf                /  /  /-2/  /+2   Sorceror
 167 Wild_Elf               We    16826764 16826765   16826766        16826767   16826768    1          0         0         -2        2         0         0         30        9       RACE_FEAT_WIELF  16826911  1          RACIAL_TYPE_WILD_ELF             120  9                   1
 168 Wood_Elf               Wo    16826769 16826770   16826771        16826772   16826773    1          2         2         -2        -2        0         0         30        7       RACE_FEAT_WOELF  16826911  1          RACIAL_TYPE_WOOD_ELF             120  7                   1
 
-Illithid, favored Psion (145)
+* Illithid, favored Psion (145)
 225 Illithid               It    16826885 16826885   16826886        16826885   16826887    413        2         4         8         6         6         2         30        145     RACE_FEAT_ILLITH 16826909  1          RACIAL_TYPE_ILLITHID             20   145                 1
 
-Viletooth Lizardfolk appearance as Half-Elf, just cause I wanna
+* Viletooth Lizardfolk appearance as Half-Elf, just cause I wanna
 112 Viletooth_Lizardfolk   Vl    16834716 16834716   16834717        16834716   16834718    4          0         0         0         0         0         2         30        3       RACE_FEAT_VTOOTH 16826908  1          RACIAL_TYPE_VILETOOTH_LIZARDFOLK 20   3                   1
+
+* Warforged appearance as Human, just cause I wanna
+149 Warforged              Wf    16828201 16828201   16828202        16828201   16828203    6          0         0         0         -2        -2        2         30        4       RACE_FEAT_WARF   16828204  1          RACIAL_TYPE_WARFORGED            5    4                   1

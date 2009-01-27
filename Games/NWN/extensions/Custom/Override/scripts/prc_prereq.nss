@@ -154,7 +154,7 @@ void Shifter(object oPC, int iArcSpell, int iDivSpell)
      if(GetRacialType(oPC) == RACIAL_TYPE_SHIFTER) SetLocalInt(oPC, "PRC_PrereqShift", 0);
      if(GetRacialType(oPC) == RACIAL_TYPE_NAZTHARUNE_RAKSHASA) SetLocalInt(oPC, "PRC_PrereqShift", 0);
 
-     // @DUG
+     /* Deprecated @DUG
      int nRacialType = MyPRCGetRacialType(oPC);
      if (GetRacialType(oPC) == RACIAL_TYPE_DOPPELGANGER ||
          nRacialType ==  RACIAL_TYPE_DOPPELGANGER ||
@@ -162,6 +162,7 @@ void Shifter(object oPC, int iArcSpell, int iDivSpell)
      {
         SetLocalInt(oPC, "PRC_PrereqShift", 0);
      }
+	  // @DUG */
 
      // not counted since it is just "disguise self" and not alter self or shape change
      //if(MyPRCGetRacialType(oPC) == RACIAL_TYPE_DEEP_GNOME) SetLocalInt(oPC, "PRC_PrereqShift", 0);
@@ -1142,7 +1143,7 @@ void main()
      SkirmishRequirement(oPC);
      SpecialAttackRequirement(oPC);
      TomeOfBattle(oPC);
-     // Truly massive-debug message flood if activated.
+     // Truly massive message flood if activated.
      /*
 
      string sPRC_AllSpell;

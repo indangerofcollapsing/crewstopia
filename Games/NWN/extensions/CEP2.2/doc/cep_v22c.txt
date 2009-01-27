@@ -1,0 +1,34 @@
+CEP v2.2c CHANGES
+
+- Several hundred new doors in cep2_add_doors [Barry_1066 and Athena]
+
+- Fixed leucrotta, waterfowl, and other blueprints [Barry_1066 and 420]
+- Fixed missing appearances in appearance.2da [Barry_1066]
+- Fixed NWN2 structure blueprints in cep2_build [Barry_1066]
+- Fixed SB werecreature models in cep2_core2 [Acaos]
+
+- New placeable appearances:
+    NWN2 Thatched Houses fixed and Snowy versions added [Acaos]
+    Scorched Earth lava based on Lord of Worms' Scorched Earth
+      (http://nwvault.ign.com/View.php?view=hakpaks.Detail&id=6631) [Acaos]
+    Vortices based on Lord of Worms' Outer Limits
+      (http://nwvault.ign.com/View.php?view=hakpaks.Detail&id=6631) [Acaos]
+
+- Shield Fixes from The_Krit:
+    cep2_add_sb_v1/zep_inc_craft.nss
+    cep2_add_sb_v1/zep_cr_nextpart.nss
+    cep2_add_sb_v1/zep_cr_prevpart.nss
+      Fix the shield crafting 2da references in these and recompile
+
+    cep2_top_v22/cepshieldmodel.2da
+      fix that tower shields 120/130 do not exist
+
+    cep2_core0/iashtz_b_098.tga
+    cep2_core5/iashto_098.tga
+      resized to 64x128
+
+    cep2_core0/ashtz_b_068.mdl
+    cep2_core0/ashtz_b_069.mdl
+    cep2_core5/ashto_068.mdl
+    cep2_core5/ashto_069.mdl
+      fix texture name in these models

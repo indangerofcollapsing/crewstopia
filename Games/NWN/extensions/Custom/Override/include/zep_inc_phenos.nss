@@ -2,7 +2,7 @@
     zep_inc_phenos  - Version 2.0
     created July 3&4 - TJ aka TheExcimer-500
     recreated August 28 - *sighs* instead of fishing...
-
+    Updated Nov.6th (Excimer) - Fixed two missing "phenotypes"
     to use type: #include "zep_inc_phenos"  at the top of your script
 
     Functions zep_Mount, zep_DisMount, zep_Fly, zep_Fly_Land
@@ -10,7 +10,7 @@
 
     #include "zep_inc_constant"
     #include "zep_inc_1st_rp"
-#include "inc_debug_dac"
+#include "inc_debug_dac" // @DUG @FIX This whole thing may be broken.
 
 /* Variables placed on PC
 

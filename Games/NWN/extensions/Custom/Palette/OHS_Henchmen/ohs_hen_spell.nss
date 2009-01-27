@@ -17,6 +17,7 @@
 #include "inc_debug_dac"
 #include "nw_i0_plot"
 //#include "x0_inc_henai" // @DUG
+#include "x2_inc_switches" // @DUG
 
 // @DUG Cribbed from x2_i0_spells
 const int X2_SPELL_AOEBEHAVIOR_FLEE = 0;
