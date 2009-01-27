@@ -2,8 +2,6 @@ int amISiblingTo(object oCreature);
 int amICousinTo(object oCreature);
 int getPerceivedAppearance(int nAppearanceType);
 
-//void main() {} // testing/compiling purposes
-
 #include "zep_inc_monster"
 
 int amISiblingTo(object oCreature)
@@ -604,3 +602,4 @@ int getPerceivedAppearance(int nAppearanceType)
    return nAppearanceType;
 }
 
+//void main() {} // testing/compiling purposes

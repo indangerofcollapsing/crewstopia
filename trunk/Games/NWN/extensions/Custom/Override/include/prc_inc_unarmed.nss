@@ -95,24 +95,21 @@ float DamageAvg(int iDamage);
 // Clean up any extras in the inventory.
 void CleanExtraFists(object oCreature)
 {
-    int iIsCWeap, iIsEquip;
-
-    object oClean = GetFirstItemInInventory(oCreature);
-
-    while (GetIsObjectValid(oClean))
+    int nItemType;
+    object oItem  = GetFirstItemInInventory(oCreature);    object oCWPB  = GetItemInSlot(INVENTORY_SLOT_CWEAPON_B, oCreature);    object oCWPL  = GetItemInSlot(INVENTORY_SLOT_CWEAPON_L, oCreature);    object oCWPR  = GetItemInSlot(INVENTORY_SLOT_CWEAPON_R, oCreature);    object oCSkin = GetItemInSlot(INVENTORY_SLOT_CARMOUR,   oCreature);
+    while(GetIsObjectValid(oItem))
     {
-        iIsCWeap = GetIsPRCCreatureWeapon(oClean);
+        nItemType = GetBaseItemType(oItem);
 
-        iIsEquip = oClean == GetItemInSlot(INVENTORY_SLOT_CWEAPON_L) ||
-                   oClean == GetItemInSlot(INVENTORY_SLOT_CWEAPON_R) ||
-                   oClean == GetItemInSlot(INVENTORY_SLOT_CWEAPON_B);
-
-        if (iIsCWeap && !iIsEquip)
-        {
-            DestroyObject(oClean);
-        }
-
-        oClean = GetNextItemInInventory(oCreature);
+        if(nItemType == BASE_ITEM_CBLUDGWEAPON ||
+           nItemType == BASE_ITEM_CPIERCWEAPON ||
+           nItemType == BASE_ITEM_CREATUREITEM ||
+           nItemType == BASE_ITEM_CSLASHWEAPON ||
+           nItemType == BASE_ITEM_CSLSHPRCWEAP
+           )        {
+            if(oItem != oCWPB &&
+               oItem != oCWPL &&               oItem != oCWPR &&               oItem != oCSkin               )                MyDestroyObject(oItem);        }
+        oItem = GetNextItemInInventory(oCreature);
     }
 }
 

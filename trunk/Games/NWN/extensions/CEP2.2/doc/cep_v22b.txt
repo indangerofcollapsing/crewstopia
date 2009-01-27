@@ -1,0 +1,21 @@
+CEP v2.2b CHANGES
+
+- Fixed bad PWK/use nodes on Tom Banjo's boulder [Tom Banjo]
+- Fixed bad reserved lines in baseitems.2da [Acaos]
+- Fixed toolset crash when trying to create an Amulet 2* [Acaos]
+
+- Numerous fixes, enhancements, and cleanups to CEP tiles [Acaos]
+  Tile minimap icons regenerated for several sets. Minimap icons
+  for tiles are now in cep2_add_tiles2.hak, which will need to be
+  included in your hak order. [Acaos]
+
+- CRAP doors cleaned up and integrated [Acaos]
+- Several missing CRAP placeables added [Acaos]
+
+- A large number of new doors added to cep2_add_doors.hak [Barry_1066 and Athena]:
+    Base curtain model is the CTP curtain model by OldMansBeard and Tiberius Morguhn
+    Base single door model is the LOK single door, cleaned up by Acaos with proper nodes added
+    Base double door model is Gaoneng's double door, cleaned up by Acaos
+    Many doors were inspired by Tiberius_Morguhn's More Doors
+      (http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=5486)
+    The doors should not conflict with any other released project

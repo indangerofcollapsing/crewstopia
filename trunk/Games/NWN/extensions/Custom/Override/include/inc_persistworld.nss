@@ -48,9 +48,9 @@ const int USER_EVENT_RESPAWN = 500;
 #include "x0_i0_treasure"
 #include "inc_heartbeat"
 #include "inc_nbde"
-#include "inc_variables"
-#include "inc_travel"
-#include "inc_debug_dac"
+//#include "inc_variables"
+//#include "inc_travel"
+//#include "inc_debug_dac"
 
 void markTemporary(object oObject)
 {

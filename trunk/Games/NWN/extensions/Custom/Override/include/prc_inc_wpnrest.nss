@@ -32,8 +32,6 @@ int IsProficient(object oPC, int nBaseItem)
 {
    int bProficient = FALSE;
 
-   if (GetHasFeat(FEAT_MINDBLADE, oPC)) return TRUE; // @DUG
-
    switch(nBaseItem)
    {
        case BASE_ITEM_SHORTSWORD:

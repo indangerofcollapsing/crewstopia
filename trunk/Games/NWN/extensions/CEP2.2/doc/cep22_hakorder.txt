@@ -1,0 +1,25 @@
+This is the official hak order for CEP 2.2:
+  cep2_top_v22
+  cep2_custom (optional)
+  cep2_add_phenos5
+  cep2_add_phenos4
+  cep2_add_phenos3
+  cep2_add_phenos2
+  cep2_add_phenos1
+  cep2_add_tiles2 (optional)
+  cep2_add_tiles1 (optional)
+  cep2_ext_tiles (optional)
+  cep2_add_doors (optional)
+  cep2_core6
+  cep2_core5
+  cep2_core4
+  cep2_core3
+  cep2_core2
+  cep2_core1
+  cep2_core0
+  cep2_crp
+  cep2_add_sb_v1 (optional)
+  cep2_crp_s (optional)
+  cep2_build (optional)
+
+Your module should be set to use cep22_v1.tlk as the custom talk table.

@@ -9,22 +9,43 @@
 //:: Created By: Brent
 //:: Created On: July 2002
 //:: Updated On: August 2003, Georg Zoeller:
-//::                          Arcane Archer special ability fix,
-//::                          New creatures added to Flying/Petrification check
-//::                          Several Fixes toMDispelagic
-//::                          Added spellsGetHighestSpellcastingClassLevel
-//::                          Added code to spellsIsTarget to make NPCs hurt their allies with AoE spells if ModuleSwitch MODULE_SWITCH_ENABLE_NPC_AOE_HURT_ALLIES is set
-//::                          Creatures with Plot or DM Flag set will no longer be affected by petrify. DMs used to get a GUI panel, even if unaffected.
+//::    Arcane Archer special ability fix,
+//::    New creatures added to Flying/Petrification check
+//::    Several Fixes toMDispelagic
+//::    Added spellsGetHighestSpellcastingClassLevel
+//::    Added code to spellsIsTarget to make NPCs hurt their allies with AoE
+//::       spells if ModuleSwitch MODULE_SWITCH_ENABLE_NPC_AOE_HURT_ALLIES is
+//::       set.
+//::    Creatures with Plot or DM Flag set will no longer be affected by
+//::       petrify. DMs used to get a GUI panel, even if unaffected.
 //:: Updated On: September 2003, Georg Zoeller:
-//::                          spellsIsTarget was not using oSource in source checks.
-//::                          Creatures with Plot or DM Flag set will no longer be affected by petrify. DMs used to get a GUI panel, even if unaffected.
+//::    spellsIsTarget was not using oSource in source checks.
+//::    Creatures with Plot or DM Flag set will no longer be affected by
+//::       petrify. DMs used to get a GUI panel, even if unaffected.
 //:: Updated On: October 2003, Georg Zoeller:
-//::                          Missile storm's no longer do a SR check for each missile, but only one per target
-//::                          ... and there was much rejoicing
-//::                          Added code to handleldispeling of AoE spells better
-//::                          Henchmen are booted from the party when petrified
-//::                          Dispel Magic delay until VFX hit has been set down to 0.3
+//::    Missile storm's no longer do a SR check for each missile, but only
+//::       one per target
+//::    ... and there was much rejoicing
+//::    Added code to handleldispeling of AoE spells better
+//::    Henchmen are booted from the party when petrified
+//::    Dispel Magic delay until VFX hit has been set down to 0.3
 //:://////////////////////////////////////////////
+
+//#include "prcsp_reputation" // mostly stuff pulled out of x0_i0_spells
+////#include "prc_alterations"
+
+////#include "x0_i0_match"
+//#include "x2_inc_switches"
+//#include "x2_inc_itemprop"
+//#include "x0_i0_henchman"
+////#include "prc_inc_combat" via prc_alterations
+#include "prc_inc_sp_tch"
+////#include "prc_spellf_inc"
+//#include "prcsp_engine"
+#include "prc_inc_function"
+#include "prc_add_spell_dc" // @DUG
+#include "nw_i0_spells" // @DUG
+#include "nw_i0_generic" // @DUG
 
 //:: modifications by mr_bumpkin on Dec 4, 2003
 //:: changed all instances of GetSpellSaveDC to PRCGetSaveDC
@@ -32,8 +53,6 @@
 
 //Added code into spellsInflictTouchAttack to maximize for Faith Healing and Blast Infidel
 //Aaon Graywolf - Jan 6, 2003
-
-#include "prcsp_reputation" // mostly stuff pulled out of x0_i0_spells
 
 //:://////////////////////////////////////////////
 //:: Saving Throw Const - only used in this include
@@ -142,18 +161,6 @@ void spellApplyMindBlank(object oTarget, int nSpellId, float fDelay=0.0);
 
 // * Handle dispel magic of AoEs
 void spellsDispelAoE(object oTargetAoE, object oCaster, int nCasterLevel);
-
-//#include "prc_alterations"
-
-//#include "x0_i0_match"
-#include "x2_inc_switches"
-#include "x2_inc_itemprop"
-#include "x0_i0_henchman"
-//#include "prc_inc_combat" via prc_alterations
-#include "prc_inc_sp_tch"
-//#include "prc_spellf_inc"
-#include "prcsp_engine"
-#include "prc_inc_function"
 
 //::///////////////////////////////////////////////
 //:: DoTrapSpike

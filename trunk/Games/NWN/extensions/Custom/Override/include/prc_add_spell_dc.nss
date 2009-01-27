@@ -17,7 +17,6 @@ int GetChangesToSaveDC(object oTarget, object oCaster = OBJECT_SELF, int nSpellI
 //#include "prc_inc_racial"
 #include "inc_newspellbook"
 
-
 int GetHeartWarderDC(int spell_id, object oCaster = OBJECT_SELF)
 {
     // Check the curent school
@@ -101,18 +100,18 @@ int ElementalSavantDC(int spell_id, object oCaster = OBJECT_SELF)
 // This does other spell focus feats, starting with Spell Focus: Cold
 int SpellFocus(int nSpellId, object oCaster = OBJECT_SELF)
 {
-    	int nDC = 0;
+      int nDC = 0;
         string sElement = ChangedElementalType(nSpellId, oCaster);
 
 
-        // Specify the elemental type 
+        // Specify the elemental type
         if (sElement == "Cold")
         {
-		if (GetHasFeat(FEAT_GREATER_SPELL_FOCUS_COLD, oCaster)) nDC += 2;
-		else if (GetHasFeat(FEAT_SPELL_FOCUS_COLD, oCaster)) nDC += 1;
+      if (GetHasFeat(FEAT_GREATER_SPELL_FOCUS_COLD, oCaster)) nDC += 2;
+      else if (GetHasFeat(FEAT_SPELL_FOCUS_COLD, oCaster)) nDC += 1;
         }
 
-    	return nDC;
+      return nDC;
 }
 
 
@@ -491,14 +490,23 @@ int PRCGetSaveDC(object oTarget, object oCaster, int nSpellID = -1)
     object oItem = GetSpellCastItem();
     if(nSpellID == -1)
         nSpellID = PRCGetSpellId();
-    //10+spelllevel+stat(cha default)
-    int nDC = GetSpellSaveDC();
-    // For when you want to assign the caster DC
+    int nDC;
+    // at this point, if it's still -1 then this is running on an AoE
+    if (nSpellID == -1)
+    {
+        // get the needed values off the AoE
+        nSpellID = GetLocalInt(OBJECT_SELF, "X2_AoE_SpellID");
+        nDC = GetLocalInt(OBJECT_SELF, "X2_AoE_BaseSaveDC");
+    }
+    else // not persistent AoE script
+    {        //10+spelllevel+stat(cha default)
+      nDC = GetSpellSaveDC();
+    }    // For when you want to assign the caster DC
     //this does not take feat/race/class into account, it is an absolute override
     if (GetLocalInt(oCaster, PRC_DC_TOTAL_OVERRIDE) != 0)
     {
-        nDC = GetLocalInt(oCaster, PRC_DC_TOTAL_OVERRIDE);
-        // @DUG DoDebug("Forced-DC PRC_DC_TOTAL_OVERRIDE casting at DC " + IntToString(nDC));
+       nDC = GetLocalInt(oCaster, PRC_DC_TOTAL_OVERRIDE);
+       // @DUG DoDebug("Forced-DC PRC_DC_TOTAL_OVERRIDE casting at DC " + IntToString(nDC));
     }
     // For when you want to assign the caster DC
     //this does take feat/race/class into account, it only overrides the baseDC

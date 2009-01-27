@@ -530,4 +530,4 @@ void IWSetEnhancementAndDrainLevel(object oWeapon, int nAddition, int bRemove = 
 
 }
 
-void main(){} // Testing/compiling purposes
+//void main(){} // Testing/compiling purposes

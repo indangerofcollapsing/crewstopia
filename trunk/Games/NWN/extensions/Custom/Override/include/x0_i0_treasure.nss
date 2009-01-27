@@ -917,10 +917,30 @@ void CTG_CreateSpecificBaseTypeTreasure(int nTreasureType,
             else
             {
                 // Make the item
-                CopyItem(oItem, oCont);
-                if (nItemsCreated == 1) {
+                //CRP CODE ADDITION - BREAKABLE ITEMS
+                if(CRP_USE_BREAKABLE_ITEMS && CRP_CONTAINER_HAS_BEEN_DESTROYED)
+                {
+                    //int bDamage = GetDamageDealtByType(DAMAGE_TYPE_ACID) + 1;
+                    //bDamage = bDamage + GetDamageDealtByType(DAMAGE_TYPE_ELECTRICAL) + 1;
+                    //bDamage = bDamage + GetDamageDealtByType(DAMAGE_TYPE_FIRE) + 1;
+                    //bDamage = bDamage + GetDamageDealtByType(DAMAGE_TYPE_MAGICAL) + 1;
+
+                    //if(bDamage >= 7 && crp_GetIsItemDestroyed(oItem, TRUE))
+                        //CreateItemOnObject(CRP_DESTROYED_ITEM, oCont, 1);
+                    //else
+                    if(crp_GetIsItemDestroyed(oItem, CRP_ALT_DAMAGE))
+                        CreateItemOnObject(CRP_DESTROYED_ITEM, oCont, 1);
+                    else
+                        CopyItem(oItem, oCont);
+                }
+                else
+                {
+                    CopyItem(oItem, oCont);
+                }
+                if (nItemsCreated == 1)
                     oItem1 = oItem;
-                } else {
+                else
+                {
                     // if this is the third item, it doesn't matter
                     // anyway, so we might as well save the conditional.
                     oItem2 = oItem;
@@ -974,14 +994,14 @@ void CTG_GenerateNPCTreasure(int nTreasureType=5, object oNPC=OBJECT_SELF)
         // No treasure, sorry.
         return;
     }
-
-    if (nTreasureType == TREASURE_TYPE_MONSTER) {
-
-        if (d100() < BK_CHANCE_OF_N0_MONSTERTREASURE) {
-            return;
+//CRP CODE ADDITION
+    if (nTreasureType == TREASURE_TYPE_MONSTER)
+    {
+        if(CRP_USE_COINS)
+        {            if(d100() < CRP_CHANCE_OF_NO_MONSTERTREASURE)            return;
         }
+        else if (d100() < BK_CHANCE_OF_N0_MONSTERTREASURE)        {            return;        }
     }
-
     // Otherwise, generate as usual
     CTG_CreateTreasure(nTreasureType, oNPC, oNPC);
 }
@@ -1213,4 +1233,3 @@ string CTG_GetRacialtypeChestTag(string sBaseTag, object oSource)
 }
 
 //void main() {} // testing/compiling purposes
-

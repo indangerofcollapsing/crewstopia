@@ -1,7 +1,8 @@
 #include "zep_inc_scrptdlg"
 
-#include "prc_inc_newip" // @DUG
+//#include "prc_inc_newip" // @DUG
 // @DUG const int ITEM_PROPERTY_USE_LIMITATION_GENDER = 150;
+const int IP_USE_LIMITATION_GENDER = 150;
 
 //Baseitem: New Weapon Types
 const int BASE_ITEM_TRIDENT_1H = 300;
@@ -100,13 +101,13 @@ void ZEPGenderRestrict(object oItem, object oPC)
     //If so, we enter the if statment and check PC gender
     //vs. the item's limitation.  Else we continue out of the
     //function.
-    if (GetItemHasItemProperty(oItem,ITEM_PROPERTY_USE_LIMITATION_GENDER))
+    if (GetItemHasItemProperty(oItem, IP_USE_LIMITATION_GENDER))
         {
         itemproperty ipGenderProperty=GetFirstItemProperty(oItem);
         //We're not sure if the above property is the one
         //we want, so we'll check it vs. the Gender property,
         //and, if it's not it, loop through until we find it.
-        while ((GetIsItemPropertyValid(ipGenderProperty))&&(GetItemPropertyType(ipGenderProperty)!=ITEM_PROPERTY_USE_LIMITATION_GENDER))
+        while ((GetIsItemPropertyValid(ipGenderProperty))&&(GetItemPropertyType(ipGenderProperty)!= IP_USE_LIMITATION_GENDER))
             {
             ipGenderProperty=GetNextItemProperty(oItem);
             }
@@ -132,3 +133,4 @@ void ZEPGenderRestrict(object oItem, object oPC)
         }
 }
 
+//void main() {} // Testing/compiling purposes

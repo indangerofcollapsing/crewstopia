@@ -514,7 +514,7 @@ void main()
          return;
    }
    if (GetHasFeat(nImprovedCriticalFeat)) nThreat -= nCritRange;
-   if (GetHasFeat(nImprovedCriticalFeat) && GetHasFeat(FEAT_KI_CRITICAL))
+   if (GetHasFeat(nWeaponOfChoiceFeat) && GetHasFeat(FEAT_KI_CRITICAL))
    {
       nThreat -= nCritRange;
    }

@@ -96,6 +96,9 @@ void OnConversation()     { RunScript("conv");      }
 
 void main()
 {
+   // CEP 2.2+ version of default.nss
+   ExecuteScript("zep_default", OBJECT_SELF);
+
     // OnConversation is exclusive of everything else, since it is just routed through this script
     if(IsConversation())             OnConversation();
   else if (FindSubString(GetTag(OBJECT_SELF),"OHS_HEN")==0)

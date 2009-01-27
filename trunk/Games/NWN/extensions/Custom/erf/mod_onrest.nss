@@ -3,7 +3,7 @@
 #include "inc_debug_dac"
 void main()
 {
-   //debugVarObject("_mod_on_rest", OBJECT_SELF);
+   //debugVarObject("mod_onrest", OBJECT_SELF);
 
    ExecuteScript("prc_rest", OBJECT_SELF); // PrC on-rest event
    ExecuteScript("x2_mod_def_rest", OBJECT_SELF); // standard on-rest event

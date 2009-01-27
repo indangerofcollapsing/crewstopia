@@ -13,6 +13,7 @@ erf : dac.erf
 module.Hak : _debug.hak
 module.Hak : dac_Override.hak
 module.Hak : dac_Palette.hak
+#module.Hak : dac_PersistWorld.hak
 module.Hak : prc_2das.hak
 module.Hak : prc_scripts.hak
 module.Hak : prc_newspellbook.hak
@@ -23,13 +24,15 @@ module.Hak : prc_race.hak
 module.Hak : prc_textures.hak
 module.Hak : prc_misc.hak
 module.Hak : prc_craft2das.hak
-module.Hak : cep2_top_v21.hak
-module.Hak : cep2_add_Phenos5.hak
-module.Hak : cep2_add_Phenos4.hak
-module.Hak : cep2_add_Phenos3.hak
-module.Hak : cep2_add_Phenos2.hak
-module.Hak : cep2_add_Phenos1.hak
+module.Hak : cep2_top_v22.hak
+module.Hak : cep2_add_phenos5.hak
+module.Hak : cep2_add_phenos4.hak
+module.Hak : cep2_add_phenos3.hak
+module.Hak : cep2_add_phenos2.hak
+module.Hak : cep2_add_phenos1.hak
 module.Hak : cep2_add_sb_v1.hak
+module.Hak : cep2_add_tiles1.hak
+module.Hak : cep2_add_doors.hak
 module.Hak : cep2_core6.hak
 module.Hak : cep2_core5.hak
 module.Hak : cep2_core4.hak
@@ -37,6 +40,9 @@ module.Hak : cep2_core3.hak
 module.Hak : cep2_core2.hak
 module.Hak : cep2_core1.hak
 module.Hak : cep2_core0.hak
+module.Hak : cep2_crp.hak
+module.Hak : cep2_crp_s.hak
+module.Hak : ACPv40.hak
 
 # Custom tlk used by the prc pack.
 module.CustomTlk : PRC+CEP+DUG.tlk
