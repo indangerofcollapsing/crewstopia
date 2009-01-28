@@ -5,8 +5,6 @@ Title: _template
 Version:
 MinNWNVersion: 1.69, XP1, XP2
 
-module.Hak : dac_en6.hak
-
 # HIF files may consist of any of the following tags.  All tags are optional.
 # Tags that support multiple data items may have the data comma separated and/or
 # may have multiple entries.  If a multiple entries are given for a tag that
