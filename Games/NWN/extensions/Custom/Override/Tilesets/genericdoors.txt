@@ -1,0 +1,41 @@
+* ctp_genericdoors.hak
+* tin01.set uses door 24, but it appears to be the original
+24:
+26         CageDoor       5349     v_generic_01  0            1              7              67954
+
+33-50:
+33         SigilDoor1      ****     tps01_gdoor_01    1            1              0              63751
+34         SigilDoor2      ****     tps01_gdoor_02    1            1              4              14452
+35         SigilDoor3      ****     tps01_gdoor_03    1            1              0              63751
+36         SigilDoor4      ****     tps01_gdoor_04    1            1              7              14451
+37         SigilDoor5      ****     tps01_gdoor_05    1            1              0              63751
+38         SigilDoor6      ****     tps01_gdoor_06    1            1              0              63751
+39         SigilDoor7      ****     tps01_gdoor_07    0            1              ****           63751
+40         SigilDoor8      ****     tps01_gdoor_08    1            1              0              63751
+41         SigilDoor9      ****     tps01_gdoor_09    1            1              0              63751
+42         SigilDoor10     ****     tps01_gdoor_10    1            1              0              63751
+43         SigilDoor11     ****     tps01_gdoor_11    1            1              7              14449
+44         SigilDoor12     ****     tps01_gdoor_12    1            1              4              14452
+45         SigilIntDoor1   ****     tps01_gdoor_50    1            1              0              63751
+46         SigilIntDoor2   ****     tps01_gdoor_51    1            1              0              63751
+47         SigilIntDoor3   ****     tps01_gdoor_52    1            1              4              14452
+48         SigilIntDoor4   ****     tps01_gdoor_53    1            1              7              14451
+49    SigilIntDoor5   ****     thv_door05        1            1              7       14449
+50    SigilIntDoor6   ****     thv_door07        1       1       7       14449
+
+* codi_sigil_ext.hak
+* agc01, mdc01, tcn01, tcn23, tcr01, tcr10, tgc01, ttr01 use door 38, but probably original
+* agc01, mdc01, tcn01, tcn23, tcr01, tcr10, tgc01 use door 39, but probably original
+* agc01, mdc01, tgc01, tcr10, tcr01, tcn23, tcn01, tcdl0 use door 40, but probably original
+* tcee0.set uses door 55, but probably original
+12:
+27         Curtain        5349     v_curtain_02    1            1              33           50958
+
+38-40:
+28         Curtain        ****     v1curtain_02  1          1              33             50958
+29         Curtain        ****     v2curtain_02  1          1              33             50958
+30         CaveExit       5349     TDC_UDoor_09  0          0              34             63510
+
+55:
+31         Curtain        ****     v3curtain_02  1          1              33             50958
+

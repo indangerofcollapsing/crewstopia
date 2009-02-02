@@ -12,6 +12,7 @@ xcopy %NWN_HOME_CEP%\src\2da\genericdoors.2da .\2da\.
 xcopy %NWN_HOME_CEP%\src\2da\loadscreens.2da .\2da\.
 xcopy %NWN_HOME_CEP%\src\2da\portraits.2da .\2da\.
 xcopy %NWN_HOME_CEP%\src\2da\soundset.2da .\2da\.
+xcopy %NWN_HOME%\extensions\Custom\Override\Tilesets\*.* .\2da\.
 
 REM Export and merge component haks
 echo Exporting component haks...
@@ -40,6 +41,8 @@ call :exportHak Full_ForestRural.hak
 call :exportHak swamp.hak
 call :exportHak sx_space_tileset.hak
 call :exportHak Undersea.hak
+
+goto end
 
 REM Build the hak file
 echo Building %HAK_NAME%.hak...

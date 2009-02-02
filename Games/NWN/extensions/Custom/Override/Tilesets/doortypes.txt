@@ -1,0 +1,173 @@
+* ctp_common.hak
+181-189:
+131        Corner04_03*PS    tps01_udoor_13 TPSST     nw_door_ttr_27   63537               1            1              ****
+132        Strait02_02*PS    tps01_udoor_14 TPSST     nw_door_ttr_27   63537            1            1              ****
+133      StInt_Trans*PS    thv_door01     THV01     nw_door_ttr_27   63537              1            1              ****
+134      StInt_MnDPly*PS   thv_door03     THV01     nw_door_ttr_27   63533              0            0              ****
+135      StInt_Main*PS     thv_door02     THV01     nw_door_ttr_27   63537           1            1              ****
+136      StInt_Corr*PS1    thv_door04     THV01     nw_door_ttr_27   63537              1            1              ****
+137      StInt_Corr*PS2    thv_door05     THV01     nw_door_ttr_27   63537              1            1              ****
+138      StInt_CorrStrU*PS thv_door06     THV01     nw_door_ttr_27   63533              0            0              ****
+139      StInt_CorrStrD*PS thv_door07     THV01     nw_door_ttr_27   63533              0            0              ****
+
+319-321: (originally typo'd as 319, 220, 221)
+319        StInt_Trans*PS    thv_door01     THV01     nw_door_ttr_27   63537           1            1              ****
+320        StInt_MnDPly*PS   thv_door03     THV01     nw_door_ttr_27   63533           0            0              ****
+321        StInt_Main*PS     thv_door02     THV01     nw_door_ttr_27   63537           1            1              ****
+
+* codi_sigil_ext.hak
+117-123:
+117        WalkWallDoor1*TR   t_door12       TTR01     nw_door_ttr_17   63524           1            1              2
+118        WalkWallDoor2*TR   t_door13       TTR01     nw_door_ttr_17   63524           1            1              2
+119        HalflingDoorN       tts_udoor_10   ****      ****             63492           1            1              1
+120        OutsideDoorN        tts_udoor_11   ****      ****             63492           1            1              1
+121        HalflingDoorN       ttr_udoor_10   ****      ****             63492           1            1              1
+122        OutsideDoorN        ttr_udoor_11   ****      ****             63492           1            1              1
+123        HobbitDoor        HobbitDoor     TTR01     ****             68537           1            1              1
+
+181-190:
+141        Gate*TE             tec_Udoor_01   TEC01     nw_door_ttr_05   63500           0            1              8
+142        Bridge*TE           tec_Udoor_02   TEC01     nw_door_ttr_06   63490           0            1              3
+143        Temple*TE           tec_udoor_03   TEC01     nw_door_ttr_09   63492           1            1              6
+144        Tower*TE            tec_udoor_04   TEC01     nw_door_ttr_09   63492           1            1              9
+145        Estate*TE           tec_udoor_05   TEC01     nw_door_ttr_15   63520           1            1              1
+146        Tree1*TE            tec_udoor_06   TEC01     nw_door_ttr_09   63492           1            1              4
+147        Estate2*TE          tec_udoor_07   TEC01     nw_door_ttr_15   63520           1            1              4
+148        Tree2*TE            tec_udoor_08   TEC01     nw_door_ttr_09   63492           1            1              4
+149        WallDoor*TE         tec_UDoor_09   TEC01     nw_door_ttr_10   84425           1            1              8
+150        Entrance*TE         tec_UDoor_10   TEC01     nw_door_ttr_10   84457           0            1              8
+
+496-499:
+496        Drawbridge        TGC_Udoor_01   TCN01     ****             ****            1            1              3
+497        Dla_Ladder        DLA_Door_01    ****      dla_sewer_ladder 63537           0            1              35
+498        SewerGrate        sewerdoor_01   ****      dla_sewer_generi 63537           0            1              36
+499        SewerCave         TDE_UDoor_08   ****      dla_sewer_cave   63540           0            0              ****
+
+501-507:
+501        LOKDoorTrans4     TDK_LOK01_06   ****      nw_door_ttr_12   63533           0            0              ****
+502        LOKDoorTrans1     TDK_LOK01_03   ****      nw_door_ttr_12   63533           0            0              ****
+503        LOKDoorTrans5b    TDK_LOK01_10   ****      nw_door_ttr_12   63533           0            0              ****
+504        ori_door3         oridor14       ****      nw_door_ttr_12   63533           1            1              16
+505        BridgeDoor1       TDD_UDoor_01   TDD01     nw_door_ttr_01   ****            0            1              1
+506        RuinDoor1         TDD_UDoor_02   TDD01     nw_door_ttr_02   ****            1            1              1
+507        RuinDoor2         TDD_UDoor_03   TDD01     nw_door_ttr_12   ****            0            1              ****
+
+512-513:
+512        HalflingDoorN     TTR_UDoor_08   TTR01     ****             63492           1            1              1
+513        OutsideDoorN      TTR_UDoor_09   TTR01     ****             63492           1            1              1
+
+* Full_ForestRural.hak
+175:
+140        RuralCave*TZ        TTR_UDoor_06   TTZ01     nw_door_ttr_12   63533           0            0              ****
+
+405-411:
+405        LOKDoorTrans0*KL    TDC_UDoor_09   tcdl0     nw_door_ttr_28   63540           0            0              ****
+406        LOKDoorCell1*KL     TCP_UDoor_07   tcdl0     nw_door_ttr_10   63500           0            1              8
+407        LOKDoorTrans1*KL    TCP_UDoor_08   tcdl0     nw_door_ttr_28   63540           0            0              ****
+408        LOKDoorTrans2*KL    TCP_UDoor_09   tcdl0     nw_door_ttr_28   63540           0            0              ****
+409        LOKDoorTrans3*KL    TCP_UDoor_10   tcdl0     nw_door_ttr_28   63540           0            0              ****
+410        LOKDoorTrans4*KL    TCP_UDoor_11   tcdl0     nw_door_ttr_28   63540           0            0              ****
+411        LOKDoorCell2*KL     TCP_UDoor_12   tcdl0     nw_door_ttr_10   63500           0            1              8
+
+465-476:
+465        HalflingDoorN*FT    TCP_UDoor_67   tcft0     nw_door_ttr_19   63527           1            1              1
+466        LOKDoorTrans5b*FT   TCP_UDoor_68   tcft0     nw_door_ttr_28   63540           0            0              ****
+467        Gate*TE             TCP_UDoor_69   tcee0     nw_door_ttr_10   63500           0            1              8
+468        Bridge*TE           TCP_UDoor_70   tcee0     nw_door_ttr_06   63490           0            1              39
+469        Temple*TE           TCP_UDoor_71   tcee0     nw_door_ttr_09   63492           1            1              40
+470        Tower*TE            TCP_UDoor_72   tcee0     nw_door_ttr_09   63492           1            1              41
+471        Estate*TE           TCP_UDoor_73   tcee0     nw_door_ttr_15   63520           1            1              42
+472        Tree1*TE            TCP_UDoor_74   tcee0     nw_door_ttr_09   63492           1            1              43
+473        Entrance2*TE        TCP_UDoor_75   tcee0     nw_door_ttr_10   84457           0            1              47
+474        Tree2*TE            TCP_UDoor_76   tcee0     nw_door_ttr_09   63492           1            1              45
+475        WallDoor*TE         TCP_UDoor_77   tcee0     nw_door_ttr_10   84425           1            1              46
+476        Entrance*TE         TCP_UDoor_78   tcee0     nw_door_ttr_10   84457           0            1              47
+
+478-485:
+478        BridgeDoor*HD       TDE_UDoor_01   tcdh0     nw_door_ttr_06   63490           0            1              5
+479        WallDoor*HD         TDE_UDoor_02   tcdh0     nw_door_ttr_07   63491           1            1              8
+480        WallDoor2*HD        TDE_UDoor_03   tcdh0     nw_door_ttr_07   63491           1            1              8
+481        CorryDoor1*HD       TDE_UDoor_05   tcdh0     nw_door_ttr_08   63495           1            1              6
+482        CorryDoor2*HD       TDE_UDoor_06   tcdh0     nw_door_ttr_08   63495           1            1              4
+483        CorryDoor2*KL       TDC_UDoor_01   tcdl0     nw_door_ttr_08   63495           1            1              5
+484        CorryDoor1*KL       TDC_UDoor_02   tcdl0     nw_door_ttr_08   63495           0            1              8
+485        BridgeDoor1*KL      TDC_UDoor_07   tcdl0     nw_door_ttr_06   63490           0            1              11
+
+499:
+500        Barn2Door*FT        TCP_UDoor_A3   tcft0     nw_door_ttr_05   5350            1            1              1
+
+532-542:
+532        MineDoor1*RC        TDM_UDoor_01   tccr0     nw_door_ttr_24   63513           1            1              1
+533        CaveDoor1*RC        TDM_UDoor_02   tccr0     nw_door_ttr_23   63510           1            1              0
+534        CaveDoor2*RC        TDM_UDoor_03   tccr0     nw_door_ttr_23   63500           1            1              1
+535        MineDoor1*RC        TDM_UDoor_04   tccr0     nw_door_ttr_24   63513           1            1              0
+536        BridgeDoor1*RC      TDM_UDoor_05   tccr0     nw_door_ttr_06   63490           1            1              1
+537        FenceDoor2*RC       TDM_UDoor_06   tccr0     nw_door_ttr_10   63500           1            1              6
+538        FenceDoor1*RC       TDM_UDoor_07   tccr0     nw_door_ttr_10   63500           0            1              0
+539        MineDoorT*RC        TDM_UDoor_08   tccr0     nw_door_ttr_12   63533           1            1              1
+540        MineTranPly*RC      TDM_UDoor_09   tccr0     nw_door_ttr_13   63534           0            0              ****
+541        MineTranPly2*RC     TDM_UDoor_10   tccr0     nw_door_ttr_12   63533           0            0              ****
+542        CorryTrans1*IX      TIN_UDoor_01   tcxi0     nw_door_ttr_11   63503           1            1              2
+
+551-555:
+551        wall1Door2*DB       TCP_UDoor_H1   tcbd0     nw_door_ttr_07   63491           0            1              8
+552        wallyDoor*DB        TCP_UDoor_H2   tcbd0     nw_door_ttr_07   63491           1            1              0
+553        TempleDoor2*DB      TCP_UDoor_H3   tcbd0     nw_door_ttr_09   63492           1            1              4
+554        TransDoor1*DB       TCP_UDoor_H4   tcbd0     nw_door_ttr_15   63520           1            1              1
+555        TempleDoor1*TE      TCN_UDoor_02   tcee0     nw_door_ttr_15   63520           1            1              1
+
+601-602:
+601        DsrtTranPly*DB      TDM_UDoor_10   tcbd0     nw_door_ttr_12   63533           0            0              ****
+602        CaveTranPly*DB      TTD_UDoor_05   tcbd0     x0_door_ttr_31   67348           0            0              ****
+
+620-621:
+620        BreachTrans1*HD     TDM_UDoor_10   tcdh0     nw_door_ttr_27   63537           0            0              ****
+621        MineTranPly2*HD     TDE_UDoor_09   tcdh0     nw_door_ttr_13   63534           0            0              ****
+
+645:
+645        CyptTrans1*IE       TDC_UDoor_08   tcei0     nw_door_ttr_14   6687            0            0              ****
+
+648-655:
+648        BridgeDoor2*FT      TTF_UDoor_01   tcft0     nw_door_ttr_06   63490           1            1              1
+649        wall1Door2*FT       TTF_UDoor_02   tcft0     nw_door_ttr_07   63491           0            1              0
+650        wallyDoor*FT        TTF_UDoor_03   tcft0     nw_door_ttr_07   63491           1            1              0
+651        TempleDoor2*FT      TTF_UDoor_04   tcft0     nw_door_ttr_09   63492           1            1              4
+652        FrstTranPly*FT      TDM_UDoor_10   tcft0     nw_door_ttr_12   63533           0            0              ****
+653        CyptTrans2*FT       TDC_UDoor_09   tcft0     nw_door_ttr_25   63535           0            0              ****
+654        RuralTranPly*FT     TTR_UDoor_07   tcft0     nw_door_ttr_29   63542           0            0              ****
+655        DsrtTranPly*FT      TTD_UDoor_05   tcft0     nw_door_ttr_12   63533           0            0              ****
+
+734-737:
+734        RuralCave*TE        TTR_UDoor_06   tcee0     nw_door_ttr_12   63533           0            0              ****
+735        RampTrans1*TE       TDC_UDoor_08   tcee0     nw_door_ttr_12   63533           0            0              ****
+736        CaveTrans2*TE       TDE_UDoor_09   tcee0     nw_door_ttr_12   63533           0            0              ****
+737        StairTrans*TE       TDE_UDoor_07   tcee0     nw_door_ttr_28   63540           0            0              ****
+
+773-782:
+773        IntFkL1*IG          TCP_UDoor_M1   tcgi0     nw_door_ttr_07   68906           1            1              0
+774        IntFkL2*IG          TCP_UDoor_M2   tcgi0     nw_door_ttr_07   68906           1            1              0
+775        IntFkL3*IG          TCP_UDoor_M3   tcgi0     nw_door_ttr_07   68906           1            1              0
+776        IntFkL4*IG          TCP_UDoor_M4   tcgi0     nw_door_ttr_07   68906           1            1              0
+777        IntFkLSdy*IG        TCP_UDoor_M5   tcgi0     nw_door_ttr_07   68906           1            1              0
+778        IntFkLFyr*IG        TCP_UDoor_M6   tcgi0     nw_door_ttr_07   68906           1            1              0
+779        LOKDoorTrans3*TF    TCP_UDoor_10   tcft0     nw_door_ttr_28   63540           0            0              ****
+780        HouseDoor1*TF       TCP_UDoor_28   tcft0     nw_door_ttr_19   63527           1            1              1
+781        HutDoor*RC          ctp_curtain_07 tccr0     nw_door_ttr_19   63527           1            1              24
+782        DwarfHallDoor1*RC   TCN_UDoor_08   tccr0     nw_door_ttr_18   63526           1            1              9
+
+* swamp.hak
+117-123: (Merge unclear; may have problems: Forest/Rural Full, Rural)
+151        TempleDoor2         TTF_UDoor_04   phf01     nw_door_ttr_09   63492           1            1              4              User001             ****           ****      ****             ****            ****         ****           ****
+152        CityBreach*CN       TDM_UDoor_09   phf01     nw_door_ttr_27   63537           0            0              ****           User002             ****           ****      ****             ****            ****         ****           ****
+153        EvilTDoor1*TR       ttr_udoor_09   phf01     nw_door_ttr_09   63492           0            1              11             User003             ****           ****      ****             ****            ****         ****           ****
+154        Wall2Door           TTR_UDoor_02   phf01     nw_door_ttr_02   63491           1            1              1              User004             ****           ****      ****             ****            ****         ****           ****
+155        BridgeDoor          TTR_UDoor_03   phf01     nw_door_ttr_03   63490           1            1              3              User005             ****           ****      ****             ****            ****         ****           ****
+156        Barn1Door           TTR_UDoor_04   phf01     nw_door_ttr_04   5350            1            1              1              User006             ****           ****      ****             ****            ****         ****           ****
+157        Barn2Door           TTR_UDoor_05   phf01     nw_door_ttr_05   5350            1            1              1              User007             ****           ****      ****             ****            ****         ****           ****
+
+124-128:
+124        Wall1Door           TTR_UDoor_01   phf01     nw_door_ttr_01   63491           1            1              1              User008             ****           ****      ****             ****            ****         ****           ****
+125        RuralCave*TR        TTR_UDoor_06   phf01     nw_door_ttr_12   63533           0            0              ****           User009             ****           ****      ****             ****            ****         ****           ****
+126        TransDoor1*TR       ttr_udoor_08   phf01     nw_door_ttr_15   63520           1            1              1              User010             ****           ****      ****             ****            ****         ****           ****
+127        RuralTranPly*TR     TTR_UDoor_07   phf01     nw_door_ttr_29   63542           0            0              ****           User011             ****           ****      ****             ****            ****         ****           ****
+128        HightDoor1*CN       TCN_UDoor_01   phf01     nw_door_ttr_17   63524           1            1              2              Reserved47          ****           ****      ****             ****            ****         ****           ****
