@@ -1,0 +1,40 @@
+agc01 - City Exterior, Gothic
+dls10 - DLA Sewers
+dls11 - DLA Sewers No Maps
+drw01 - Drow City
+eld01 - Crypt, Greystone
+mdc01 - Desert City, MGS
+phf01 - Forest/Rural Full
+swm80 - Immersive Swamp
+tbm01 - Mountains, Rocky
+tccr0 - CTP Cave Ruins
+tcdh0 - CTP Dwarven Halls
+tcdl0 - CTP Dungeon LOK
+tcee0 - CTP Elven City Exp
+tcge0 - CTP Gothic Estates
+tcgi0 - CTP Gothic Interior
+tcn01 - City Exterior
+tcn23 - City Exterior, Fieldstone
+tcr01 - Rural City, Kthoris
+tcr10 - Rural City, DOA
+tcxi0 - CTP Brick Interior
+tdc01 - Crypt
+tdd01 - Swamp
+tdg07 - Savannah
+tdlk1 - Dungeon, Generic
+tdm01 - Mines and Caverns
+tec01 - Egyptian Crypt
+tgc01 - City Exterior Expanded
+thv01 - Sigil Interior
+tin01 - City Interior
+tms01 - Microset
+tpms1 - Mountains, Snowy
+tpsst - Sigil Exterior
+tsh01 - Mountains, Grassy
+ttf01 - Forest
+ttm01 - Foothills
+ttr01 - Rural
+tts01 - Rural Winter
+ttu01 - Underdark
+tus01 - Undersea
+tze01 - Aztec Exterior

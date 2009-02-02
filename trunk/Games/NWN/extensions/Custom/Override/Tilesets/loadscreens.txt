@@ -1,0 +1,64 @@
+* codi_sigil_ext.hak
+12:
+150        Curtain        5349     v_curtain_02    1            1              33           50958
+
+38-40:
+216        Curtain        ****     v1curtain_02  1          1              33             50958
+217        Curtain        ****     v2curtain_02  1          1              33             50958
+218        CaveExit       5349     TDC_UDoor_09  0          0              34             63510
+
+55:
+151        Curtain        ****     v3curtain_02  1          1              33             50958
+
+150-167:
+232        Forest06              AREA_TRANSITION_FOREST_06        ls_pascast_01        TTF01     ****
+233        Forest07              AREA_TRANSITION_FOREST_07        ls_pascast_02        TTF01     ****
+234        Rural06               AREA_TRANSITION_RURAL_06         ls_pascast_03        TTR01     ****
+235        Abyss01       AREA_TRANSITION_ABYSS_01      LS_ABY_01       ABY01       ****
+236        Abyss02       AREA_TRANSITION_ABYSS_02      LS_ABY_02       ABY01       ****
+237        Abyss03       AREA_TRANSITION_ABYSS_03      LS_ABY_03       ABY01       ****
+238        Abyss04       AREA_TRANSITION_ABYSS_04      LS_ABY_04       ABY01       ****
+239    Maze01                ****                             nwn_ls_mzload1    mze40     ****
+240    Maze02                ****                             nwn_ls_mzload2    mze40     ****
+241        DesertCity01          AREA_TRANSITION_DC_01            LS_MGDC_01  MDC01     ****
+242        DesertCity02          AREA_TRANSITION_DC_02            LS_MGDC_02  MDC01     ****
+243        DesertCity03          AREA_TRANSITION_DC_03            LS_MGDC_03  MDC01     ****
+244        DesertCity04          AREA_TRANSITION_DC_04            LS_MGDC_04  MDC01     ****
+245        DesertCity05          AREA_TRANSITION_DC_05            LS_MGDC_05  MDC01     ****
+246        DesertCity06          AREA_TRANSITION_DC_06            LS_MGDC_06  MDC01     ****
+247        DesertCity07          AREA_TRANSITION_DC_07            LS_MGDC_07  MDC01     ****
+248        DesertCity08          AREA_TRANSITION_DC_08            LS_MGDC_08  MDC01     ****
+249        DesertCity09          AREA_TRANSITION_DC_09            LS_MGDC_09  MDC01     ****
+
+* codi_sigil_int.hak
+150-161:
+220         CODIStem01            AREA_TRANSITION_STEM_01          LS_THV_01     THV01     68585
+221         CODIStem02            AREA_TRANSITION_STEM_02          LS_THV_02     THV01     68586
+222         CODIStem03            AREA_TRANSITION_STEM_03          LS_THV_03     THV01     68587
+223         CODIStem04            AREA_TRANSITION_STEM_04          LS_THV_04     THV01     68588
+224         CODIStem05            AREA_TRANSITION_STEM_05          LS_THV_05     THV01     68589
+225         CODISigil01           AREA_TRANSITION_SIGIL_01         LS_TPS_01     TPSST     68545
+226         CODISigil02           AREA_TRANSITION_SIGIL_02         LS_TPS_02     TPSST     68546
+227         CODISigil03           AREA_TRANSITION_SIGIL_03         LS_TPS_03     TPSST     68547
+228         CODISigil04           AREA_TRANSITION_SIGIL_04         LS_TPS_04     TPSST     68548
+229         CODISigil05           AREA_TRANSITION_SIGIL_05         LS_TPS_05     TPSST     68549
+230         CODISigil06           AREA_TRANSITION_SIGIL_06         LS_TPS_06     TPSST     68550
+231         CODISigil07           AREA_TRANSITION_SIGIL_07         LS_TPS_07     TPSST     68551
+
+* Full_ForestRural.hak
+150-161:
+220         CODIStem01            AREA_TRANSITION_STEM_01          LS_THV_01     THV01     68585
+221         CODIStem02            AREA_TRANSITION_STEM_02          LS_THV_02     THV01     68586
+222         CODIStem03            AREA_TRANSITION_STEM_03          LS_THV_03     THV01     68587
+223         CODIStem04            AREA_TRANSITION_STEM_04          LS_THV_04     THV01     68588
+224         CODIStem05            AREA_TRANSITION_STEM_05          LS_THV_05     THV01     68589
+225         CODISigil01           AREA_TRANSITION_SIGIL_01         LS_TPS_01     TPSST     68545
+226         CODISigil02           AREA_TRANSITION_SIGIL_02         LS_TPS_02     TPSST     68546
+227         CODISigil03           AREA_TRANSITION_SIGIL_03         LS_TPS_03     TPSST     68547
+228         CODISigil04           AREA_TRANSITION_SIGIL_04         LS_TPS_04     TPSST     68548
+229         CODISigil05           AREA_TRANSITION_SIGIL_05         LS_TPS_05     TPSST     68549
+230         CODISigil06           AREA_TRANSITION_SIGIL_06         LS_TPS_06     TPSST     68550
+231         CODISigil07           AREA_TRANSITION_SIGIL_07         LS_TPS_07     TPSST     68551
+
+* Undersea.hak (from the documentation)
+219        Undersea   AREA_TRANSITION_UNDERSEA_01   LS_TUS_01       TUS01       31429
