@@ -62,3 +62,9 @@
 
 * Undersea.hak (from the documentation)
 219        Undersea   AREA_TRANSITION_UNDERSEA_01   LS_TUS_01       TUS01       31429
+
+* IceMines.hak
+68-70:
+260        Mines01       AREA_TRANSITION_MINES_01      LS_MINES_01     MIN01       ****
+261        Mines02       AREA_TRANSITION_MINES_02      LS_MINES_02     MIN01       ****
+262        Mines03       AREA_TRANSITION_MINES_03      LS_MINES_03     MIN01       ****

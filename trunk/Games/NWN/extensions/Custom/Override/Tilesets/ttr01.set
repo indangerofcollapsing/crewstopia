@@ -1,5 +1,7 @@
 ; NEVERWINTER NIGHTS TILESET FILE
 ; DO NOT EDIT MANUALLY - UNLESS YOU KNOW WHAT YOU ARE DOING
+; Rural
+; DisplayName=1606
 
 [GENERAL]
 Name=TTR01
@@ -9,8 +11,8 @@ Interior=0
 HasHeightTransition=1
 EnvMap=ttr01__ref01
 Transition=5
-; @DUG Rural
-DisplayName=1606
+DisplayName=-1
+UnlocalizedName=Rural
 Border=Grass
 Default=Grass
 Floor=Grass

@@ -1,5 +1,7 @@
 ; NEVERWINTER NIGHTS TILESET FILE
 ; DO NOT EDIT MANUALLY - UNLESS YOU KNOW WHAT YOU ARE DOING
+; Crypt 2
+; DisplayName=61853
 
 [GENERAL]
 Name=TEC01
@@ -9,8 +11,7 @@ Interior=1
 HasHeightTransition=0
 EnvMap=tec01__ref01
 Transition=3
-; @DUG Crypt 2
-; @DUG DisplayName=61853
+DisplayName=-1
 UnlocalizedName=Egyptian Crypt
 Border=Wall
 Default=Wall

@@ -1,5 +1,7 @@
 ; NEVERWINTER NIGHTS TILESET FILE
 ; DO NOT EDIT MANUALLY - UNLESS YOU KNOW WHAT YOU ARE DOING
+; Sea
+; DisplayName=31429
 
 [GENERAL]
 Name=TUS01
@@ -9,8 +11,8 @@ Interior=0
 HasHeightUsansition=0
 EnvMap=tus01__ref01
 Transition=3
-; @DUG Sea
-DisplayName=31429
+DisplayName=-1
+UnlocalizedName=Undersea
 Border=Forest
 Default=Forest
 Floor=Forest

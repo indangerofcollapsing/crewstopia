@@ -1,5 +1,7 @@
 ; created with .Set Editor Beta 0.85
 ; comment, contacts and bugs reports to Jlenlc@wanadoo.fr
+; Underdark
+; DisplayName=9044
 
 [GENERAL]
 Name=TTU01
@@ -9,8 +11,8 @@ Interior=0
 HasHeightTransition=1
 EnvMap=ttu01__ref
 Transition=5
-; @DUG Underdark
-DisplayName=9044
+DisplayName=-1
+UnlocalizedName=Underdark
 Border=Rock
 Default=Floor
 Floor=Floor

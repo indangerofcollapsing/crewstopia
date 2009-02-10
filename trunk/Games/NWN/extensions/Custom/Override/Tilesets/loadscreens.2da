@@ -261,3 +261,6 @@
 257        SteamWork05           AREA_TRANSITION_TSW_05           LS_TSW_08   TSW01     ****
 258        SteamWork06           AREA_TRANSITION_TSW_06           LS_TSW_09   TSW01     ****
 259        SteamWork07           AREA_TRANSITION_TSW_07           LS_TSW_02   TSW01     ****
+260        Mines01       AREA_TRANSITION_MINES_01      LS_MINES_01     MIN01       ****
+261        Mines02       AREA_TRANSITION_MINES_02      LS_MINES_02     MIN01       ****
+262        Mines03       AREA_TRANSITION_MINES_03      LS_MINES_03     MIN01       ****

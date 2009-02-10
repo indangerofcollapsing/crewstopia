@@ -9,8 +9,9 @@ Interior=1
 HasHeightTransition=0
 EnvMap=tdm01__ref01
 Transition=3
-; @DUG Mines and Caverns
-DisplayName=1609
+; DisplayName=1609
+DisplayName=-1
+UnlocalizedName=Mines and Caverns
 Border=Wall
 Default=Wall
 Floor=Floor

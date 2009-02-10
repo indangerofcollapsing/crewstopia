@@ -1,9 +1,9 @@
 ; NEVERWINTER NIGHTS TILESET FILE
 ; Dfrickfrickfrickaaarse
+; Name=Sigil
 
 [GENERAL]
-; @DUG Name=Sigil
-Name=Sigil Exterior
+Name=TPSST
 Type=SET
 Version=V1.0
 Interior=0
@@ -11,7 +11,6 @@ HasHeightTransition=1
 EnvMap=tdc01__ref01
 Transition=2
 DisplayName=-1
-; @DUG added
 UnlocalizedName=Sigil Exterior
 Border=building
 Default=cobble

@@ -1,5 +1,6 @@
 ; NEVERWINTER NIGHTS TILESET FILE
 ; DO NOT EDIT MANUALLY - UNLESS YOU KNOW WHAT YOU ARE DOING
+; UnlocalizedName=Full Forest/Rural
 
 [GENERAL]
 Name=phf01
@@ -10,7 +11,6 @@ HasHeightTransition=1
 EnvMap=ttr01__ref01
 Transition=4
 DisplayName=-1
-; @DUG UnlocalizedName=Full Forest/Rural
 UnlocalizedName=Forest/Rural Full
 Border=Grass
 Default=Grass
