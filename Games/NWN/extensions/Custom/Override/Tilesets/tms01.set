@@ -1,5 +1,7 @@
 ; NEVERWINTER NIGHTS TILESET FILE
 ; DO NOT EDIT MANUALLY - UNLESS YOU KNOW WHAT YOU ARE DOING
+; Microset
+; DisplayName=2325
 
 [GENERAL]
 Name=TMS01
@@ -9,8 +11,8 @@ Interior=0
 HasHeightTransition=1
 EnvMap=ttr01__ref01
 Transition=5
-; @DUG Microset
-DisplayName=2325
+DisplayName=-1
+UnlocalizedName=Microset
 Border=Grass
 Default=Grass
 Floor=Grass

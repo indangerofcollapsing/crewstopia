@@ -37,4 +37,18 @@ ttr01 - Rural
 tts01 - Rural Winter
 ttu01 - Underdark
 tus01 - Undersea
+tvd01 - Dungeon, Aged
 tze01 - Aztec Exterior
+zcn01 - [CEP] City Exterior
+zdc01 - [CEP] Crypts
+zde01 - [CEP] Dungeon
+zdm01 - [CEP] Mines and Caverns
+zic01 - [CEP] Castle Interior
+zid01 - [CEP] Drow Interior
+zin01 - [CEP] City Interior
+ztd01 - [CEP] Desert
+ztf01 - [CEP] Forest
+zti01 - [CEP] Frozen Wastes
+ztr01 - [CEP] Rural
+zts01 - [CEP] Winter
+ztu01 - [CEP] Underdark

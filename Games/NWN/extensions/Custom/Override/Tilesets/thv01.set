@@ -1,5 +1,6 @@
 ; NEVERWINTER NIGHTS TILESET FILE
 ; DO NOT EDIT MANUALLY - UNLESS YOU KNOW WHAT YOU ARE DOING
+; UnlocalizedName=Stem Interior
 
 [GENERAL]
 Name=thv01
@@ -9,7 +10,6 @@ Interior=1
 HasHeightTransition=0
 EnvMap=
 Transition=10
-; @DUG UnlocalizedName=Stem Interior
 UnlocalizedName=Sigil Interior
 Border=wall
 Default=wall
