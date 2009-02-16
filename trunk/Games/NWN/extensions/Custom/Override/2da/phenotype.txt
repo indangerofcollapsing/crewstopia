@@ -1,8 +1,19 @@
 Merged Bioware 1.69, CEP, and ACP phenotypes.
+* ACP and CEP are not compatible; one must take precedence
 
-Lost the following Bioware phenos:
-5   Large_M     111016      2
-6   N_Joust_M   111017      0
-7   ****        ****        0
-8   L_Joust_M   111018      2
+* sx_intimate.hak
+9  Intimate      16797624 0
+
+* ACPv40.hak
+15 Kensai        16797617 0                
+16 Assassin      16797618 0                
+17 Heavy         16797619 0                
+18 Fencing       16797620 0                
+19 Arcane        16797622 0                
+20 Demonblade    16797623 0                
+21 Warrior       16797624 0                
+30 MA_TigerFang  16797625 0                
+31 MA_SunFist    16797626 0                
+32 MA_DragonPalm 16797627 0                
+33 MA_BearClaw   16797628 0                
 
